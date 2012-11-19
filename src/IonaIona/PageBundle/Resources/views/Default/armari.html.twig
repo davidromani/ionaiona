@@ -14,3 +14,8 @@
         </div>
     </div>
 {% endblock %}
+{% block peuidiomes %}
+    <a href="{{ path('armari_ca', {'_locale' : 'ca'}) }}">{% trans %}idiomas.catalan{% endtrans %}</a><br>
+    <a href="{{ path('armari_es', {'_locale' : 'es'}) }}">{% trans %}idiomas.espanol{% endtrans %}</a><br>
+    <a href="{{ path('armari_en', {'_locale' : 'en'}) }}">{% trans %}idiomas.ingles{% endtrans %}</a>
+{% endblock %} 

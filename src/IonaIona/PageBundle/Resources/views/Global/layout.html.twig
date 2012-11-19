@@ -32,8 +32,6 @@
         <div id="principal">
             {% block principal %}{% endblock %}
         </div>
-        {% block newsbanner %}{% endblock %}
-        {% block asociatebanner %}{% endblock %}
         <footer>
             <div class="constrictor clearfix">
                 <h6></h6>
@@ -51,9 +49,7 @@
                 </div>
                 <div>
                     <strong>{% trans %}idiomas{% endtrans %}</strong><br>
-                    <a href="{# path('home_ca') #}">{% trans %}idiomas.catalan{% endtrans %}</a><br>
-                    <a href="{# path('home_ca') #}">{% trans %}idiomas.espanol{% endtrans %}</a><br>
-                    <a href="{# path('home_ca') #}">{% trans %}idiomas.ingles{% endtrans %}</a>
+                    {% block peuidiomes %}{% endblock %}
                 </div>
                 <div>
                     <strong>{% trans %}puntosdeventa{% endtrans %}</strong><br>

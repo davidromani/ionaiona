@@ -10,3 +10,8 @@
         <img src="/images/home.png" alt="ballena iona iona patchdoll" title="Foto principal">
     </div>
 {% endblock %}
+{% block peuidiomes %}
+    <a href="{{ path('home_ca', {'_locale' : 'ca'}) }}">{% trans %}idiomas.catalan{% endtrans %}</a><br>
+    <a href="{{ path('home_es', {'_locale' : 'es'}) }}">{% trans %}idiomas.espanol{% endtrans %}</a><br>
+    <a href="{{ path('home_en', {'_locale' : 'en'}) }}">{% trans %}idiomas.ingles{% endtrans %}</a>
+{% endblock %} 
