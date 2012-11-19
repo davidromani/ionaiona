@@ -1,0 +1,12 @@
+{% extends 'PageBundle:Global:layout.html.twig' %}
+{% block titulo %}
+    {% trans %}inicio{% endtrans %}
+{% endblock %}
+{% block menu %}
+    {{ knp_menu_render('PageBundle:Builder:mainMenu') }}
+{% endblock %}
+{% block principal %}
+    <div class="constrictor clearfix">
+        <img src="/images/home.png" alt="ballena iona iona patchdoll" title="Foto principal">
+    </div>
+{% endblock %}

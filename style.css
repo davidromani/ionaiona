@@ -1,0 +1,45 @@
+/*   
+Template Name: Coming Soon
+Theme URI: http://www.thisismyurl.com
+Description: A simple website template to announce your website is coming soon.
+Author: Christopher Ross
+Author URI: http://www.thisismyurl.com
+Version: 1.2
+Tags: coming soon
+	The CSS, XHTML, design and PHP are released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+*/
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	width: 100%;
+  height: 100%;
+}
+
+#page {
+    margin: 200px 0px 200px 0px;
+    text-align: center;
+    width: 100%;
+}
+
+#footer {
+	font-size: 10px;
+	line-height: 12px;
+	margin-top: 20px;
+	padding-top: 20p;
+	color: #000;
+	float: left;
+	width: 100%;
+  text-align: center;
+}
+
+#footer a {
+	color: #000;
+	text-decoration: none;
+}
+	
+#footer a:hover {
+	color: #566D7E;
+}

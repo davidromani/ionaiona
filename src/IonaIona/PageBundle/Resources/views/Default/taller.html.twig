@@ -1,0 +1,15 @@
+{% extends 'PageBundle:Global:layout.html.twig' %}
+{% block titulo %}
+    {% trans %}menu.taller{% endtrans %}
+{% endblock %}
+{% block menu %}
+    {{ knp_menu_render('PageBundle:Builder:mainMenu') }}
+{% endblock %}
+{% block principal %}
+    <div class="constrictor clearfix">
+        <div class="ad-inicio-principal">
+            <p>Hello taller world!</p>
+            <p>Estas en taller</p>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <!-- <meta http-equiv="Content-Type" content="text/html"/> -->
+        <!--[if ie]> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <![endif]-->
+        <title>iona iona · {% block titulo %}{% endblock %}</title>
+        <meta name="description" content="iona iona desc.">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="{{ asset('bundles/page/css/normalize.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('bundles/page/css/main.css') }}" type="text/css">
+        <link type="image/png" href="/favicon.png" rel="icon"/>
+        <link type="image/png" href="/favicon.png" rel="shortcut icon"/>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="{{ asset('bundles/page/js/vendor/jquery-1.8.0.min.js') }}"><\/script>')</script>
+        <script src="{{ asset('bundles/page/js/vendor/modernizr-2.6.1.min.js') }}"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+        <header>
+            <div class="constrictor clearfix">
+                <h1 class="invisible">iona iona</h1>
+                <a href="{{ path('home_' ~ app.request.locale) }}"><img src="/images/header.png" alt="iona iona logo" title="iona iona"></a>
+                {% block menu %}{% endblock %}
+            </div>
+        </header>
+        <div id="principal">
+            {% block principal %}{% endblock %}
+        </div>
+        {% block newsbanner %}{% endblock %}
+        {% block asociatebanner %}{% endblock %}
+        <footer>
+            <div class="constrictor clearfix">
+                <h6></h6>
+                <div>
+                    <strong>{% trans %}contacto{% endtrans %}</strong><br>
+                    <a href="mailto:hello@ionaiona.com">{% trans %}hola{% endtrans %}@ionaiona.com</a><br>
+                    +34 679 156 547<br>
+                    +34 977 709 770
+                </div>
+                <div>
+                    <strong>{% trans %}siguenos{% endtrans %}</strong><br>
+                    <a href="http://www.facebook.com">facebook</a><br>
+                    <a href="http://www.pinterest.com">pinterest</a><br>
+                    <a href="http://www.twitter.com">twitter</a>
+                </div>
+                <div>
+                    <strong>{% trans %}idiomas{% endtrans %}</strong><br>
+                    <a href="{{ path('home_ca') }}">{% trans %}idiomas.catalan{% endtrans %}</a><br>
+                    <a href="{{ path('home_ca') }}">{% trans %}idiomas.espanol{% endtrans %}</a><br>
+                    <a href="{{ path('home_ca') }}">{% trans %}idiomas.ingles{% endtrans %}</a>
+                </div>
+                <div>
+                    <strong>{% trans %}puntosdeventa{% endtrans %}</strong><br>
+                    <a href="">{% trans %}puntosdeventa.amposta{% endtrans %}</a><br>
+                </div>
+            </div>
+        </footer>
+        <!--
+            <script src="{{ asset('bundles/page/js/plugins.js') }}"></script>
+            <script src="{{ asset('bundles/page/js/main.js') }}"></script> 
+        -->
+        <script>
+            var _gaq=[['_setAccount','UA-33911308-1'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>

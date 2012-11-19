@@ -1,0 +1,16 @@
+{% extends 'PageBundle:Global:layout.html.twig' %}
+{% block titulo %}
+    {% trans %}menu.armari{% endtrans %}
+{% endblock %}
+{% block menu %}
+    {{ knp_menu_render('PageBundle:Builder:mainMenu') }}
+    {{ knp_menu_render('PageBundle:Builder:armariMenu') }}
+{% endblock %}
+{% block principal %}
+    <div class="constrictor clearfix">
+        <div class="ad-inicio-principal">
+            <p>Hello armari world!</p>
+            <p>Estas en armario</p>
+        </div>
+    </div>
+{% endblock %}

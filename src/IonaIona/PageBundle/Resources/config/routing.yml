@@ -1,0 +1,143 @@
+home_ca:
+    pattern:        /{_locale}/inici/
+    defaults:       { _controller: PageBundle:Default:home }
+    requirements:
+        _locale:    ca
+
+home_es:
+    pattern:        /{_locale}/inicio/
+    defaults:       { _controller: PageBundle:Default:home }
+    requirements:
+        _locale:    es
+
+home_en:
+    pattern:        /{_locale}/home/
+    defaults:       { _controller: PageBundle:Default:home }
+    requirements:
+        _locale:    en
+
+armari_ca:
+    pattern:        /{_locale}/l-armari/
+    defaults:       { _controller: PageBundle:Default:armari }
+    requirements:
+        _locale:    ca
+
+armari_es:
+    pattern:        /{_locale}/armario/
+    defaults:       { _controller: PageBundle:Default:armari }
+    requirements:
+        _locale:    es
+
+armari_en:
+    pattern:        /{_locale}/wardrobe/
+    defaults:       { _controller: PageBundle:Default:armari }
+    requirements:
+        _locale:    en
+
+taller_ca:
+    pattern:        /{_locale}/taller/
+    defaults:       { _controller: PageBundle:Default:taller }
+    requirements:
+        _locale:    ca
+
+taller_es:
+    pattern:        /{_locale}/taller/
+    defaults:       { _controller: PageBundle:Default:taller }
+    requirements:
+        _locale:    es
+
+taller_en:
+    pattern:        /{_locale}/workshop/
+    defaults:       { _controller: PageBundle:Default:taller }
+    requirements:
+        _locale:    en
+
+diari_ca:
+    pattern:        /{_locale}/el-diari/
+    defaults:       { _controller: PageBundle:Default:diari }
+    requirements:
+        _locale:    ca
+
+diari_es:
+    pattern:        /{_locale}/diario/
+    defaults:       { _controller: PageBundle:Default:diari }
+    requirements:
+        _locale:    es
+
+diari_en:
+    pattern:        /{_locale}/newspaper/
+    defaults:       { _controller: PageBundle:Default:diari }
+    requirements:
+        _locale:    en
+
+balena_ca:
+    pattern:        /{_locale}/l-armari/balena
+    defaults:       { _controller: PageBundle:Default:balena }
+    requirements:
+        _locale:    ca
+
+balena_es:
+    pattern:        /{_locale}/armario/ballena
+    defaults:       { _controller: PageBundle:Default:balena }
+    requirements:
+        _locale:    es
+
+balena_en:
+    pattern:        /{_locale}/wardrobe/whale
+    defaults:       { _controller: PageBundle:Default:balena }
+    requirements:
+        _locale:    en
+
+girafa_ca:
+    pattern:        /{_locale}/l-armari/girafa
+    defaults:       { _controller: PageBundle:Default:girafa }
+    requirements:
+        _locale:    ca
+
+girafa_es:
+    pattern:        /{_locale}/armario/jirafa
+    defaults:       { _controller: PageBundle:Default:girafa }
+    requirements:
+        _locale:    es
+
+girafa_en:
+    pattern:        /{_locale}/wardrobe/giraffe
+    defaults:       { _controller: PageBundle:Default:girafa }
+    requirements:
+        _locale:    en
+
+mico_ca:
+    pattern:        /{_locale}/l-armari/mico
+    defaults:       { _controller: PageBundle:Default:mico }
+    requirements:
+        _locale:    ca
+
+mico_es:
+    pattern:        /{_locale}/armario/mono
+    defaults:       { _controller: PageBundle:Default:mico }
+    requirements:
+        _locale:    es
+
+mico_en:
+    pattern:        /{_locale}/wardrobe/monkey
+    defaults:       { _controller: PageBundle:Default:girafa }
+    requirements:
+        _locale:    en
+
+gossalsitxa_ca:
+    pattern:        /{_locale}/l-armari/gos-salsitxa
+    defaults:       { _controller: PageBundle:Default:gossalsitxa }
+    requirements:
+        _locale:    ca
+
+gossalsitxa_es:
+    pattern:        /{_locale}/armario/perro-salchicha
+    defaults:       { _controller: PageBundle:Default:gossalsitxa }
+    requirements:
+        _locale:    es
+
+gossalsitxa_en:
+    pattern:        /{_locale}/wardrobe/dachshund
+    defaults:       { _controller: PageBundle:Default:gossalsitxa }
+    requirements:
+        _locale:    en
