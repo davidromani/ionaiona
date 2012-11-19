@@ -13,7 +13,7 @@ framework:
     csrf_protection: true
     validation:      { enable_annotations: true }
     templating:      { engines: ['twig'] } #assets_version: SomeVersionScheme
-    default_locale:  %locale%
+    default_locale:  ca
     trust_proxy_headers: false # Whether or not the Request object should trust proxy headers (X_FORWARDED_FOR/HTTP_CLIENT_IP)
     session:         ~
 
@@ -88,11 +88,11 @@ swiftmailer:
 
 # Sonata Admin
 sonata_admin:
-    title:  'ionaiona - administrador de continguts'
+    title:  'iona iona - administrador de continguts'
     title_logo: '/favicon.png'
     templates:
-        layout: FluxPageBundle:Admin:standard_layout_tinymce.html.twig
-        dashboard: FluxPageBundle:Admin:my_dashboard.html.twig
+        layout: PageBundle:Admin:standard_layout_tinymce.html.twig
+        dashboard: PageBundle:Admin:my_dashboard.html.twig
         ajax: SonataAdminBundle::ajax_layout.html.twig
         list: SonataAdminBundle:CRUD:list.html.twig
         show: SonataAdminBundle:CRUD:show.html.twig
@@ -227,7 +227,15 @@ liip_imagine:
             quality: 80
             filters:
                 thumbnail: { size: [600, null], mode: outbound }
+        imatge940:
+            quality: 80
+            filters:
+                thumbnail: { size: [940, null], mode: outbound }
 
 # DIC config
 services:
-    
+    flux.admin.page:
+        class: Flux\PageBundle\Admin\PageAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Pàgines, label: Pàgina }
+        arguments: [null, Flux\PageBundle\Entity\Page, FluxPageBundle:PageAdmin]
