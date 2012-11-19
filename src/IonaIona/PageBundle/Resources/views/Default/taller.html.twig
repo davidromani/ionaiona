@@ -3,7 +3,7 @@
     {% trans %}menu.taller{% endtrans %}
 {% endblock %}
 {% block menu %}
-    {{ knp_menu_render('PageBundle:Builder:mainMenu') }}
+    {{ knp_menu_render('PageBundle:Builder:main_' ~ app.request.locale ~ '_Menu') }}
 {% endblock %}
 {% block principal %}
     <div class="constrictor clearfix">
