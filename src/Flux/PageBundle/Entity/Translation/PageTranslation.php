@@ -7,7 +7,7 @@ use Gedmo\Translatable\Entity\MappedSuperclass\AbstractPersonalTranslation;
 /**
  * @ORM\Entity
  * @ORM\Table(
- *  name="page_translation",
+ *  name="flux_page_translation",
  *  uniqueConstraints={@ORM\UniqueConstraint(name="lookup_unique_idx", columns={"locale", "object_id", "field"})}
  * )
  */

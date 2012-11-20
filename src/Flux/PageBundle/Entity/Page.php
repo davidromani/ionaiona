@@ -9,7 +9,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="page")
+ * @ORM\Table(name="flux_page")
  * @ORM\Entity(repositoryClass="Flux\PageBundle\Repository\PageRepository")
  * @ORM\HasLifecycleCallbacks
  * @Gedmo\TranslationEntity(class="Flux\PageBundle\Entity\Translation\PageTranslation")
