@@ -24,7 +24,7 @@
         "sonata-project/user-bundle" : "dev-master",
         "sonata-project/cache-bundle": "dev-master",
         "stof/doctrine-extensions-bundle": "dev-master",
-        "a2lix/translation-form-bundle" : "dev-master",
+        "a2lix/translation-form-bundle" : "0.3.9",
         "stfalcon/tinymce-bundle": "dev-master",
         "vich/uploader-bundle": "dev-master",
         "liip/imagine-bundle": "dev-master",

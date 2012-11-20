@@ -19,7 +19,7 @@ class PageAdmin extends Admin
             //->addIdentifier('id')
             ->addIdentifier('code', null, array('label' => 'Código'))
             ->addIdentifier('title', null, array('label' => 'Título'))
-            ->add('image', null, array('label' => 'Imagen'))
+            ->add('image1', null, array('label' => 'Imagen'))
             ->add('position', null, array('label' => 'Posición'))
             ->add('is_active', 'boolean', array('label' => 'Activa'))
             // add custom action links
