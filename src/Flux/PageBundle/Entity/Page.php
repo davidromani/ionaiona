@@ -53,49 +53,55 @@ class Page
      * @ORM\Column(type="text", length=4000, nullable=true)
      * @Gedmo\Translatable
      */
-    protected $text;
+    protected $text1;
+
+    /**
+     * @ORM\Column(type="text", length=4000, nullable=true)
+     * @Gedmo\Translatable
+     */
+    protected $text2;
 
     /**
      * @Assert\File(
-     *     maxSize="8M",
+     *     maxSize="3M",
      *     mimeTypes={"image/png", "image/jpeg", "image/pjpeg"}
      * )
-     * @Vich\UploadableField(mapping="imatge", fileNameProperty="imageBig")
+     * @Vich\UploadableField(mapping="imatge", fileNameProperty="image1")
      */
-    protected $imageBigFile;
+    protected $image1File;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    protected $imageBig;
+    protected $image1;
 
     /**
      * @Assert\File(
-     *     maxSize="4M",
+     *     maxSize="3M",
      *     mimeTypes={"image/png", "image/jpeg", "image/pjpeg"}
      * )
-     * @Vich\UploadableField(mapping="imatge", fileNameProperty="image")
+     * @Vich\UploadableField(mapping="imatge", fileNameProperty="image2")
      */
-    protected $imageFile;
+    protected $image2File;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    protected $image;
+    protected $image2;
 
     /**
      * @Assert\File(
-     *     maxSize="2M",
+     *     maxSize="3M",
      *     mimeTypes={"image/png", "image/jpeg", "image/pjpeg"}
      * )
-     * @Vich\UploadableField(mapping="imatge", fileNameProperty="imageSmall")
+     * @Vich\UploadableField(mapping="imatge", fileNameProperty="image3")
      */
-    protected $imageSmallFile;
+    protected $image3File;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    protected $imageSmall;
+    protected $image3;
 
     /**
      * @ORM\Column(type="smallint")
@@ -122,6 +128,26 @@ class Page
      */
     public function __construct() {
         $this->translations = new ArrayCollection();
+    }
+
+    /**
+     * Get translations
+     *
+     * @return ArrayCollection
+     */
+    public function getTranslations()
+    {
+        return $this->translations;
+    }
+
+    /**
+     * Get translated field and form locale
+     */
+    public function getTranslatedFieldAndFromLocale($field, $locale)
+    {
+        $this->getTranslations()->filter(function($entity) {
+            return (($entity->getLocale() === $locale) && ($entity->getField() === $field));
+        })->first();
     }
 
     /**
@@ -246,95 +272,186 @@ class Page
     }
 
     /**
-     * Set text
+     * Set text1
      *
      * @param string $text
      * @return Page
      */
-    public function setText($text)
+    public function setText1($text)
     {
-        $this->text = $text;
+        $this->text1 = $text;
     
         return $this;
     }
 
     /**
-     * Get text
+     * Get text1
      *
      * @return string 
      */
-    public function getText()
+    public function getText1()
     {
-        return $this->text;
+        return $this->text1;
     }
 
-    public function setImageBigFile($imageBigFile)
+    /**
+     * Set text2
+     *
+     * @param string $text
+     * @return Page
+     */
+    public function setText2($text)
     {
-        $this->imageBigFile = $imageBigFile;
+        $this->text2 = $text;
+    
         return $this;
     }
 
-    public function getImageBigFile()
+    /**
+     * Get text2
+     *
+     * @return string 
+     */
+    public function getText2()
     {
-        return $this->imageBigFile;
+        return $this->text2;
     }
 
-    public function setImageBig($imageBig)
+    /**
+     * Set image1File
+     *
+     * @param string $imageFile
+     * @return Page
+     */
+    public function setImage1File($imageFile)
     {
-        $this->imageBig = $imageBig;
-
+        $this->image1File = $imageFile;
+        
         return $this;
     }
 
-    public function getImageBig()
+    /**
+     * Get image1File
+     *
+     * @return string 
+     */
+    public function getImage1File()
     {
-        return $this->imageBig;
+        return $this->image1File;
     }
 
-    public function setImageFile($imageFile)
+    /**
+     * Set image1
+     *
+     * @param string $image
+     * @return Page
+     */
+    public function setImage1($image)
     {
-        $this->imageFile = $imageFile;
-        return $this;
-    }
-
-    public function getImageFile()
-    {
-        return $this->imageFile;
-    }
-
-    public function setImage($image)
-    {
-        $this->image = $image;
-
-        return $this;
-    }
-
-    public function getImage()
-    {
-        return $this->image;
-    }
-
-    public function setImageSmallFile($imageSmallFile)
-    {
-        $this->imageSmallFile = $imageSmallFile;
-        return $this;
-    }
-
-    public function getImageSmallFile()
-    {
-        return $this->imageSmallFile;
-    }
-
-    public function setImageSmall($imageSmall)
-    {
-        $this->imageSmall = $imageSmall;
+        $this->image1 = $image;
 
         return $this;
     }
 
-    public function getImageSmall()
+    /**
+     * Get image1
+     *
+     * @return string 
+     */
+    public function getImage1()
     {
-        return $this->imageSmall;
+        return $this->image1;
+    }
+
+    /**
+     * Set image2File
+     *
+     * @param string $imageFile
+     * @return Page
+     */
+    public function setImage2File($imageFile)
+    {
+        $this->image2File = $imageFile;
+        
+        return $this;
+    }
+
+    /**
+     * Get image2File
+     *
+     * @return string 
+     */
+    public function getImage2File()
+    {
+        return $this->image2File;
+    }
+
+    /**
+     * Set image2
+     *
+     * @param string $image
+     * @return Page
+     */
+    public function setImage2($image)
+    {
+        $this->image2 = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image2
+     *
+     * @return string 
+     */
+    public function getImage2()
+    {
+        return $this->image2;
+    }
+
+    /**
+     * Set image3File
+     *
+     * @param string $imageFile
+     * @return Page
+     */
+    public function setImage3File($imageFile)
+    {
+        $this->image3File = $imageFile;
+        return $this;
+    }
+
+    /**
+     * Get image3File
+     *
+     * @return string 
+     */
+    public function getImage3File()
+    {
+        return $this->image3File;
+    }
+
+    /**
+     * Set image3
+     *
+     * @param string $image
+     * @return Page
+     */
+    public function setImage3($image)
+    {
+        $this->image3 = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image3
+     *
+     * @return string 
+     */
+    public function getImage3()
+    {
+        return $this->image3;
     }
 
     /**
@@ -391,16 +508,6 @@ class Page
     public function __toString()
     {
         return $this->getTitle();
-    }
-
-    /**
-     * Get translations
-     *
-     * @return ArrayCollection
-     */
-    public function getTranslations()
-    {
-        return $this->translations;
     }
 
 }

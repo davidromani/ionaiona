@@ -15,10 +15,11 @@ class Pages implements FixtureInterface
         $page->setCode('001-001');
         $page->setTitle('inici');
         $page->setSummary('inici...');
-        $page->setText("vols veure l'armari de iona iona? fes pom pom a la porta!");
+        $page->setText1("vols veure l'armari de iona iona? fes pom pom a la porta!");
+        $page->setText2("producte artesanal i de proximitat produït amb materials ecològics");
         $page->setPosition(1);
-        $page->setImageBig('presentacion-big.jpeg');
-        $page->setImage('presentacion.jpeg');
+        $page->setImage1File('presentacion-big.jpeg');
+        $page->setImage1('presentacion.jpeg');
         $page->setIsActive(true);
         $translation = new PageTranslation();
         $translation->setLocale('es');
@@ -32,8 +33,13 @@ class Pages implements FixtureInterface
         $page->addTranslation($translation);
         $translation = new PageTranslation();
         $translation->setLocale('es');
-        $translation->setField('text');
+        $translation->setField('text1');
         $translation->setContent("¿quieres ver el armario de iona iona? haz pom pom en la puerta!");
+        $page->addTranslation($translation);
+        $translation = new PageTranslation();
+        $translation->setLocale('es');
+        $translation->setField('text2');
+        $translation->setContent("producto artesanal y de proximidad producido con materiales ecológicos");
         $page->addTranslation($translation);
         $manager->persist($page);
 

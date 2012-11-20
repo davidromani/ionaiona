@@ -141,3 +141,7 @@ gossalsitxa_en:
     defaults:       { _controller: PageBundle:Default:gossalsitxa }
     requirements:
         _locale:    en
+
+inicial:
+    pattern:        /
+    defaults:       { _controller: PageBundle:Default:home }
