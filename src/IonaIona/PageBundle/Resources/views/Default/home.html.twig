@@ -7,7 +7,7 @@
 {% endblock %}
 {% block principal %}
     <div class="constrictor clearfix">
-        <img src="/images/home.png" alt="ballena iona iona patchdoll" title="Foto principal">
+        <img src="{{ vich_uploader_asset(pagina, 'image1File') | imagine_filter('imatge940') }}" alt="ballena iona iona patchdoll" title="Foto principal">
     </div>
 {% endblock %}
 {% block peuidiomes %}
