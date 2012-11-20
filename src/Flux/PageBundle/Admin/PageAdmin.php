@@ -54,34 +54,23 @@ class PageAdmin extends Admin
             ->add('title', 'text', array('label' => 'Título'))
             ->add('subtitle', 'text', array('label' => 'Subtítulo', 'required' => false))
             ->add('summary', 'text', array('label' => 'Resumen', 'required' => false))
-            ->add('text', 'textarea', array(
-                'label' => 'Texto', 
-                'required' => false,
-                'attr' => array(
-                    'class' => 'tinymce',
-                    'data-theme' => 'simple',
-                    'style' => 'height:400px'
-            )))
+            ->add('text1', 'textarea', array('label' => 'Texto 1', 'required' => false))
+            ->add('text2', 'textarea', array('label' => 'Texto 2', 'required' => false))
             ->add('translations', 'a2lix_translations', array(
                 'label' => ' ',
                 'fields' => array(
                     'title' => array('label' => 'Título'),
                     'subtitle' => array('label' => 'Subtítulo'),
                     'summary' => array('label' => 'Resumen'),
-                    'text' => array(
-                        'label' => 'Texto',
-                        'attr' => array(
-                            'class' => 'tinymce',
-                            'data-theme' => 'simple',
-                            'style' => 'width: 600px; height: 400px; display: block;')
-            ))))
-            ->add('imageBigFile', 'file', array('label' => 'Subir imagen grande', 'required' => false))
-            ->add('imageBig', null, array('label' => 'Imagen grande', 'required' => false, 'read_only' => true))
-            ->add('imageFile', 'file', array('label' => 'Subir imagen', 'required' => false))
-            ->add('image', null, array('label' => 'Imagen', 'required' => false, 'read_only' => true))
-            ->add('imageSmallFile', 'file', array('label' => 'Subir imagen pequeña', 'required' => false))
-            ->add('imageSmall', null, array('label' => 'Imagen pequeña', 'required' => false, 'read_only' => true))
-            
+                    'text1' => array('label' => 'Texto 1'),
+                    'text2' => array('label' => 'Texto 2')
+            )))
+            ->add('image1File', 'file', array('label' => 'Subir imagen 1', 'required' => false))
+            ->add('image1', null, array('label' => 'Imagen 1', 'required' => false, 'read_only' => true))
+            ->add('image2File', 'file', array('label' => 'Subir imagen 2', 'required' => false))
+            ->add('image2', null, array('label' => 'Imagen 2', 'required' => false, 'read_only' => true))
+            ->add('image3File', 'file', array('label' => 'Subir imagen 3', 'required' => false))
+            ->add('image3', null, array('label' => 'Imagen 3', 'required' => false, 'read_only' => true))
             ->add('position', 'integer', array('label' => 'Posición'))
             ->add('is_active', 'checkbox', array('label' => 'Activa', 'required' => false))
             // help messages like this

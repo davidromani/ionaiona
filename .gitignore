@@ -10,6 +10,7 @@ web/bundles/*
 web/css/*
 web/js/*
 web/uploads/*
+doc/sonata-admin-user.txt
 
 # -- Composer -----------------------------------------
 composer.phar
