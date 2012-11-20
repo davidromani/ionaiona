@@ -21,14 +21,8 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '001-002'));
-        /*$asociacion = $em->getRepository('ASBAEPageBundle:Page')->findOneBy(array('code' => '001-002'));
-        $junta = $em->getRepository('ASBAEPageBundle:Page')->findOneBy(array('code' => '001-003'));
-        $noticias = $em->getRepository('ASBAEEventsBundle:News')->findLast3ActiveAndOrderedByDate();*/
         return $this->render('PageBundle:Default:armari.html.twig', array(
-            //'pagina' => $pagina,
-            //'asociacion' => $asociacion,
-            //'junta' => $junta,
-            //'noticias' => $noticias
+            'pagina' => $pagina,
         ));
     }
 
@@ -36,14 +30,8 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '001-003'));
-        /*$asociacion = $em->getRepository('ASBAEPageBundle:Page')->findOneBy(array('code' => '001-002'));
-        $junta = $em->getRepository('ASBAEPageBundle:Page')->findOneBy(array('code' => '001-003'));
-        $noticias = $em->getRepository('ASBAEEventsBundle:News')->findLast3ActiveAndOrderedByDate();*/
         return $this->render('PageBundle:Default:taller.html.twig', array(
-            //'pagina' => $pagina,
-            //'asociacion' => $asociacion,
-            //'junta' => $junta,
-            //'noticias' => $noticias
+            'pagina' => $pagina,
         ));
     }
 
@@ -51,14 +39,44 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '001-004'));
-        /*$asociacion = $em->getRepository('ASBAEPageBundle:Page')->findOneBy(array('code' => '001-002'));
-        $junta = $em->getRepository('ASBAEPageBundle:Page')->findOneBy(array('code' => '001-003'));
-        $noticias = $em->getRepository('ASBAEEventsBundle:News')->findLast3ActiveAndOrderedByDate();*/
         return $this->render('PageBundle:Default:diari.html.twig', array(
-            //'pagina' => $pagina,
-            //'asociacion' => $asociacion,
-            //'junta' => $junta,
-            //'noticias' => $noticias
+            'pagina' => $pagina,
+        ));
+    }
+
+    public function balenaAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '001-004'));
+        return $this->render('PageBundle:Armari:categoria.armari.html.twig', array(
+            'pagina' => $pagina,
+        ));
+    }
+
+    public function girafaAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '001-004'));
+        return $this->render('PageBundle:Armari:categoria.armari.html.twig', array(
+            'pagina' => $pagina,
+        ));
+    }
+
+    public function micoAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '001-004'));
+        return $this->render('PageBundle:Armari:categoria.armari.html.twig', array(
+            'pagina' => $pagina,
+        ));
+    }
+
+    public function gossalsitxaAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '001-004'));
+        return $this->render('PageBundle:Armari:categoria.armari.html.twig', array(
+            'pagina' => $pagina,
         ));
     }
 }
