@@ -1,6 +1,8 @@
 <?php
 namespace Flux\PageBundle\Admin;
 
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Translation\Translator;
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
@@ -15,20 +17,22 @@ class PageAdmin extends Admin
 {
     protected function configureListFields(ListMapper $listMapper)
     {
+        $locale = $this->getRequest()->get('locale');
+        $translator = new Translator($locale);
         $listMapper
             //->addIdentifier('id')
-            ->addIdentifier('code', null, array('label' => 'Código'))
-            ->addIdentifier('title', null, array('label' => 'Título'))
-            ->add('image1', null, array('label' => 'Imagen'))
-            ->add('position', null, array('label' => 'Posición'))
-            ->add('is_active', 'boolean', array('label' => 'Activa'))
+            ->addIdentifier('code', null, array('label' => $translator->trans('page.code')))
+            ->addIdentifier('title', null, array('label' => $translator->trans('page.title')))
+            ->add('image1', null, array('label' => $translator->trans('page.image1')))
+            ->add('position', null, array('label' => $translator->trans('page.position')))
+            ->add('is_active', 'boolean', array('label' => $translator->trans('page.active')))
             // add custom action links
             ->add('_action', 'actions', array(
                 'actions' => array(
                     //'view' => array(),
                     'edit' => array(),
                 ),
-                'label' => 'Acciones'
+                'label' => $translator->trans('page.actions')
             ))
         ;
     }
