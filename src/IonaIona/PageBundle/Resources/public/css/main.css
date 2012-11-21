@@ -176,7 +176,9 @@ div#principal div.constrictor.clearfix div.bloc:last-child {
     margin-right: 0;
 }
 
-
+div#principal div.constrictor.clearfix svg image.pointer:hover {
+    cursor: pointer;
+}
 
 
 
