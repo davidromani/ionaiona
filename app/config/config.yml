@@ -102,6 +102,7 @@ sonata_admin:
             - { position: left, type: sonata.admin.block.admin_list }
         groups:
             Pàgines:
+            Productes:
 
 
 # Sonata Block
@@ -236,3 +237,8 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, group: Pàgines, label: Pàgina }
         arguments: [null, Flux\PageBundle\Entity\Page, FluxPageBundle:PageAdmin]
+    flux.admin.category:
+        class: Flux\ProductBundle\Admin\CategoryAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Productes, label: Categoria }
+        arguments: [null, Flux\ProductBundle\Entity\Category, FluxProductBundle:CategoryAdmin]

@@ -1,5 +1,5 @@
 <?php
-namespace Flux\PageBundle\Admin;
+namespace Flux\ProductBundle\Admin;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Translation\Translator;
@@ -11,9 +11,9 @@ use Sonata\AdminBundle\Show\ShowMapper;
 use Sonata\PageBundle\Model\PageInterface;
 use Knp\Menu\ItemInterface as MenuItemInterface;
 
-use Flux\PageBundle\Entity\Page;
+use Flux\ProductBundle\Entity\Category;
 
-class PageAdmin extends Admin
+class CategoryAdmin extends Admin
 {
     protected function configureListFields(ListMapper $listMapper)
     {
@@ -60,26 +60,20 @@ class PageAdmin extends Admin
         $formMapper
             ->add('code', 'text', array('label' => $translator->trans('page.code'), 'read_only' => true))
             ->add('title', 'text', array('label' => $translator->trans('page.title')))
-            ->add('subtitle', 'text', array('label' => $translator->trans('page.subtitle'), 'required' => false))
-            ->add('summary', 'text', array('label' => $translator->trans('page.summary'), 'required' => false))
-            ->add('text1', 'textarea', array('label' => $translator->trans('page.text1'), 'required' => false))
-            ->add('text2', 'textarea', array('label' => $translator->trans('page.text2'), 'required' => false))
+            //->add('subtitle', 'text', array('label' => $translator->trans('page.subtitle'), 'required' => false))
+            //->add('summary', 'text', array('label' => $translator->trans('page.summary'), 'required' => false))
             ->add('translations', 'a2lix_translations', array(
                 'label' => ' ',
                 'fields' => array(
                     'title' => array('label' => $translator->trans('page.title')),
-                    'subtitle' => array('label' => $translator->trans('page.subtitle')),
-                    'summary' => array('label' => $translator->trans('page.summary')),
-                    'text1' => array('label' => $translator->trans('page.text1')),
-                    'text2' => array('label' => $translator->trans('page.text2'))
+                    //'subtitle' => array('label' => $translator->trans('page.subtitle')),
+                    //'summary' => array('label' => $translator->trans('page.summary')),
             )))
             ->add('image1File', 'file', array('label' => $translator->trans('page.upload.image1'), 'required' => false))
             ->add('image1', null, array('label' => $translator->trans('page.image1'), 'required' => false, 'read_only' => true))
             // TRY TO PRINT PREVIEW ->add('img1', 'sonata_type_model', array('property_path' => false, 'label' => 'im1', 'required' => false, 'template' => 'FluxPageBundle:Default:img.html.twig'))
-            ->add('image2File', 'file', array('label' => $translator->trans('page.upload.image2'), 'required' => false))
-            ->add('image2', null, array('label' => $translator->trans('page.image2'), 'required' => false, 'read_only' => true))
-            ->add('image3File', 'file', array('label' => $translator->trans('page.upload.image3'), 'required' => false))
-            ->add('image3', null, array('label' => $translator->trans('page.image3'), 'required' => false, 'read_only' => true))
+            //->add('image2File', 'file', array('label' => $translator->trans('page.upload.image2'), 'required' => false))
+            //->add('image2', null, array('label' => $translator->trans('page.image2'), 'required' => false, 'read_only' => true))
             ->add('position', 'integer', array('label' => $translator->trans('page.position')))
             ->add('is_active', 'checkbox', array('label' => $translator->trans('page.active'), 'required' => false))
             // help messages like this

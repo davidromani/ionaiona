@@ -1,6 +1,15 @@
 page.code: Código
 page.title: Título
+page.subtitle: Subtítulo
+page.summary: Resumen
+page.text1: Texto 1
+page.text2: Texto 2
 page.image1: Imagen 1
+page.upload.image1: Subir imagen 1
+page.image2: Imagen 2
+page.upload.image2: Subir imagen 2
+page.image3: Imagen 3
+page.upload.image3: Subir imagen 3
 page.position: Posición
 page.active: Activa
 page.actions: Acciones

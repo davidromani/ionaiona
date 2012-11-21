@@ -1,6 +1,15 @@
 page.code: Codi
 page.title: Títol
+page.subtitle: Subtítol
+page.summary: Resum
+page.text1: Text 1
+page.text2: Text 2
 page.image1: Imatge 1
+page.upload.image1: Pujar imatge 1
+page.image2: Imatge 2
+page.upload.image2: Pujar imatge 2
+page.image3: Imatge 3
+page.upload.image3: Pujar imatge 3
 page.position: Posició
 page.active: Activa
 page.actions: Accions

@@ -1,3 +1,8 @@
+flux_product:
+    resource: "@FluxProductBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 ionaiona_page:
     resource: "@PageBundle/Resources/config/routing.yml"
     prefix:   /
