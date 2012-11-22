@@ -23,6 +23,15 @@ body {
     line-height: 1.4;
 }
 
+@font-face {
+    font-family: 'GothamRnd';
+    src: url('/fonts/otf/gothamrndmedium.otf');
+    src: url('/fonts/ttf/gothamrndmedium.ttf') format('truetype'),
+         url('/fonts/svg/gothamrndmedium.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection declarations have to be separate.
@@ -103,6 +112,7 @@ div.constrictor {
  * HEADER
  */
 header {
+    font-family: 'GothamRnd', arial, helvetica;
     margin-bottom: 40px;
     height: 210px;
     position: fixed;
@@ -153,6 +163,7 @@ header div.constrictor.clearfix ul li.current a {
  * MAIN
  */
 div#principal {
+    font-family: 'GothamRnd', arial, helvetica;
     margin-top: 250px;
 }
 
@@ -176,9 +187,6 @@ div#principal div.constrictor.clearfix div.bloc:last-child {
     margin-right: 0;
 }
 
-div#principal div.constrictor.clearfix svg image.pointer:hover {
-    cursor: pointer;
-}
 
 
 
@@ -375,137 +383,7 @@ div#form-banner {
     background: #CBDCED;
 }
 
-div#news-banner {
-    padding-bottom: 40px;
-    background: #CBDCED;
-}
 
-h2#news {
-    color: #FFF;
-    position: relative;
-    top: -32px;
-    left: -12px;
-    background: url(/images/noticiesbanda.png) no-repeat 0 0;
-    height: 39px;
-    padding: 15px 40px;
-    width: 198px;
-    margin-bottom: 0;
-    text-align: center;
-}
-
-div.news-item {
-    float: left;
-    width: 260px;
-    margin-right: 80px;
-}
-
-div.news-item:last-child {
-    margin-right: 0;
-}
-
-div.news-item a {
-    color: #2269B5;
-    text-decoration: none;
-}
-
-div.news-item a:hover {
-    text-decoration: underline;
-}
-
-div.news-item a h3 {
-    color: #2269B5;
-    font-size: 1em;
-    margin-bottom: 5px;
-    margin-top: 0;
-}
-
-div.news-item h6 {
-    color: #2269B5;
-    font-size: 0.85em;
-    margin-top: 5px;
-    margin-bottom: 20px;
-}
-
-div.news-item p {
-    font-size: 0.75em;
-    line-height: 1.6em;
-}
-
-div.news-item p a.enlace {
-    text-decoration: none;
-    color: #2269B5;
-}
-
-div.news-item p a.enlace:hover {
-    text-decoration: underline;
-}
-
-div#asociate-banner {
-    background: #2269B5;
-    color: #FFF;
-    height: 130px;
-    text-align: right;
-}
-
-div.asociate-banner-esq {
-    float: left;
-    width: 320px;
-}
-
-div.asociate-banner-esq h2 {
-    margin: 27px 0 5px 0;
-}
-
-div.asociate-banner-esq h4 {
-    margin: 5px 0;
-    font-weight: lighter;
-}
-
-div.asociate-banner-cen {
-    float: left;
-    background: url('/images/asociatebanner.png') no-repeat 65px 0;
-    position: relative;
-    top: -12px;
-    display: block;
-    width: 266px;
-    height: 142px;
-}
-
-div.asociate-banner-dre {
-    float: right;
-}
-
-div.asociate-banner-dre a {
-    margin-right: 105px;
-    margin-top: 41px;
-    display: block;
-    color: #2263b2;
-    padding: 10px 55px;
-    background: -moz-linear-gradient(top, #FFF 0%, #FFF 50%, #D6D6D6);
-    background: -webkit-gradient(linear, left top, left bottom, from(#FFF), color-stop(0.50, #FFF), to(#D6D6D6));
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-    border: 0 solid #2263B2;
-    -moz-box-shadow:
-        0 1px 3px rgba(000,000,000,0.5),
-        inset 0 0 3px rgba(255,255,255,1);
-    -webkit-box-shadow:
-        0 1px 3px rgba(000,000,000,0.5),
-        inset 0 0 3px rgba(255,255,255,1);
-    box-shadow:
-        0 1px 3px rgba(000,000,000,0.5),
-        inset 0 0 3px rgba(255,255,255,1);
-    text-shadow:
-        0 -1px 0 rgba(000,000,000,0.1),
-        0 1px 0 rgba(255,255,255,1);
-    text-decoration: none;
-    font-size: 1.5em;
-}
-
-div.asociate-banner-dre a:hover {
-    opacity: 0.75;
-}
 
 div.calendar form div.calendar-header input.arrow {
     float: left;
@@ -571,8 +449,9 @@ div.calendar table.calendari tbody tr td a {
 }
 
 footer {
+    font-family: 'GothamRnd', arial, helvetica;
     color: #000;
-    font-size: 1em;
+    font-size: 0.85em;
     padding-bottom: 40px;
     /*float: left;*/
 }

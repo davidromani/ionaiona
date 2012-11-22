@@ -7,14 +7,14 @@
     {{ knp_menu_render('PageBundle:Builder:armari_' ~ app.request.locale ~ '_Menu') }}
 {% endblock %}
 {% block principal %}
-    <div class="constrictor clearfix">
-        
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="337">
-                <image x="75" y="0" width="813" height="337" preserveAspectRatio="none" xlink:href="/images/wardrobe.png"></image>
-                <image x="300" y="220" width="100" height="114" preserveAspectRatio="xMinYMin" xlink:href="/images/balena.png" class="pointer"></image>
-                <image x="618" y="120" width="100" height="210" preserveAspectRatio="xMinYMin" xlink:href="/images/girafa.png" class="pointer"></image>
-            </svg>
-       
+    <div class="constrictor clearfix">  
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="337">
+            <image x="75" y="0" width="813" height="337" preserveAspectRatio="none" xlink:href="/images/wardrobe.png"></image>
+            <a xlink:href="{{ path( 'balena_' ~ app.request.locale ) }}"><image x="300" y="220" width="100" height="114" preserveAspectRatio="xMinYMin" xlink:href="/images/balena.png"></image></a>
+            <a xlink:href="{{ path( 'girafa_' ~ app.request.locale ) }}"><image x="618" y="120" width="100" height="210" preserveAspectRatio="xMinYMin" xlink:href="/images/girafa.png"></image></a>
+            <image x="485" y="58" width="70" height="70" preserveAspectRatio="xMinYMin" xlink:href="/images/ocell.png"></image>
+            <image x="250" y="5" width="460" height="150" preserveAspectRatio="xMinYMin" xlink:href="/images/banderoles.png"></image>
+        </svg>
     </div>
 {% endblock %}
 {% block peuidiomes %}
