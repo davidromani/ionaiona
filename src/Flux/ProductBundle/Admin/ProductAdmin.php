@@ -11,9 +11,9 @@ use Sonata\AdminBundle\Show\ShowMapper;
 use Sonata\PageBundle\Model\PageInterface;
 use Knp\Menu\ItemInterface as MenuItemInterface;
 
-use Flux\ProductBundle\Entity\Category;
+use Flux\ProductBundle\Entity\Product;
 
-class CategoryAdmin extends Admin
+class ProductAdmin extends Admin
 {
     protected function configureListFields(ListMapper $listMapper)
     {
@@ -22,7 +22,8 @@ class CategoryAdmin extends Admin
         $listMapper
             //->addIdentifier('id')
             ->addIdentifier('code', null, array('label' => $translator->trans('page.code')))
-            ->addIdentifier('title', null, array('label' => $translator->trans('page.title')))
+            ->addIdentifier('name', null, array('label' => $translator->trans('page.name')))
+            ->add('category', null, array('label' => $translator->trans('page.category')))
             ->add('image1', null, array('label' => $translator->trans('page.image1')))
             ->add('position', null, array('label' => $translator->trans('page.position')))
             ->add('is_active', 'boolean', array('label' => $translator->trans('page.active')))
@@ -48,7 +49,7 @@ class CategoryAdmin extends Admin
         $locale = $this->getRequest()->get('locale');
         $translator = new Translator($locale);
         $datagridMapper
-            ->add('title', null, array('label' => $translator->trans('page.title')))
+            ->add('name', null, array('label' => $translator->trans('page.name')))
             ->add('isActive', null, array('label' => $translator->trans('page.active')))
         ;
     }
@@ -58,22 +59,27 @@ class CategoryAdmin extends Admin
         $locale = $this->getRequest()->get('locale');
         $translator = new Translator($locale);
         $formMapper
+            ->add('category','sonata_type_model', array('label' => $translator->trans('page.category')), array())
             ->add('code', 'text', array('label' => $translator->trans('page.code')))
-            ->add('title', 'text', array('label' => $translator->trans('page.title')))
-            //->add('subtitle', 'text', array('label' => $translator->trans('page.subtitle'), 'required' => false))
-            //->add('summary', 'text', array('label' => $translator->trans('page.summary'), 'required' => false))
+            ->add('name', 'text', array('label' => $translator->trans('page.name')))
+            ->add('birth', 'text', array('label' => $translator->trans('page.birth'), 'required' => false))
+            ->add('dimensions', 'text', array('label' => $translator->trans('page.dimensions'), 'required' => false))
+            ->add('specifications', 'text', array('label' => $translator->trans('page.specifications'), 'required' => false))
             ->add('translations', 'a2lix_translations', array(
                 'label' => ' ',
                 'fields' => array(
-                    'title' => array('label' => $translator->trans('page.title')),
-                    //'subtitle' => array('label' => $translator->trans('page.subtitle')),
-                    //'summary' => array('label' => $translator->trans('page.summary')),
+                    'name' => array('label' => $translator->trans('page.name')),
+                    'birth' => array('label' => $translator->trans('page.birth')),
+                    'dimensions' => array('label' => $translator->trans('page.dimensions')),
+                    'specifications' => array('label' => $translator->trans('page.specifications')),
             )))
             ->add('image1File', 'file', array('label' => $translator->trans('page.upload.image1'), 'required' => false))
             ->add('image1', null, array('label' => $translator->trans('page.image1'), 'required' => false, 'read_only' => true))
             // TRY TO PRINT PREVIEW ->add('img1', 'sonata_type_model', array('property_path' => false, 'label' => 'im1', 'required' => false, 'template' => 'FluxPageBundle:Default:img.html.twig'))
-            //->add('image2File', 'file', array('label' => $translator->trans('page.upload.image2'), 'required' => false))
-            //->add('image2', null, array('label' => $translator->trans('page.image2'), 'required' => false, 'read_only' => true))
+            ->add('image2File', 'file', array('label' => $translator->trans('page.upload.image2'), 'required' => false))
+            ->add('image2', null, array('label' => $translator->trans('page.image2'), 'required' => false, 'read_only' => true))
+            ->add('weight', 'integer', array('label' => $translator->trans('page.weight'), 'required' => false))
+            ->add('fabrics', 'integer', array('label' => $translator->trans('page.fabrics'), 'required' => false))
             ->add('position', 'integer', array('label' => $translator->trans('page.position')))
             ->add('is_active', 'checkbox', array('label' => $translator->trans('page.active'), 'required' => false))
             // help messages like this

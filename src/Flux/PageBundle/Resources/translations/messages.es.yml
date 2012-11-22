@@ -1,5 +1,6 @@
 page.code: Código
 page.title: Título
+page.name: Nombre
 page.subtitle: Subtítulo
 page.summary: Resumen
 page.text1: Texto 1
@@ -13,3 +14,9 @@ page.upload.image3: Subir imagen 3
 page.position: Posición
 page.active: Activa
 page.actions: Acciones
+page.category: Categoria
+page.dimensions: Dimensiones
+page.specifications: Especificaciones
+page.birth: Nacimiento
+page.weight: Peso
+page.fabrics: Cantidad de telas

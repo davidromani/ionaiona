@@ -242,3 +242,8 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, group: Productes, label: Categoria }
         arguments: [null, Flux\ProductBundle\Entity\Category, FluxProductBundle:CategoryAdmin]
+    flux.admin.product:
+        class: Flux\ProductBundle\Admin\ProductAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Productes, label: Producte }
+        arguments: [null, Flux\ProductBundle\Entity\Product, FluxProductBundle:ProductAdmin]

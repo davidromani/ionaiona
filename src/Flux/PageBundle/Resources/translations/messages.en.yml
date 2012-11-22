@@ -1,5 +1,6 @@
 page.code: Code
 page.title: Title
+page.name: Name
 page.subtitle: Subtitle
 page.summary: Summary
 page.text1: Text 1
@@ -13,3 +14,9 @@ page.upload.image3: Upload image 3
 page.position: Position
 page.active: Active
 page.actions: Actions
+page.category: Category
+page.dimensions: Dimensions
+page.specifications: Specifications
+page.birth: Birth
+page.weight: Weight
+page.fabrics: Fabrics amount
