@@ -8,8 +8,15 @@
 {% endblock %}
 {% block principal %}
     <div class="constrictor clearfix">
-        <div class="ad-inicio-principal">
-            <p>{% trans %}enconstruccio{% endtrans %}</p>
+        <div class="conjunt-items-armari">
+            <p>
+                {% for item in items %}
+                    <a href=""><img src="{{ vich_uploader_asset(item, 'image1File') | imagine_filter('imatge260') }}" alt="" title=""></a>
+                    {% if loop.index % 3 == 0 %}
+                        </p><p>
+                    {% endif %}
+                {% endfor %}
+            </p>
         </div>
     </div>
 {% endblock %}

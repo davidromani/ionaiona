@@ -39,6 +39,7 @@ class Categories implements FixtureInterface
         $product->setWeight(200);
         $product->setFabrics(4);
         $product->setSpecifications('100% cotó orgànic');
+        $product->setImage1('whale1.png');
         $product->setPosition(1);
         $product->setIsActive(true);
         $translation = new ProductTranslation();
@@ -62,6 +63,7 @@ class Categories implements FixtureInterface
         $product->setWeight(200);
         $product->setFabrics(4);
         $product->setSpecifications('100% cotó orgànic');
+        $product->setImage1('whale2.png');
         $product->setPosition(2);
         $product->setIsActive(true);
         $translation = new ProductTranslation();
@@ -85,6 +87,7 @@ class Categories implements FixtureInterface
         $product->setWeight(200);
         $product->setFabrics(4);
         $product->setSpecifications('100% cotó orgànic');
+        $product->setImage1('whale3.png');
         $product->setPosition(3);
         $product->setIsActive(true);
         $translation = new ProductTranslation();
@@ -108,6 +111,7 @@ class Categories implements FixtureInterface
         $product->setWeight(200);
         $product->setFabrics(4);
         $product->setSpecifications('100% cotó orgànic');
+        $product->setImage1('whale2.png');
         $product->setPosition(4);
         $product->setIsActive(true);
         $translation = new ProductTranslation();
@@ -148,6 +152,7 @@ class Categories implements FixtureInterface
         $product->setWeight(200);
         $product->setFabrics(4);
         $product->setSpecifications('100% cotó orgànic');
+        $product->setImage1('jiraffe1.png');
         $product->setPosition(1);
         $product->setIsActive(true);
         $translation = new ProductTranslation();

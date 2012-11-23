@@ -48,8 +48,10 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '001-004'));
+        $balenes = $em->getRepository('FluxProductBundle:Product')->getSortedActiveItemsFromCategoryCode('00A-00A');
         return $this->render('PageBundle:Armari:categoria.armari.html.twig', array(
             'pagina' => $pagina,
+            'items' => $balenes,
         ));
     }
 
@@ -57,8 +59,10 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '001-004'));
+        $jirafes = $em->getRepository('FluxProductBundle:Product')->getSortedActiveItemsFromCategoryCode('00A-00B');
         return $this->render('PageBundle:Armari:categoria.armari.html.twig', array(
             'pagina' => $pagina,
+            'items' => $jirafes,
         ));
     }
 
@@ -66,8 +70,10 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '001-004'));
+        $micos = $em->getRepository('FluxProductBundle:Product')->getSortedActiveItemsFromCategoryCode('00A-00C');
         return $this->render('PageBundle:Armari:categoria.armari.html.twig', array(
             'pagina' => $pagina,
+            'items' => $micos,
         ));
     }
 

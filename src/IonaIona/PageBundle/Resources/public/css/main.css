@@ -187,27 +187,32 @@ div#principal div.constrictor.clearfix div.bloc:last-child {
     margin-right: 0;
 }
 
-
-
-
-
-
-
-div.ad-inicio-principal a:hover {
-    text-decoration: underline;
+div#principal div.constrictor.clearfix div.conjunt-items-armari p a {
+    margin: 0 76px 70px 0;
 }
 
-div.ad-inicio-principal img {
+div#principal div.constrictor.clearfix div.conjunt-items-armari p a:last-child {
+    margin-right: 0;
+}
+
+div#principal div.constrictor.clearfix div.conjunt-items-armari p a img {
     transition: opacity 0.35s;
     -moz-transition: opacity 0.35s;
     -webkit-transition: opacity 0.35s;
     -o-transition: opacity 0.35s;
 }
 
-div.ad-inicio-principal img:hover {
+div#principal div.constrictor.clearfix div.conjunt-items-armari p a img {
     cursor: pointer;
     opacity: 0.75;
 }
+
+
+
+
+
+
+
 
 div.ad-servicios-principal {
     width: 260px;
