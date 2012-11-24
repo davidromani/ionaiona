@@ -55,6 +55,33 @@ class DefaultController extends Controller
         ));
     }
 
+    public function balenesAction($nom, $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $balena = $em->getRepository('FluxProductBundle:Product')->find($id);
+        $needsPrev = true;
+        $needsNext = true;
+        try {
+            $prev = $em->getRepository('FluxProductBundle:Product')->getPrevActiveItemFromPositionAndCategory($balena->getPosition(), $balena->getCategory());
+        } catch (\Doctrine\Orm\NoResultException $e) {
+            $prev = null;
+            $needsPrev = false;
+        }
+        try {
+            $next = $em->getRepository('FluxProductBundle:Product')->getNextActiveItemFromPositionAndCategory($balena->getPosition(), $balena->getCategory());
+        } catch (\Doctrine\Orm\NoResultException $e) {
+            $next = null;
+            $needsNext = false;
+        }
+        return $this->render('PageBundle:Armari:detalle.armari.html.twig', array(
+            'prev' => $prev,
+            'needsPrev' => $needsPrev,
+            'item' => $balena,
+            'next' => $next,
+            'needsNext' => $needsNext,
+        ));
+    }
+
     public function girafaAction()
     {
         $em = $this->getDoctrine()->getManager();
@@ -81,8 +108,10 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '001-004'));
+        $gossos = $em->getRepository('FluxProductBundle:Product')->getSortedActiveItemsFromCategoryCode('00A-00D');
         return $this->render('PageBundle:Armari:categoria.armari.html.twig', array(
             'pagina' => $pagina,
+            'items' => $gossos,
         ));
     }
 }

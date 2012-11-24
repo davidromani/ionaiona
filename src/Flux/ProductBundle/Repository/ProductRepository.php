@@ -21,4 +21,22 @@ class ProductRepository extends EntityRepository
             ->getResult();
     }
 
+    public function getPrevActiveItemFromPositionAndCategory($pos, $category)
+    {
+        return $this->getEntityManager()
+            ->createQuery('SELECT p FROM FluxProductBundle:Product p WHERE p.isActive = 1 AND p.position = :pos AND p.category = :category')
+            ->setParameter('pos', $pos - 1)
+            ->setParameter('category', $category)
+            ->getSingleResult();
+    }
+
+    public function getNextActiveItemFromPositionAndCategory($pos, $category)
+    {
+        return $this->getEntityManager()
+            ->createQuery('SELECT p FROM FluxProductBundle:Product p WHERE p.isActive = 1 AND p.position = :pos AND p.category = :category')
+            ->setParameter('pos', $pos + 1)
+            ->setParameter('category', $category)
+            ->getSingleResult();
+    }
+
 }

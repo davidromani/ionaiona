@@ -6,6 +6,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Flux\Utilities\Utils;
 
 /**
  * @ORM\Entity
@@ -492,6 +493,15 @@ class Product
      */
     public function getCategory() {
         return $this->category;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string 
+     */
+    public function getSlug() {
+        return Utils::getSlug($this->name);
     }
 
     /**

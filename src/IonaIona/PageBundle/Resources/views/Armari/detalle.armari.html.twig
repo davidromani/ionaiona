@@ -1,0 +1,37 @@
+{% extends 'PageBundle:Global:layout.html.twig' %}
+{% block titulo %}
+    {% trans %}menu.armari{% endtrans %}
+{% endblock %}
+{% block menu %}
+    {{ knp_menu_render('PageBundle:Builder:main_' ~ app.request.locale ~ '_Menu') }}
+    {{ knp_menu_render('PageBundle:Builder:armari_' ~ app.request.locale ~ '_Menu') }}
+{% endblock %}
+{% block principal %}
+    <div class="constrictor clearfix">
+        <div class="detall-item-armari-esquerra">
+            <h2>{% trans %}detall.armari.cartilla{% endtrans %}</h2>
+            <p>
+                {% trans %}detall.armari.nom{% endtrans %} <strong>{{ item.name }}</strong><br>
+                {% trans %}detall.armari.naixement{% endtrans %} <strong>{{ item.birth }}</strong><br>
+                {% trans %}detall.armari.dimensions{% endtrans %} <strong>{{ item.dimensions }}</strong><br>
+                {% trans %}detall.armari.pes{% endtrans %} <strong>{{ item.weight }}</strong><br>
+                {% trans %}detall.armari.quantitat{% endtrans %} <strong>{{ item.fabrics }}</strong><br>
+                {% trans %}detall.armari.especificacions{% endtrans %} <strong>{{ item.specifications }}</strong><br>    
+            </p>
+        </div>
+        <div class="detall-item-armari-dreta">
+            {% if needsPrev == true %}
+                <a href="{{ path( 'balenes_' ~ app.request.locale, { nom : prev.slug, id : prev.id }) }}"><</a>
+            {% endif %}
+            <img src="{{ vich_uploader_asset(item, 'image1File') | imagine_filter('imatge600') }}" alt="" title="">
+            {% if needsNext == true %}
+                <a href="{{ path( 'balenes_' ~ app.request.locale, { nom : next.slug, id : next.id }) }}">></a>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
+{% block peuidiomes %}
+    <a href="{{ path('armari_ca', {'_locale' : 'ca'}) }}">{% trans %}idiomas.catalan{% endtrans %}</a><br>
+    <a href="{{ path('armari_es', {'_locale' : 'es'}) }}">{% trans %}idiomas.espanol{% endtrans %}</a><br>
+    <a href="{{ path('armari_en', {'_locale' : 'en'}) }}">{% trans %}idiomas.ingles{% endtrans %}</a>
+{% endblock %} 

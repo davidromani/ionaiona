@@ -207,186 +207,20 @@ div#principal div.constrictor.clearfix div.conjunt-items-armari p a img {
     opacity: 0.75;
 }
 
-
-
-
-
-
-
-
-div.ad-servicios-principal {
-    width: 260px;
-    margin-left: 80px;
+div#principal div.constrictor.clearfix div.detall-item-armari-esquerra {
     float: left;
-    overflow: hidden;
+    width: 30%;
 }
 
-div.ad-servicios-principal img {
-    transition: opacity 0.35s;
-    -moz-transition: opacity 0.35s;
-    -webkit-transition: opacity 0.35s;
-    -o-transition: opacity 0.35s;
+div#principal div.constrictor.clearfix div.detall-item-armari-dreta {
+    float: right;
 }
 
-/*div.ad-servicios-principal img:hover {
-    cursor: pointer;
-    opacity: 0.75;
-}*/
-
-div.ad-servicios-principal:first-child {
-    margin-left: 0;
-}
-
-div.ad-servicios-principal ul {
-    padding-left: 20px;
-    color: #2269B5;
-    margin: 10px 0 60px 0;
-}
-
-div.ad-servicios-principal ul li {
-    margin-bottom: 8px;
-    font-size: 0.95em;
-}
-
-div.filablocks {
-    float: left;
-}
-
-div.ad-servicios-principal span {
-    display: block;
-    margin: 20px 0 60px 0;
-    font-size: 0.85em;
-    line-height: 1.6em;
-}
-
-div.ad-servicios-principal a {
-    text-decoration: none;
-    color: #2269B5;
-}
-
-div.ad-servicios-principal a:hover {
-    text-decoration: underline;
-}
-
-
-
-div.contacto h3 {
-    color: #2262B2;
-    font-size: 1.5em;
-    border-bottom: solid 1px #2262B2;
-    margin: 0 0 20px 0;
-}
-
-div.contacto div.contacto-datos-esquerra {
-    float: left;
-    width: 220px;  
-    margin: 0 40px 40px 0;
-}
-
-div.contacto div.contacto-datos-esquerra a {
-    color: #2262B2;
+div#principal div.constrictor.clearfix div.detall-item-armari-dreta a {
     text-decoration: none;
 }
 
-div.contacto div.contacto-datos-esquerra a:hover {
-    text-decoration: underline;
-}
 
-div.contacto div.contacto-datos-dreta {
-    float: left;
-    width: 670px;
-    height: 400px;
-    margin: 0 0 80px 8px;
-    overflow: hidden;
-}
-
-div.contacto div.contacto-formulario-menu {
-    float: left;
-    width: 100%;
-}
-
-div.contacto div.contacto-formulario-menu ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-div.contacto div.contacto-formulario-menu ul li {
-    float: left;
-    margin-right: 40px;
-    width: 200px;
-    padding: 5px;
-    background: #EAF1F8;
-    text-align: center;
-    border-radius: 5px 5px 0 0;
-}
-
-div.contacto div.contacto-formulario-menu ul li.resalte {
-    background: #CBDCED;
-}
-
-div.contacto div.contacto-formulario-menu ul li a {
-    text-decoration: none;
-    color: #2262B2;
-}
-
-div.contacto div.contacto-formulario-menu ul li a:hover {
-    text-decoration: underline;
-}
-
-div.contacto-formulario form div {
-    margin-bottom: 20px;
-}
-
-div.contacto-formulario form div label {
-    width: 150px;
-    margin-right: 10px;
-    float: left;
-    color: #2262B2;
-    padding: 5px 0;
-}
-
-div.contacto-formulario form div input {
-    border: none;
-    border-radius: 3px;
-    padding: 5px;
-    width: 250px;
-}
-
-div.contacto-formulario form div input:focus {
-    border: none;
-}
-
-div.contacto-formulario form div textarea {
-    border: none;
-    border-radius: 3px;
-    resize: none;
-    width: 250px;
-    height: 66px;
-    padding: 5px;
-}
-
-div.contacto-formulario form div textarea:focus {
-    border: none;
-}
-
-div.contacto-formulario form input[type="submit"].boton {
-    background: #0054A8;
-    padding: 5px 30px;
-    border: none;
-    border-radius: 3px;
-    color: #FFF;
-    box-shadow: 1px 1px 5px #AAA;
-}
-
-div.contacto-formulario form input[type="submit"].boton:hover {
-    opacity: 0.75;
-}
-
-div#form-banner {
-    padding: 40px 0;
-    background: #CBDCED;
-}
 
 
 

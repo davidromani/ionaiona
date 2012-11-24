@@ -88,6 +88,24 @@ balena_en:
     requirements:
         _locale:    en
 
+balenes_ca:
+    pattern:        /{_locale}/l-armari/balena/{nom}/{id}
+    defaults:       { _controller: PageBundle:Default:balenes }
+    requirements:
+        _locale:    ca
+
+balenes_es:
+    pattern:        /{_locale}/armario/ballena/{nom}/{id}
+    defaults:       { _controller: PageBundle:Default:balenes }
+    requirements:
+        _locale:    es
+
+balenes_en:
+    pattern:        /{_locale}/wardrobe/whale/{nom}/{id}
+    defaults:       { _controller: PageBundle:Default:balenes }
+    requirements:
+        _locale:    en
+
 girafa_ca:
     pattern:        /{_locale}/l-armari/girafa
     defaults:       { _controller: PageBundle:Default:girafa }
