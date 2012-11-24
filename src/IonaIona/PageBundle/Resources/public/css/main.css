@@ -112,7 +112,7 @@ div.constrictor {
  * HEADER
  */
 header {
-    font-family: 'Montserrat', 'GothamRnd', arial, helvetica;
+    font-family: 'GothamRnd', arial, helvetica;
     margin-bottom: 40px;
     height: 210px;
     position: fixed;
@@ -163,7 +163,7 @@ header div.constrictor.clearfix ul li.current a {
  * MAIN
  */
 div#principal {
-    font-family: 'Montserrat', 'GothamRnd', arial, helvetica;
+    font-family: 'GothamRnd', arial, helvetica;
     margin-top: 250px;
 }
 
@@ -188,7 +188,7 @@ div#principal div.constrictor.clearfix div.bloc:last-child {
 }
 
 div#principal div.constrictor.clearfix div.conjunt-items-armari p a {
-    margin: 0 76px 70px 0;
+    margin: 0 75px 70px 0;
 }
 
 div#principal div.constrictor.clearfix div.conjunt-items-armari p a:last-child {
@@ -288,7 +288,7 @@ div.calendar table.calendari tbody tr td a {
 }
 
 footer {
-    font-family: 'Montserrat', 'GothamRnd', arial, helvetica;
+    font-family: 'GothamRnd', arial, helvetica;
     color: #000;
     font-size: 0.85em;
     padding-bottom: 40px;
