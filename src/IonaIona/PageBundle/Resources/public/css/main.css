@@ -226,68 +226,7 @@ div#principal div.constrictor.clearfix div.detall-item-armari-dreta a {
 }
 
 
-div.calendar form div.calendar-header input.arrow {
-    float: left;
-    background: none;
-    color: #FFF;
-    border: none;
-}
 
-div.calendar div.calendar-header {
-    background: #2269B5;
-    padding: 5px;
-    margin-bottom: 10px;
-    color: #FFF;
-    text-align: center;
-    height: 25px;
-}
-
-div.calendar div.calendar-header-title {
-    text-align: center;
-    width: 260px;
-    color: #FFF;
-    top: -38px;
-    position: relative;
-    height: 0;
-}
-
-div.calendar table.calendari {
-    width: 260px;
-    text-align: right;
-    color: #2269B5;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
-div.calendar table.calendari thead tr {
-    text-align: center;
-}
-
-div.calendar table.calendari thead tr th {
-    padding: 4px 8px;
-}
-
-div.calendar table.calendari tbody tr td {
-    padding: 4px 8px;
-}
-
-div.calendar table.calendari tbody tr td.weekend {
-    color: #EF0024;
-}
-
-div.calendar table.calendari tbody tr td.hit {
-    background: #2269B5;
-}
-
-div.calendar table.calendari tbody tr td.weekend.hit {
-    background: #EF0024;
-}
-
-div.calendar table.calendari tbody tr td a {
-    color: white;
-
-    text-decoration: none;
-}
 
 footer {
     font-family: 'GothamRnd', arial, helvetica;
