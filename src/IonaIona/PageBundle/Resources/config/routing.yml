@@ -19,19 +19,19 @@ home_en:
 ############################ ARMARI
 armari_ca:
     pattern:        /{_locale}/l-armari/
-    defaults:       { _controller: PageBundle:Armari:armari }
+    defaults:       { _controller: PageBundle:Default:armari }
     requirements:
         _locale:    ca
 
 armari_es:
     pattern:        /{_locale}/armario/
-    defaults:       { _controller: PageBundle:Armari:armari }
+    defaults:       { _controller: PageBundle:Default:armari }
     requirements:
         _locale:    es
 
 armari_en:
     pattern:        /{_locale}/wardrobe/
-    defaults:       { _controller: PageBundle:Armari:armari }
+    defaults:       { _controller: PageBundle:Default:armari }
     requirements:
         _locale:    en
 

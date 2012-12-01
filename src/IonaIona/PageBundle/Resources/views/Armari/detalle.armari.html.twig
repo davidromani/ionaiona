@@ -21,11 +21,11 @@
         </div>
         <div class="detall-item-armari-dreta">
             {% if needsPrev == true %}
-                <a href="{{ path( 'balenes_' ~ app.request.locale, { nom : prev.slug, id : prev.id }) }}"><</a>
+                <a href="{{ path( 'armari_balenes_' ~ app.request.locale, { nom : prev.slug, id : prev.id }) }}"><</a>
             {% endif %}
             <img src="{{ vich_uploader_asset(item, 'image1File') | imagine_filter('imatge600') }}" alt="" title="">
             {% if needsNext == true %}
-                <a href="{{ path( 'balenes_' ~ app.request.locale, { nom : next.slug, id : next.id }) }}">></a>
+                <a href="{{ path( 'armari_balenes_' ~ app.request.locale, { nom : next.slug, id : next.id }) }}">></a>
             {% endif %}
         </div>
     </div>
