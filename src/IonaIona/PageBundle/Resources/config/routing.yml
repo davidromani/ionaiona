@@ -53,24 +53,6 @@ armari_balena_en:
     requirements:
         _locale:    en
 
-armari_balenes_ca:
-    pattern:        /{_locale}/l-armari/balena/{nom}/{id}
-    defaults:       { _controller: PageBundle:Armari:balenes }
-    requirements:
-        _locale:    ca
-
-armari_balenes_es:
-    pattern:        /{_locale}/armario/ballena/{nom}/{id}
-    defaults:       { _controller: PageBundle:Armari:balenes }
-    requirements:
-        _locale:    es
-
-armari_balenes_en:
-    pattern:        /{_locale}/wardrobe/whale/{nom}/{id}
-    defaults:       { _controller: PageBundle:Armari:balenes }
-    requirements:
-        _locale:    en
-
 armari_girafa_ca:
     pattern:        /{_locale}/l-armari/girafa
     defaults:       { _controller: PageBundle:Armari:girafa }
@@ -158,6 +140,24 @@ armari_banderola_es:
 armari_banderola_en:
     pattern:        /{_locale}/wardrobe/flag
     defaults:       { _controller: PageBundle:Armari:banderola }
+    requirements:
+        _locale:    en
+
+armari_items_ca:
+    pattern:        /{_locale}/l-armari/{nom}/{id}
+    defaults:       { _controller: PageBundle:Armari:items }
+    requirements:
+        _locale:    ca
+
+armari_items_es:
+    pattern:        /{_locale}/armario/{nom}/{id}
+    defaults:       { _controller: PageBundle:Armari:items }
+    requirements:
+        _locale:    es
+
+armari_items_en:
+    pattern:        /{_locale}/wardrobe/{nom}/{id}
+    defaults:       { _controller: PageBundle:Armari:items }
     requirements:
         _locale:    en
 

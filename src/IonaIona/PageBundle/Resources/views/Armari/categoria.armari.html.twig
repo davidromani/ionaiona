@@ -10,12 +10,16 @@
     <div class="constrictor clearfix">
         <div class="conjunt-items-armari">
             <p>
-                {% for item in items %}
-                    <a href="{{ path( 'armari_balenes_' ~ app.request.locale, { nom : item.slug, id : item.id }) }}"><img src="{{ vich_uploader_asset(item, 'image1File') | imagine_filter('imatge260') }}" alt="" title=""></a>
-                    {% if loop.index % 3 == 0 %}
-                        </p><p>
-                    {% endif %}
-                {% endfor %}
+                {% if items | length > 0 %}
+                    {% for item in items %}
+                        <a href="{{ path( 'armari_items_' ~ app.request.locale, { nom : item.slug, id : item.id }) }}"><img src="{{ vich_uploader_asset(item, 'image1File') | imagine_filter('imatge260') }}" alt="" title=""></a>
+                        {% if loop.index % 3 == 0 %}
+                            </p><p>
+                        {% endif %}
+                    {% endfor %}
+                {% else %}
+                    {% trans %}noitems{% endtrans %}
+                {% endif %}
             </p>
         </div>
     </div>

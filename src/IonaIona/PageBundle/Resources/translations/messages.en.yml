@@ -14,4 +14,12 @@ idiomas.espanol: spanish
 idiomas.ingles: english
 puntosdeventa: selling points
 puntosdeventa.amposta: amposta
-enconstruccio: en construcción
+enconstruccio: under construction
+detall.armari.cartilla: The card
+detall.armari.nom: Name
+detall.armari.naixement: Born at
+detall.armari.dimensions: Dimensions
+detall.armari.pes: Weight
+detall.armari.quantitat: Amount of fabrics
+detall.armari.especificacions: Specifications
+noitems: Sorry, there are no currently available in this category doll.

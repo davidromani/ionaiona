@@ -8,18 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 class ArmariController extends Controller
 {
-    public function balenaAction()
-    {
-        $em = $this->getDoctrine()->getManager();
-        $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '001-004'));
-        $balenes = $em->getRepository('FluxProductBundle:Product')->getSortedActiveItemsFromCategoryCode('00A-00A');
-        return $this->render('PageBundle:Armari:categoria.armari.html.twig', array(
-            'pagina' => $pagina,
-            'items' => $balenes,
-        ));
-    }
-
-    public function balenesAction($nom, $id)
+    public function itemsAction($nom, $id)
     {
         $em = $this->getDoctrine()->getManager();
         $balena = $em->getRepository('FluxProductBundle:Product')->find($id);
@@ -43,6 +32,17 @@ class ArmariController extends Controller
             'item' => $balena,
             'next' => $next,
             'needsNext' => $needsNext,
+        ));
+    }
+
+    public function balenaAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '001-004'));
+        $balenes = $em->getRepository('FluxProductBundle:Product')->getSortedActiveItemsFromCategoryCode('00A-00A');
+        return $this->render('PageBundle:Armari:categoria.armari.html.twig', array(
+            'pagina' => $pagina,
+            'items' => $balenes,
         ));
     }
 

@@ -40,6 +40,8 @@ class Categories implements FixtureInterface
         $product->setFabrics(4);
         $product->setSpecifications('100% cotó orgànic');
         $product->setImage1('whale1.png');
+        $product->setPrice(35);
+        $product->setStock(1);
         $product->setPosition(1);
         $product->setIsActive(true);
         $translation = new ProductTranslation();
@@ -64,6 +66,8 @@ class Categories implements FixtureInterface
         $product->setFabrics(4);
         $product->setSpecifications('100% cotó orgànic');
         $product->setImage1('whale2.png');
+        $product->setPrice(36);
+        $product->setStock(1);
         $product->setPosition(2);
         $product->setIsActive(true);
         $translation = new ProductTranslation();
@@ -88,6 +92,8 @@ class Categories implements FixtureInterface
         $product->setFabrics(4);
         $product->setSpecifications('100% cotó orgànic');
         $product->setImage1('whale3.png');
+        $product->setPrice(37);
+        $product->setStock(1);
         $product->setPosition(3);
         $product->setIsActive(true);
         $translation = new ProductTranslation();
@@ -112,6 +118,8 @@ class Categories implements FixtureInterface
         $product->setFabrics(4);
         $product->setSpecifications('100% cotó orgànic');
         $product->setImage1('whale2.png');
+        $product->setPrice(38);
+        $product->setStock(0);
         $product->setPosition(4);
         $product->setIsActive(true);
         $translation = new ProductTranslation();
@@ -153,6 +161,8 @@ class Categories implements FixtureInterface
         $product->setFabrics(4);
         $product->setSpecifications('100% cotó orgànic');
         $product->setImage1('jiraffe1.png');
+        $product->setPrice(39);
+        $product->setStock(1);
         $product->setPosition(1);
         $product->setIsActive(true);
         $translation = new ProductTranslation();
@@ -169,18 +179,69 @@ class Categories implements FixtureInterface
 
         $category = new Category();
         $category->setCode('00A-00C');
-        $category->setTitle('mico');
+        $category->setTitle('gos salsitxa');
         $category->setPosition(3);
         $category->setIsActive(true);
         $translation = new CategoryTranslation();
         $translation->setLocale('es');
         $translation->setField('title');
-        $translation->setContent('mono');
+        $translation->setContent('perro salchicha');
         $category->addTranslation($translation);
         $translation = new CategoryTranslation();
         $translation->setLocale('en');
         $translation->setField('title');
-        $translation->setContent('monkey');
+        $translation->setContent('dachshund');
+        $category->addTranslation($translation);
+        $manager->persist($category);
+
+        $category = new Category();
+        $category->setCode('00A-00D');
+        $category->setTitle('pitet');
+        $category->setPosition(4);
+        $category->setIsActive(true);
+        $translation = new CategoryTranslation();
+        $translation->setLocale('es');
+        $translation->setField('title');
+        $translation->setContent('babero');
+        $category->addTranslation($translation);
+        $translation = new CategoryTranslation();
+        $translation->setLocale('en');
+        $translation->setField('title');
+        $translation->setContent('bib');
+        $category->addTranslation($translation);
+        $manager->persist($category);
+
+        $category = new Category();
+        $category->setCode('00A-00E');
+        $category->setTitle('ocell');
+        $category->setPosition(5);
+        $category->setIsActive(true);
+        $translation = new CategoryTranslation();
+        $translation->setLocale('es');
+        $translation->setField('title');
+        $translation->setContent('pájaro');
+        $category->addTranslation($translation);
+        $translation = new CategoryTranslation();
+        $translation->setLocale('en');
+        $translation->setField('title');
+        $translation->setContent('bird');
+        $category->addTranslation($translation);
+        $manager->persist($category);
+
+        $category = new Category();
+        $category->setCode('00A-00F');
+        $category->setTitle('banderola');
+        $category->setPosition(6);
+        $category->setIsActive(true);
+        $translation = new CategoryTranslation();
+        $translation->setLocale('es');
+        $translation->setField('title');
+        $translation->setContent('banderola');
+        $category->addTranslation($translation);
+        $translation = new CategoryTranslation();
+        $translation->setLocale('en');
+        $translation->setField('title');
+        $translation->setContent('flag');
         $category->addTranslation($translation);
         $manager->persist($category);
 
