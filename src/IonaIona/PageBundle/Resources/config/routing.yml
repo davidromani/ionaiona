@@ -16,24 +16,116 @@ home_en:
     requirements:
         _locale:    en
 
+############################ ARMARI
 armari_ca:
     pattern:        /{_locale}/l-armari/
-    defaults:       { _controller: PageBundle:Default:armari }
+    defaults:       { _controller: PageBundle:Armari:armari }
     requirements:
         _locale:    ca
 
 armari_es:
     pattern:        /{_locale}/armario/
-    defaults:       { _controller: PageBundle:Default:armari }
+    defaults:       { _controller: PageBundle:Armari:armari }
     requirements:
         _locale:    es
 
 armari_en:
     pattern:        /{_locale}/wardrobe/
-    defaults:       { _controller: PageBundle:Default:armari }
+    defaults:       { _controller: PageBundle:Armari:armari }
     requirements:
         _locale:    en
 
+armari_balena_ca:
+    pattern:        /{_locale}/l-armari/balena
+    defaults:       { _controller: PageBundle:Armari:balena }
+    requirements:
+        _locale:    ca
+
+armari_balena_es:
+    pattern:        /{_locale}/armario/ballena
+    defaults:       { _controller: PageBundle:Armari:balena }
+    requirements:
+        _locale:    es
+
+armari_balena_en:
+    pattern:        /{_locale}/wardrobe/whale
+    defaults:       { _controller: PageBundle:Armari:balena }
+    requirements:
+        _locale:    en
+
+armari_balenes_ca:
+    pattern:        /{_locale}/l-armari/balena/{nom}/{id}
+    defaults:       { _controller: PageBundle:Armari:balenes }
+    requirements:
+        _locale:    ca
+
+armari_balenes_es:
+    pattern:        /{_locale}/armario/ballena/{nom}/{id}
+    defaults:       { _controller: PageBundle:Armari:balenes }
+    requirements:
+        _locale:    es
+
+armari_balenes_en:
+    pattern:        /{_locale}/wardrobe/whale/{nom}/{id}
+    defaults:       { _controller: PageBundle:Armari:balenes }
+    requirements:
+        _locale:    en
+
+armari_girafa_ca:
+    pattern:        /{_locale}/l-armari/girafa
+    defaults:       { _controller: PageBundle:Armari:girafa }
+    requirements:
+        _locale:    ca
+
+armari_girafa_es:
+    pattern:        /{_locale}/armario/jirafa
+    defaults:       { _controller: PageBundle:Armari:girafa }
+    requirements:
+        _locale:    es
+
+armari_girafa_en:
+    pattern:        /{_locale}/wardrobe/giraffe
+    defaults:       { _controller: PageBundle:Armari:girafa }
+    requirements:
+        _locale:    en
+
+armari_mico_ca:
+    pattern:        /{_locale}/l-armari/mico
+    defaults:       { _controller: PageBundle:Armari:mico }
+    requirements:
+        _locale:    ca
+
+armari_mico_es:
+    pattern:        /{_locale}/armario/mono
+    defaults:       { _controller: PageBundle:Armari:mico }
+    requirements:
+        _locale:    es
+
+armari_mico_en:
+    pattern:        /{_locale}/wardrobe/monkey
+    defaults:       { _controller: PageBundle:Armari:girafa }
+    requirements:
+        _locale:    en
+
+armari_gossalsitxa_ca:
+    pattern:        /{_locale}/l-armari/gos-salsitxa
+    defaults:       { _controller: PageBundle:Armari:gossalsitxa }
+    requirements:
+        _locale:    ca
+
+armari_gossalsitxa_es:
+    pattern:        /{_locale}/armario/perro-salchicha
+    defaults:       { _controller: PageBundle:Armari:gossalsitxa }
+    requirements:
+        _locale:    es
+
+armari_gossalsitxa_en:
+    pattern:        /{_locale}/wardrobe/dachshund
+    defaults:       { _controller: PageBundle:Armari:gossalsitxa }
+    requirements:
+        _locale:    en
+
+############################ TALLER
 taller_ca:
     pattern:        /{_locale}/taller/
     defaults:       { _controller: PageBundle:Default:taller }
@@ -52,6 +144,61 @@ taller_en:
     requirements:
         _locale:    en
 
+taller_historia_ca:
+    pattern:        /{_locale}/taller/historia
+    defaults:       { _controller: PageBundle:Taller:historia }
+    requirements:
+        _locale:    ca
+
+taller_historia_es:
+    pattern:        /{_locale}/taller/historia
+    defaults:       { _controller: PageBundle:Taller:historia }
+    requirements:
+        _locale:    es
+
+taller_historia_en:
+    pattern:        /{_locale}/workshop/history
+    defaults:       { _controller: PageBundle:Taller:historia }
+    requirements:
+        _locale:    en
+
+taller_artesania_ca:
+    pattern:        /{_locale}/taller/artesania
+    defaults:       { _controller: PageBundle:Taller:artesania }
+    requirements:
+        _locale:    ca
+
+taller_artesania_es:
+    pattern:        /{_locale}/taller/artesania
+    defaults:       { _controller: PageBundle:Taller:artesania }
+    requirements:
+        _locale:    es
+
+taller_artesania_en:
+    pattern:        /{_locale}/workshop/crafts
+    defaults:       { _controller: PageBundle:Taller:artesania }
+    requirements:
+        _locale:    en
+
+taller_proximitat_ca:
+    pattern:        /{_locale}/taller/proximitat
+    defaults:       { _controller: PageBundle:Taller:proximitat }
+    requirements:
+        _locale:    ca
+
+taller_proximitat_es:
+    pattern:        /{_locale}/taller/proximidad
+    defaults:       { _controller: PageBundle:Taller:proximitat }
+    requirements:
+        _locale:    es
+
+taller_proximitat_en:
+    pattern:        /{_locale}/workshop/proximity
+    defaults:       { _controller: PageBundle:Taller:proximitat }
+    requirements:
+        _locale:    en
+
+############################ DIARI
 diari_ca:
     pattern:        /{_locale}/el-diari/
     defaults:       { _controller: PageBundle:Default:diari }
@@ -67,96 +214,6 @@ diari_es:
 diari_en:
     pattern:        /{_locale}/newspaper/
     defaults:       { _controller: PageBundle:Default:diari }
-    requirements:
-        _locale:    en
-
-balena_ca:
-    pattern:        /{_locale}/l-armari/balena
-    defaults:       { _controller: PageBundle:Default:balena }
-    requirements:
-        _locale:    ca
-
-balena_es:
-    pattern:        /{_locale}/armario/ballena
-    defaults:       { _controller: PageBundle:Default:balena }
-    requirements:
-        _locale:    es
-
-balena_en:
-    pattern:        /{_locale}/wardrobe/whale
-    defaults:       { _controller: PageBundle:Default:balena }
-    requirements:
-        _locale:    en
-
-balenes_ca:
-    pattern:        /{_locale}/l-armari/balena/{nom}/{id}
-    defaults:       { _controller: PageBundle:Default:balenes }
-    requirements:
-        _locale:    ca
-
-balenes_es:
-    pattern:        /{_locale}/armario/ballena/{nom}/{id}
-    defaults:       { _controller: PageBundle:Default:balenes }
-    requirements:
-        _locale:    es
-
-balenes_en:
-    pattern:        /{_locale}/wardrobe/whale/{nom}/{id}
-    defaults:       { _controller: PageBundle:Default:balenes }
-    requirements:
-        _locale:    en
-
-girafa_ca:
-    pattern:        /{_locale}/l-armari/girafa
-    defaults:       { _controller: PageBundle:Default:girafa }
-    requirements:
-        _locale:    ca
-
-girafa_es:
-    pattern:        /{_locale}/armario/jirafa
-    defaults:       { _controller: PageBundle:Default:girafa }
-    requirements:
-        _locale:    es
-
-girafa_en:
-    pattern:        /{_locale}/wardrobe/giraffe
-    defaults:       { _controller: PageBundle:Default:girafa }
-    requirements:
-        _locale:    en
-
-mico_ca:
-    pattern:        /{_locale}/l-armari/mico
-    defaults:       { _controller: PageBundle:Default:mico }
-    requirements:
-        _locale:    ca
-
-mico_es:
-    pattern:        /{_locale}/armario/mono
-    defaults:       { _controller: PageBundle:Default:mico }
-    requirements:
-        _locale:    es
-
-mico_en:
-    pattern:        /{_locale}/wardrobe/monkey
-    defaults:       { _controller: PageBundle:Default:girafa }
-    requirements:
-        _locale:    en
-
-gossalsitxa_ca:
-    pattern:        /{_locale}/l-armari/gos-salsitxa
-    defaults:       { _controller: PageBundle:Default:gossalsitxa }
-    requirements:
-        _locale:    ca
-
-gossalsitxa_es:
-    pattern:        /{_locale}/armario/perro-salchicha
-    defaults:       { _controller: PageBundle:Default:gossalsitxa }
-    requirements:
-        _locale:    es
-
-gossalsitxa_en:
-    pattern:        /{_locale}/wardrobe/dachshund
-    defaults:       { _controller: PageBundle:Default:gossalsitxa }
     requirements:
         _locale:    en
 

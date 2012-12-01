@@ -95,6 +95,16 @@ class Product
     protected $image2;
 
     /**
+     * @ORM\Column(type="float")
+     */
+    protected $price;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    protected $stock;
+
+    /**
      * @ORM\Column(type="smallint")
      */
     protected $position;
@@ -429,6 +439,48 @@ class Product
     }
 
     /**
+     * Set price
+     *
+     * @param float $price
+     * @return Product
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+    }
+
+    /**
+     * Get price
+     *
+     * @return float
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * Set stock
+     *
+     * @param integer $stock
+     * @return Product
+     */
+    public function setStock($stock)
+    {
+        $this->stock = $stock;
+    }
+
+    /**
+     * Get stock
+     *
+     * @return integer
+     */
+    public function getStock()
+    {
+        return $this->stock;
+    }
+
+    /**
      * Set position
      *
      * @param integer $position
@@ -477,7 +529,7 @@ class Product
     /**
      * Set category
      *
-     * @param Flux\ProductBundle\Entity\Category $category
+     * @param Category $category
      * @return Category
      */
     public function setCategory($category = null) {

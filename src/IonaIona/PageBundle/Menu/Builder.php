@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class Builder extends ContainerAware
 {
-    public function mainMenu(FactoryInterface $factory, array $options)
+    /*public function mainMenu(FactoryInterface $factory, array $options)
     {
         $menu = $factory->createItem('root');
         $menu->setCurrentUri($this->container->get('request')->getRequestUri());
@@ -15,7 +15,7 @@ class Builder extends ContainerAware
         /*$armari->addChild('balena', array('route' => 'balena_ca'));
         $armari->addChild('girafa', array('route' => 'girafa_ca'));
         $armari->addChild('mico', array('route' => 'mico_ca'));
-        $armari->addChild('gos salsitxa', array('route' => 'gossalsitxa_ca'));*/
+        $armari->addChild('gos salsitxa', array('route' => 'gossalsitxa_ca')); /
         $menu->addChild('taller', array('route' => 'taller_ca'));
         $menu->addChild('diari', array('route' => 'diari_ca'));
 
@@ -32,7 +32,7 @@ class Builder extends ContainerAware
         $menu->addChild('gos salsitxa', array('route' => 'gossalsitxa_ca'));
 
         return $menu;
-    }
+    }*/
 
     public function main_ca_Menu(FactoryInterface $factory, array $options)
     {
@@ -41,7 +41,6 @@ class Builder extends ContainerAware
         $menu->addChild('l\'armari', array('route' => 'armari_ca'));
         $menu->addChild('el taller', array('route' => 'taller_ca'));
         $menu->addChild('el diari', array('route' => 'diari_ca'));
-
         return $menu;
     }
 
@@ -49,11 +48,20 @@ class Builder extends ContainerAware
     {
         $menu = $factory->createItem('armari');
         $menu->setCurrentUri($this->container->get('request')->getRequestUri());
-        $menu->addChild('balena', array('route' => 'balena_ca'));
-        $menu->addChild('girafa', array('route' => 'girafa_ca'));
-        $menu->addChild('mico', array('route' => 'mico_ca'));
-        $menu->addChild('gos salsitxa', array('route' => 'gossalsitxa_ca'));
+        $menu->addChild('balena', array('route' => 'armari_balena_ca'));
+        $menu->addChild('girafa', array('route' => 'armari_girafa_ca'));
+        $menu->addChild('mico', array('route' => 'armari_mico_ca'));
+        $menu->addChild('gos salsitxa', array('route' => 'armari_gossalsitxa_ca'));
+        return $menu;
+    }
 
+    public function taller_ca_Menu(FactoryInterface $factory, array $options)
+    {
+        $menu = $factory->createItem('taller');
+        $menu->setCurrentUri($this->container->get('request')->getRequestUri());
+        $menu->addChild('història', array('route' => 'taller_historia_ca'));
+        $menu->addChild('artesania', array('route' => 'taller_artesania_ca'));
+        $menu->addChild('proximitat', array('route' => 'taller_proximitat_ca'));
         return $menu;
     }
 
@@ -64,7 +72,6 @@ class Builder extends ContainerAware
         $menu->addChild('armario', array('route' => 'armari_es'));
         $menu->addChild('taller', array('route' => 'taller_es'));
         $menu->addChild('diario', array('route' => 'diari_es'));
-
         return $menu;
     }
 
@@ -72,11 +79,20 @@ class Builder extends ContainerAware
     {
         $menu = $factory->createItem('armari');
         $menu->setCurrentUri($this->container->get('request')->getRequestUri());
-        $menu->addChild('ballena', array('route' => 'balena_es'));
-        $menu->addChild('jirafa', array('route' => 'girafa_es'));
-        $menu->addChild('mono', array('route' => 'mico_es'));
-        $menu->addChild('perro salchicha', array('route' => 'gossalsitxa_es'));
+        $menu->addChild('ballena', array('route' => 'armari_balena_es'));
+        $menu->addChild('jirafa', array('route' => 'armari_girafa_es'));
+        $menu->addChild('mono', array('route' => 'armari_mico_es'));
+        $menu->addChild('perro salchicha', array('route' => 'armari_gossalsitxa_es'));
+        return $menu;
+    }
 
+    public function taller_es_Menu(FactoryInterface $factory, array $options)
+    {
+        $menu = $factory->createItem('taller');
+        $menu->setCurrentUri($this->container->get('request')->getRequestUri());
+        $menu->addChild('historia', array('route' => 'taller_historia_es'));
+        $menu->addChild('artesania', array('route' => 'taller_artesania_es'));
+        $menu->addChild('proximidad', array('route' => 'taller_proximitat_es'));
         return $menu;
     }
 
@@ -87,7 +103,6 @@ class Builder extends ContainerAware
         $menu->addChild('wardrobe', array('route' => 'armari_en'));
         $menu->addChild('workshop', array('route' => 'taller_en'));
         $menu->addChild('newspaper', array('route' => 'diari_en'));
-
         return $menu;
     }
 
@@ -95,11 +110,21 @@ class Builder extends ContainerAware
     {
         $menu = $factory->createItem('armari');
         $menu->setCurrentUri($this->container->get('request')->getRequestUri());
-        $menu->addChild('whale', array('route' => 'balena_en'));
-        $menu->addChild('jiraffe', array('route' => 'girafa_en'));
-        $menu->addChild('monkey', array('route' => 'mico_en'));
-        $menu->addChild('dachshund', array('route' => 'gossalsitxa_en'));
-
+        $menu->addChild('whale', array('route' => 'armari_balena_en'));
+        $menu->addChild('jiraffe', array('route' => 'armari_girafa_en'));
+        $menu->addChild('monkey', array('route' => 'armari_mico_en'));
+        $menu->addChild('dachshund', array('route' => 'armari_gossalsitxa_en'));
         return $menu;
     }
+
+    public function taller_en_Menu(FactoryInterface $factory, array $options)
+    {
+        $menu = $factory->createItem('taller');
+        $menu->setCurrentUri($this->container->get('request')->getRequestUri());
+        $menu->addChild('history', array('route' => 'taller_historia_en'));
+        $menu->addChild('crafts', array('route' => 'taller_artesania_en'));
+        $menu->addChild('proximity', array('route' => 'taller_proximitat_en'));
+        return $menu;
+    }
+
 }
