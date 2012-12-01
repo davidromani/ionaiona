@@ -17,9 +17,11 @@ puntosdeventa.amposta: amposta
 enconstruccio: en construcción
 detall.armari.cartilla: La cartilla
 detall.armari.nom: Nombre
+detall.armari.referencia: Referencia
 detall.armari.naixement: Nacida en
 detall.armari.dimensions: Dimensiones
 detall.armari.pes: Peso
 detall.armari.quantitat: Cantidad de telas
 detall.armari.especificacions: Especificaciones
+detall.armari.preu: Precio
 noitems: Lo sentimos, actualmente no hay ningún muñeco disponible en esta categoría.

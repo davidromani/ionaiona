@@ -8,18 +8,20 @@
 {% endblock %}
 {% block principal %}
     <div class="constrictor clearfix">
-        <div class="detall-item-armari-esquerra">
+        <div class="detall-item-armari-dreta">
             <h2>{% trans %}detall.armari.cartilla{% endtrans %}</h2>
             <p>
-                {% trans %}detall.armari.nom{% endtrans %} <strong>{{ item.name }}</strong><br>
-                {% trans %}detall.armari.naixement{% endtrans %} <strong>{{ item.birth }}</strong><br>
-                {% trans %}detall.armari.dimensions{% endtrans %} <strong>{{ item.dimensions }}</strong><br>
-                {% trans %}detall.armari.pes{% endtrans %} <strong>{{ item.weight }}</strong><br>
-                {% trans %}detall.armari.quantitat{% endtrans %} <strong>{{ item.fabrics }}</strong><br>
-                {% trans %}detall.armari.especificacions{% endtrans %} <strong>{{ item.specifications }}</strong><br>    
+                {% trans %}detall.armari.nom{% endtrans %} <strong style="color:#D84359">{{ item.name }}</strong><br>
+                {% trans %}detall.armari.referencia{% endtrans %} <strong style="color:#D84359">{{ item.code }}</strong><br>
+                {% trans %}detall.armari.naixement{% endtrans %} <strong style="color:#D84359">{{ item.birth }}</strong><br>
+                {% trans %}detall.armari.dimensions{% endtrans %} <strong style="color:#D84359">{{ item.dimensions }}</strong><br>
+                {% trans %}detall.armari.pes{% endtrans %} <strong style="color:#D84359">{{ item.weight }} gr.</strong><br>
+                {% trans %}detall.armari.quantitat{% endtrans %} <strong style="color:#D84359">{{ item.fabrics }}</strong><br>
+                {% trans %}detall.armari.especificacions{% endtrans %} <strong style="color:#D84359">{{ item.specifications }}</strong><br>
+                {% trans %}detall.armari.preu{% endtrans %} <strong style="color:#D84359">{{ item.price }} €</strong><br>
             </p>
         </div>
-        <div class="detall-item-armari-dreta">
+        <div class="detall-item-armari-esquerra">
             {% if needsPrev == true %}
                 <a href="{{ path( 'armari_items_' ~ app.request.locale, { nom : prev.slug, id : prev.id }) }}"><</a>
             {% endif %}

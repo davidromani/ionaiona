@@ -165,7 +165,7 @@ header div.constrictor.clearfix ul li a {
 }
 
 header div.constrictor.clearfix ul li.current a {
-    color: #F00;
+    color: #D84359;
 }
 
 /**
@@ -232,25 +232,33 @@ div#principal div.constrictor.clearfix div.conjunt-items-armari div.file-block d
 
 div#principal div.constrictor.clearfix div.detall-item-armari-esquerra {
     float: left;
-    width: 30%;
+    width: 50%;
+}
+
+div#principal div.constrictor.clearfix div.detall-item-armari-esquerra a {
+    text-decoration: none;
+    color: #000;
+}
+
+div#principal div.constrictor.clearfix div.detall-item-armari-esquerra a:hover {
+    color: #D84359;
 }
 
 div#principal div.constrictor.clearfix div.detall-item-armari-dreta {
     float: right;
+    width: 40%;
 }
 
-div#principal div.constrictor.clearfix div.detall-item-armari-dreta a {
-    text-decoration: none;
+div#principal div.constrictor.clearfix div.detall-item-armari-dreta h2 {
+    border-top: 2px #000 dotted;
+    border-bottom: 2px #000 dotted;
+    padding: 5px 0;
+    margin-top: 0;
 }
 
-div#principal div.constrictor.clearfix div.taller-panel-izquierdo {
-    float: left;
-    width: 60%;
-}
-
-div#principal div.constrictor.clearfix div.taller-panel-derecho {
-    float: right;
-    width: 30%;
+div#principal div.constrictor.clearfix div.detall-item-armari-dreta p {
+    font-size: 0.95em;
+    line-height: 1.9em;
 }
 
 footer {

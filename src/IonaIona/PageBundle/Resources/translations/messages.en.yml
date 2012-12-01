@@ -17,9 +17,11 @@ puntosdeventa.amposta: amposta
 enconstruccio: under construction
 detall.armari.cartilla: The card
 detall.armari.nom: Name
+detall.armari.referencia: Reference
 detall.armari.naixement: Born at
 detall.armari.dimensions: Dimensions
 detall.armari.pes: Weight
 detall.armari.quantitat: Amount of fabrics
 detall.armari.especificacions: Specifications
+detall.armari.preu: Price
 noitems: Sorry, there are no currently available in this category doll.
