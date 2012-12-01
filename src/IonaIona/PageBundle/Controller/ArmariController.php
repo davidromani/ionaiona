@@ -57,25 +57,47 @@ class ArmariController extends Controller
         ));
     }
 
-    public function micoAction()
+    public function gossalsitxaAction()
     {
         $em = $this->getDoctrine()->getManager();
         $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '001-004'));
-        $micos = $em->getRepository('FluxProductBundle:Product')->getSortedActiveItemsFromCategoryCode('00A-00C');
+        $gossos = $em->getRepository('FluxProductBundle:Product')->getSortedActiveItemsFromCategoryCode('00A-00C');
+        return $this->render('PageBundle:Armari:categoria.armari.html.twig', array(
+            'pagina' => $pagina,
+            'items' => $gossos,
+        ));
+    }
+
+    public function pitetAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '001-004'));
+        $micos = $em->getRepository('FluxProductBundle:Product')->getSortedActiveItemsFromCategoryCode('00A-00D');
         return $this->render('PageBundle:Armari:categoria.armari.html.twig', array(
             'pagina' => $pagina,
             'items' => $micos,
         ));
     }
 
-    public function gossalsitxaAction()
+    public function ocellAction()
     {
         $em = $this->getDoctrine()->getManager();
         $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '001-004'));
-        $gossos = $em->getRepository('FluxProductBundle:Product')->getSortedActiveItemsFromCategoryCode('00A-00D');
+        $micos = $em->getRepository('FluxProductBundle:Product')->getSortedActiveItemsFromCategoryCode('00A-00E');
         return $this->render('PageBundle:Armari:categoria.armari.html.twig', array(
             'pagina' => $pagina,
-            'items' => $gossos,
+            'items' => $micos,
+        ));
+    }
+
+    public function banderolaAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '001-004'));
+        $micos = $em->getRepository('FluxProductBundle:Product')->getSortedActiveItemsFromCategoryCode('00A-00F');
+        return $this->render('PageBundle:Armari:categoria.armari.html.twig', array(
+            'pagina' => $pagina,
+            'items' => $micos,
         ));
     }
 }

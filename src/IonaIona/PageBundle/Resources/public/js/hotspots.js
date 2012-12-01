@@ -61,6 +61,8 @@ function fireIntervalFinal(param) {
         $(document).trigger('app/setMovement', APP.girafa);
     } else if (param.id == 'ninot_ocell') {
         $(document).trigger('app/setMovement', APP.ocell);
+    } else if (param.id == 'ninot_pitet') {
+        $(document).trigger('app/setMovement', APP.pitet);
     }
 }
 /**

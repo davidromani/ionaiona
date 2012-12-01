@@ -89,24 +89,6 @@ armari_girafa_en:
     requirements:
         _locale:    en
 
-armari_mico_ca:
-    pattern:        /{_locale}/l-armari/mico
-    defaults:       { _controller: PageBundle:Armari:mico }
-    requirements:
-        _locale:    ca
-
-armari_mico_es:
-    pattern:        /{_locale}/armario/mono
-    defaults:       { _controller: PageBundle:Armari:mico }
-    requirements:
-        _locale:    es
-
-armari_mico_en:
-    pattern:        /{_locale}/wardrobe/monkey
-    defaults:       { _controller: PageBundle:Armari:girafa }
-    requirements:
-        _locale:    en
-
 armari_gossalsitxa_ca:
     pattern:        /{_locale}/l-armari/gos-salsitxa
     defaults:       { _controller: PageBundle:Armari:gossalsitxa }
@@ -122,6 +104,60 @@ armari_gossalsitxa_es:
 armari_gossalsitxa_en:
     pattern:        /{_locale}/wardrobe/dachshund
     defaults:       { _controller: PageBundle:Armari:gossalsitxa }
+    requirements:
+        _locale:    en
+
+armari_pitet_ca:
+    pattern:        /{_locale}/l-armari/pitet
+    defaults:       { _controller: PageBundle:Armari:pitet }
+    requirements:
+        _locale:    ca
+
+armari_pitet_es:
+    pattern:        /{_locale}/armario/babero
+    defaults:       { _controller: PageBundle:Armari:pitet }
+    requirements:
+        _locale:    es
+
+armari_pitet_en:
+    pattern:        /{_locale}/wardrobe/bib
+    defaults:       { _controller: PageBundle:Armari:pitet }
+    requirements:
+        _locale:    en
+
+armari_ocell_ca:
+    pattern:        /{_locale}/l-armari/ocell
+    defaults:       { _controller: PageBundle:Armari:ocell }
+    requirements:
+        _locale:    ca
+
+armari_ocell_es:
+    pattern:        /{_locale}/armario/pajaro
+    defaults:       { _controller: PageBundle:Armari:ocell }
+    requirements:
+        _locale:    es
+
+armari_ocell_en:
+    pattern:        /{_locale}/wardrobe/bird
+    defaults:       { _controller: PageBundle:Armari:ocell }
+    requirements:
+        _locale:    en
+
+armari_banderola_ca:
+    pattern:        /{_locale}/l-armari/banderola
+    defaults:       { _controller: PageBundle:Armari:banderola }
+    requirements:
+        _locale:    ca
+
+armari_banderola_es:
+    pattern:        /{_locale}/armario/banderola
+    defaults:       { _controller: PageBundle:Armari:banderola }
+    requirements:
+        _locale:    es
+
+armari_banderola_en:
+    pattern:        /{_locale}/wardrobe/flag
+    defaults:       { _controller: PageBundle:Armari:banderola }
     requirements:
         _locale:    en
 

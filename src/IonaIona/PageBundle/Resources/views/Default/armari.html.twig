@@ -30,9 +30,18 @@
                 width : parseInt(n.attr('width')),
                 height : parseInt(n.attr('height'))
             };
+            var n = $('#ninot_pitet');
+            APP.pitet = {
+                id : 'ninot_pitet',
+                x : parseInt(n.attr('x')),
+                y : parseInt(n.attr('y')),
+                width : parseInt(n.attr('width')),
+                height : parseInt(n.attr('height'))
+            };
             $(document).trigger('app/setMovement', APP.balena);
             $(document).trigger('app/setMovement', APP.girafa);
             $(document).trigger('app/setMovement', APP.ocell);
+            $(document).trigger('app/setMovement', APP.pitet);
         });
     </script>
 {% endblock %}
@@ -44,10 +53,11 @@
     <div class="constrictor clearfix">  
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="337">
             <image x="75" y="0" width="813" height="337" preserveAspectRatio="none" xlink:href="/images/wardrobe.png"></image>
-            <a xlink:href="{{ path( 'armari_balena_' ~ app.request.locale ) }}"><image id="ninot_balena" x="300" y="220" width="100" height="114" preserveAspectRatio="xMinYMin" xlink:href="/images/balena.png"></image></a>
+            <a xlink:href="{{ path( 'armari_balena_' ~ app.request.locale ) }}"><image id="ninot_balena" x="485" y="195" width="120" height="134" preserveAspectRatio="xMinYMin" xlink:href="/images/balena.png"></image></a>
             <a xlink:href="{{ path( 'armari_girafa_' ~ app.request.locale ) }}"><image id="ninot_girafa" x="618" y="120" width="100" height="210" preserveAspectRatio="xMinYMin" xlink:href="/images/girafa.png"></image></a>
-            <image id="ninot_ocell" x="485" y="58" width="70" height="70" preserveAspectRatio="xMinYMin" xlink:href="/images/ocell.png"></image>
-            <image x="250" y="5" width="460" height="150" preserveAspectRatio="xMinYMin" xlink:href="/images/banderoles.png"></image>
+            <a xlink:href="{{ path( 'armari_ocell_' ~ app.request.locale ) }}"><image id="ninot_ocell" x="460" y="165" width="70" height="70" preserveAspectRatio="xMinYMin" xlink:href="/images/ocell.png"></image></a>
+            <a xlink:href="{{ path( 'armari_pitet_' ~ app.request.locale ) }}"><image id="ninot_pitet" x="260" y="250" width="120" height="70" preserveAspectRatio="xMinYMin" xlink:href="/images/pitet_nena.png"></image></a>
+            <a xlink:href="{{ path( 'armari_banderola_' ~ app.request.locale ) }}"><image x="250" y="5" width="460" height="150" preserveAspectRatio="xMinYMin" xlink:href="/images/banderoles.png"></image></a>
         </svg>
     </div>
 {% endblock %}
