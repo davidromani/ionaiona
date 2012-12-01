@@ -9,18 +9,25 @@
 {% block principal %}
     <div class="constrictor clearfix">
         <div class="conjunt-items-armari">
-            <p>
+            <div class="file-block">
                 {% if items | length > 0 %}
                     {% for item in items %}
-                        <a href="{{ path( 'armari_items_' ~ app.request.locale, { nom : item.slug, id : item.id }) }}"><img src="{{ vich_uploader_asset(item, 'image1File') | imagine_filter('imatge260') }}" alt="" title=""></a>
-                        {% if loop.index % 3 == 0 %}
-                            </p><p>
-                        {% endif %}
+                        <div class="one-item-block">
+                            <a href="{{ path( 'armari_items_' ~ app.request.locale, { nom : item.slug, id : item.id }) }}"><img src="{{ vich_uploader_asset(item, 'image1File') | imagine_filter('imatge260') }}" alt="" title=""></a>
+                            <div class="one-item-foot">
+                                <div style="float:left;width:75%">{{ item.name }}</div>
+                                <div style="float:right;width:20%;text-align:right;">{{ item.price }} €</div>
+                            </div>
+                        </div>
+                    {% if loop.index % 3 == 0 %}
+                        </div>
+                        <div class="file-block">
+                    {% endif %}
                     {% endfor %}
+            </div>
                 {% else %}
                     {% trans %}noitems{% endtrans %}
                 {% endif %}
-            </p>
         </div>
     </div>
 {% endblock %}

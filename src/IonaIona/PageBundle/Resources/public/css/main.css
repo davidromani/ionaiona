@@ -146,6 +146,10 @@ header div.constrictor.clearfix ul {
     width: 100%;
 }
 
+header div.constrictor.clearfix ul:last-child {
+    border-bottom: dotted 2px #000;
+}
+
 header div.constrictor.clearfix ul li {
     float: left;
     font-size: 1.25em;
@@ -192,24 +196,38 @@ div#principal div.constrictor.clearfix div.bloc:last-child {
     margin-right: 0;
 }
 
-div#principal div.constrictor.clearfix div.conjunt-items-armari p a {
-    margin: 0 75px 70px 0;
+div#principal div.constrictor.clearfix div.conjunt-items-armari div.file-block {
+    float: left;
+    margin-bottom: 30px;
 }
 
-div#principal div.constrictor.clearfix div.conjunt-items-armari p a:last-child {
+div#principal div.constrictor.clearfix div.conjunt-items-armari div.file-block div.one-item-block {
+    float: left;
+    margin-right: 80px;
+}
+
+div#principal div.constrictor.clearfix div.conjunt-items-armari div.file-block div.one-item-block:last-child {
     margin-right: 0;
 }
 
-div#principal div.constrictor.clearfix div.conjunt-items-armari p a img {
+div#principal div.constrictor.clearfix div.conjunt-items-armari div.file-block div.one-item-block a img {
     transition: opacity 0.35s;
     -moz-transition: opacity 0.35s;
     -webkit-transition: opacity 0.35s;
     -o-transition: opacity 0.35s;
 }
 
-div#principal div.constrictor.clearfix div.conjunt-items-armari p a img {
+div#principal div.constrictor.clearfix div.conjunt-items-armari div.file-block div.one-item-block a img:hover {
     cursor: pointer;
     opacity: 0.75;
+}
+
+div#principal div.constrictor.clearfix div.conjunt-items-armari div.file-block div.one-item-block div.one-item-foot {
+    padding: 5px 0;
+    margin-top: 15px;
+    border-bottom: 2px black dotted;
+    border-top: 2px black dotted;
+    height: 20px;
 }
 
 div#principal div.constrictor.clearfix div.detall-item-armari-esquerra {
@@ -234,7 +252,6 @@ div#principal div.constrictor.clearfix div.taller-panel-derecho {
     float: right;
     width: 30%;
 }
-
 
 footer {
     font-family: 'GothamRnd', arial, helvetica;
