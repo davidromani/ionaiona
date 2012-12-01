@@ -8,8 +8,12 @@
 {% endblock %}
 {% block principal %}
     <div class="constrictor clearfix">
-        <div class="ad-inicio-principal">
-            <p>{% trans %}enconstruccio{% endtrans %}</p>
+        <div class="taller-panel-izquierdo">
+            <h2>{{ pagina.title }}</h2>
+            <p>{{ pagina.text1 | raw }}</p>
+        </div>
+        <div class="taller-panel-derecho">
+            <img src="{{ vich_uploader_asset(pagina, 'image1File') | imagine_filter('imatge260') }}" alt="" title="">
         </div>
     </div>
 {% endblock %}

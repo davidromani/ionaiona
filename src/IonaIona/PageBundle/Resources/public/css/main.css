@@ -225,7 +225,15 @@ div#principal div.constrictor.clearfix div.detall-item-armari-dreta a {
     text-decoration: none;
 }
 
+div#principal div.constrictor.clearfix div.taller-panel-izquierdo {
+    float: left;
+    width: 60%;
+}
 
+div#principal div.constrictor.clearfix div.taller-panel-derecho {
+    float: right;
+    width: 30%;
+}
 
 
 footer {
