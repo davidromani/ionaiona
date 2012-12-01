@@ -1,0 +1,23 @@
+{% extends 'PageBundle:Global:layout.html.twig' %}
+{% block titulo %}
+    {% trans %}menu.armari{% endtrans %}
+{% endblock %}
+{% block menu %}
+    {{ knp_menu_render('PageBundle:Builder:main_' ~ app.request.locale ~ '_Menu') }}
+    {{ knp_menu_render('PageBundle:Builder:armari_' ~ app.request.locale ~ '_Menu') }}
+{% endblock %}
+{% block principal %}
+    <div class="constrictor clearfix">
+        <div class="detall-item-armari-dreta">
+            botiga: comprar item id={{ item.id }}
+        </div>
+        <div class="detall-item-armari-esquerra">
+            step1
+        </div>
+    </div>
+{% endblock %}
+{% block peuidiomes %}
+    <a href="{{ path('armari_ca', {'_locale' : 'ca'}) }}">{% trans %}idiomas.catalan{% endtrans %}</a><br>
+    <a href="{{ path('armari_es', {'_locale' : 'es'}) }}">{% trans %}idiomas.espanol{% endtrans %}</a><br>
+    <a href="{{ path('armari_en', {'_locale' : 'en'}) }}">{% trans %}idiomas.ingles{% endtrans %}</a>
+{% endblock %} 

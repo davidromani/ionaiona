@@ -8,12 +8,12 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 class BotigaController extends Controller
 {
-    public function step1Action()
+    public function step1Action($id)
     {
         $em = $this->getDoctrine()->getManager();
-        $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '002-001'));
-        return $this->render('PageBundle:Taller:historia.html.twig', array(
-            'pagina' => $pagina,
+        $newItem = $em->getRepository('FluxProductBundle:Product')->find($id);
+        return $this->render('PageBundle:Botiga:step1.html.twig', array(
+            'item' => $newItem,
         ));
     }
 

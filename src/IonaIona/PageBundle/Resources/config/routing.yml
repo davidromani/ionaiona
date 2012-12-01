@@ -255,19 +255,19 @@ diari_en:
 
 ############################ BOTIGA
 buy_step_1_ca:
-    pattern:        /{_locale}/botiga/
+    pattern:        /{_locale}/botiga/{id}
     defaults:       { _controller: PageBundle:Botiga:step1 }
     requirements:
         _locale:    ca
 
 buy_step_1_es:
-    pattern:        /{_locale}/tienda/
+    pattern:        /{_locale}/tienda/{id}
     defaults:       { _controller: PageBundle:Botiga:step1 }
     requirements:
         _locale:    es
 
 buy_step_1_en:
-    pattern:        /{_locale}/shop/
+    pattern:        /{_locale}/shop/{id}
     defaults:       { _controller: PageBundle:Botiga:step1 }
     requirements:
         _locale:    en

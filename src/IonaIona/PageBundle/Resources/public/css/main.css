@@ -261,6 +261,23 @@ div#principal div.constrictor.clearfix div.detall-item-armari-dreta p {
     line-height: 1.9em;
 }
 
+div#principal div.constrictor.clearfix div.taller-panel-izquierdo {
+    float: left;
+    width: 60%;
+}
+
+div#principal div.constrictor.clearfix div.taller-panel-izquierdo h2 {
+    margin-top: 0;
+    padding: 5px 0;
+    border-top: dotted 2px #000;
+    border-bottom: dotted 2px #000;
+}
+
+div#principal div.constrictor.clearfix div.taller-panel-derecho {
+    float: right;
+    width: 30%;
+}
+
 footer {
     font-family: 'GothamRnd', arial, helvetica;
     color: #000;
