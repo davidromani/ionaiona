@@ -253,6 +253,25 @@ diari_en:
     requirements:
         _locale:    en
 
+############################ BOTIGA
+buy_step_1_ca:
+    pattern:        /{_locale}/botiga/
+    defaults:       { _controller: PageBundle:Botiga:step1 }
+    requirements:
+        _locale:    ca
+
+buy_step_1_es:
+    pattern:        /{_locale}/tienda/
+    defaults:       { _controller: PageBundle:Botiga:step1 }
+    requirements:
+        _locale:    es
+
+buy_step_1_en:
+    pattern:        /{_locale}/shop/
+    defaults:       { _controller: PageBundle:Botiga:step1 }
+    requirements:
+        _locale:    en
+
 inicial:
     pattern:        /
     defaults:       { _controller: PageBundle:Default:home }

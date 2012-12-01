@@ -290,9 +290,30 @@ footer div.constrictor.clearfix div a:hover {
     text-decoration: underline;
 }
 
+a.call-to-action {
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px #AAA;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    transition: opacity 0.35s;
+    -moz-transition: opacity 0.35s;
+    -webkit-transition: opacity 0.35s;
+    -o-transition: opacity 0.35s;
+    text-align: center;
+}
 
+a.call-to-action.red {
+    background: #D84359;
+}
 
+a.call-to-action:hover {
 
+    box-shadow: 1px 1px 1px #AAA;
+    margin: 2px 0 0 2px;
+}
 
 
 

@@ -20,6 +20,7 @@
                 {% trans %}detall.armari.especificacions{% endtrans %} <strong style="color:#D84359">{{ item.specifications }}</strong><br>
                 {% trans %}detall.armari.preu{% endtrans %} <strong style="color:#D84359">{{ item.price }} €</strong><br>
             </p>
+            <a style="width: 30%;margin-top: 30px" class="call-to-action red" href="{{ path( 'buy_step_1_' ~ app.request.locale, { id : item.id } ) }}">{% trans %}detall.armari.comprar{% endtrans %}</a>
         </div>
         <div class="detall-item-armari-esquerra">
             {% if needsPrev == true %}
