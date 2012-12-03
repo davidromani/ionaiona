@@ -63,6 +63,8 @@ function fireIntervalFinal(param) {
         $(document).trigger('app/setMovement', APP.ocell);
     } else if (param.id == 'ninot_pitet') {
         $(document).trigger('app/setMovement', APP.pitet);
+    } else if (param.id == 'ninot_gossalsitxa') {
+        $(document).trigger('app/setMovement', APP.gos);
     }
 }
 /**
