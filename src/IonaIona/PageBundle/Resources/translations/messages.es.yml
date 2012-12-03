@@ -26,3 +26,12 @@ detall.armari.especificacions: Especificaciones
 detall.armari.preu: Precio
 detall.armari.comprar: comprar
 noitems: Lo sentimos, actualmente no hay ningún muñeco disponible en esta categoría.
+store.cistell: la cesta
+store.imatge: imagen
+store.producte: producto
+store.quantitat: cantidad
+store.import: importe
+store.subtotal: suma
+store.iva: iva
+store.carrier: gastos de envío
+store.total: TOTAL

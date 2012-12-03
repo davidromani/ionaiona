@@ -26,3 +26,12 @@ detall.armari.especificacions: Especificacions
 detall.armari.preu: Preu
 detall.armari.comprar: comprar
 noitems: Ho sentim, actualment no hi ha cap ninot disponible en aquesta categoria.
+store.cistell: el cistell
+store.imatge: imatge
+store.producte: producte
+store.quantitat: quantitat
+store.import: import
+store.subtotal: suma
+store.iva: iva
+store.carrier: despeses enviament
+store.total: TOTAL

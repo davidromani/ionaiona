@@ -26,3 +26,12 @@ detall.armari.especificacions: Specifications
 detall.armari.preu: Price
 detall.armari.comprar: buy
 noitems: Sorry, there are no currently available in this category doll.
+store.cistell: the shopping cart
+store.imatge: image
+store.producte: product
+store.quantitat: amount
+store.import: value
+store.subtotal: sum
+store.iva: iva
+store.carrier: shipping costs
+store.total: TOTAL

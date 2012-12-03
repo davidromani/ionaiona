@@ -217,6 +217,10 @@ vich_uploader:
 liip_imagine:
     cache_prefix: /uploads/cache
     filter_sets:
+        imatge80:
+            quality: 90
+            filters:
+                thumbnail: { size: [80, null], mode: outbound }
         imatge260:
             quality: 90
             filters:

@@ -244,6 +244,25 @@ div#principal div.constrictor.clearfix div.detall-item-armari-esquerra a:hover {
     color: #D84359;
 }
 
+div#principal div.constrictor.clearfix div.detall-item-armari-esquerra table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 2px dotted #000;
+    border-bottom: 2px dotted #000;
+}
+
+div#principal div.constrictor.clearfix div.detall-item-armari-esquerra table thead {
+    text-align: left;
+}
+
+div#principal div.constrictor.clearfix div.detall-item-armari-esquerra table thead tr th {
+    border-bottom: 2px dotted #000;
+}
+
+div#principal div.constrictor.clearfix div.detall-item-armari-esquerra table tfoot tr th {
+    text-align: right;
+}
+
 div#principal div.constrictor.clearfix div.detall-item-armari-dreta {
     float: right;
     width: 40%;
