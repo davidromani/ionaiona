@@ -47,14 +47,16 @@ class BotigaController extends Controller
         $items = array();
 
         if (count($cistell) > 0) {
-            $index = 0; $found = false;
+            /*$index = 0; $found = false;
             while (!$found && $index < count($cistell)) {
                 if ($cistell[$index] == $id) {
                     unset($cistell[$index]);
                     $found = true;
                 }
                 $index++;
-            }
+            }*/
+            $array2 = array($id);
+            $cistell = array_diff($cistell, $array2);
             $session->set('cistell', $cistell); // guarda cistell en sessio
         }
 
