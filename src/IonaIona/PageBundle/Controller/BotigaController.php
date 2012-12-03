@@ -39,4 +39,37 @@ class BotigaController extends Controller
         ));
     }
 
+    public function removeAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $session = $this->getRequest()->getSession();
+        $cistell = $session->get('cistell');
+        $items = array();
+
+        if (count($cistell) > 0) {
+            $index = 0; $found = false;
+            while (!$found && $index < count($cistell)) {
+                if ($cistell[$index] == $id) {
+                    unset($cistell[$index]);
+                    $found = true;
+                }
+                $index++;
+            }
+            $session->set('cistell', $cistell); // guarda cistell en sessio
+        }
+
+        // Transforma el cistell (matriu de punters) amb objectes del tipus producte per enviar a la vista
+        foreach ($cistell as $item) {
+            $product = $em->getRepository('FluxProductBundle:Product')->find($item);
+            if ($product) {
+                array_push($items, $product);
+            }
+        }
+
+        return $this->render('PageBundle:Botiga:step1.html.twig', array(
+            'items' => $items,
+            'cistell' => $cistell,
+        ));
+    }
+
 }

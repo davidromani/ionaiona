@@ -272,6 +272,25 @@ buy_step_1_en:
     requirements:
         _locale:    en
 
+cancel_buy_ca:
+    pattern:        /{_locale}/botiga/eliminar/{id}
+    defaults:       { _controller: PageBundle:Botiga:remove }
+    requirements:
+        _locale:    ca
+
+cancel_buy_es:
+    pattern:        /{_locale}/botiga/borrar/{id}
+    defaults:       { _controller: PageBundle:Botiga:remove }
+    requirements:
+        _locale:    es
+
+cancel_buy_en:
+    pattern:        /{_locale}/botiga/remove/{id}
+    defaults:       { _controller: PageBundle:Botiga:remove }
+    requirements:
+        _locale:    en
+
+############################ GLOBAL
 inicial:
     pattern:        /
     defaults:       { _controller: PageBundle:Default:home }
