@@ -37,3 +37,14 @@ store.carrier: gastos de envío
 store.total: TOTAL
 store.seguircompra: seguir comprando
 store.confirmarcompra: confirmar compra
+store.form: formulario
+store.form.name: nombre y apellidos
+store.form.address: dirección
+store.form.postalCode: código postal
+store.form.city: ciudad
+store.form.email: email
+store.form.phone: teléfono
+store.form.mensaje: comentario
+store.form.wantNewsletter: sí, quiero recibir información sobre nuevos productos
+store.form.cancel: cancelar
+store.form.send: enviar

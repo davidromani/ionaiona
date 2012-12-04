@@ -37,3 +37,14 @@ store.carrier: despeses enviament
 store.total: TOTAL
 store.seguircompra: seguir comprant
 store.confirmarcompra: confirmar compra
+store.form: formulari
+store.form.name: nom i cognoms
+store.form.address: adreça
+store.form.postalCode: codi postal
+store.form.city: ciutat
+store.form.email: email
+store.form.phone: telèfon
+store.form.mensaje: comentari
+store.form.wantNewsletter: sí, vull rebre informació sobre nous productes
+store.form.cancel: cancel·lar
+store.form.send: enviar

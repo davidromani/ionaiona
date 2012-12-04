@@ -56,7 +56,7 @@
                     </tr>
                 </tfoot>
             </table>
-            <table>
+            <table style="margin-top:30px">
                 <thead>
                     <tr>
                         <th colspan="2" style="color:#D84359;text-align:center">{% trans %}store.form{% endtrans %}</th>
@@ -66,42 +66,43 @@
                 {{ form_errors(form) }}
                 <tbody>
                     <tr>
-                        <td>{{ form_label(form.name) }}</td>
+                        <td>{{ 'store.form.name' | trans }}</td>
                         <td>{{ form_errors(form.name) }}{{ form_widget(form.name) }}</td>
                     </tr>
                     <tr>
-                        <td>{{ form_label(form.address) }}</td>
+                        <td>{{ 'store.form.address' | trans }}</td>
                         <td>{{ form_errors(form.address) }}{{ form_widget(form.address) }}</td>
                     </tr>
                     <tr>
-                        <td>{{ form_label(form.postalCode) }}</td>
+                        <td>{{ 'store.form.postalCode' | trans }}</td>
                         <td>{{ form_errors(form.postalCode) }}{{ form_widget(form.postalCode) }}</td>
                     </tr>
                     <tr>
-                        <td>{{ form_label(form.city) }}</td>
+                        <td>{{ 'store.form.city' | trans }}</td>
                         <td>{{ form_errors(form.city) }}{{ form_widget(form.city) }}</td>
                     </tr>
                     <tr>
-                        <td>{{ form_label(form.email) }}</td>
+                        <td>{{ 'store.form.email' | trans }}</td>
                         <td>{{ form_errors(form.email) }}{{ form_widget(form.email) }}</td>
                     </tr>
                     <tr>
-                        <td>{{ form_label(form.phone) }}</td>
+                        <td>{{ 'store.form.phone' | trans }}</td>
                         <td>{{ form_errors(form.phone) }}{{ form_widget(form.phone) }}</td>
                     </tr>
                     <tr>
-                        <td>{{ form_label(form.mensaje) }}</td>
+                        <td>{{ 'store.form.mensaje' | trans }}</td>
                         <td>{{ form_errors(form.mensaje) }}{{ form_widget(form.mensaje) }}</td>
                     </tr>
                     <tr>
-                        <td>{{ form_label(form.wantNewsletter) }}</td>
+                        <td>{{ 'store.form.wantNewsletter' | trans }}</td>
                         <td>{{ form_errors(form.wantNewsletter) }}{{ form_widget(form.wantNewsletter) }}</td>
                     </tr>
                 </tbody>
                 {{ form_rest(form) }}
                 <tfoot>
                     <tr>
-                        <th><input type="submit" value="Enviar"></th>
+                        <th><input type="submit" value="{{ 'store.form.cancel' | trans }}"></th>
+                        <th><input type="submit" value="{{ 'store.form.send' | trans }}"></th>
                     </tr>
                 </tfoot>
                 </form>
