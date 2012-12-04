@@ -56,7 +56,56 @@
                     </tr>
                 </tfoot>
             </table>
-
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2" style="color:#D84359;text-align:center">{% trans %}store.form{% endtrans %}</th>
+                    </tr>
+                </thead>
+                <form action="{{ path('buy_step_2_' ~ app.request.locale) }}" method="post" {{ form_enctype(form) }}>
+                {{ form_errors(form) }}
+                <tbody>
+                    <tr>
+                        <td>{{ form_label(form.name) }}</td>
+                        <td>{{ form_errors(form.name) }}{{ form_widget(form.name) }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ form_label(form.address) }}</td>
+                        <td>{{ form_errors(form.address) }}{{ form_widget(form.address) }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ form_label(form.postalCode) }}</td>
+                        <td>{{ form_errors(form.postalCode) }}{{ form_widget(form.postalCode) }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ form_label(form.city) }}</td>
+                        <td>{{ form_errors(form.city) }}{{ form_widget(form.city) }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ form_label(form.email) }}</td>
+                        <td>{{ form_errors(form.email) }}{{ form_widget(form.email) }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ form_label(form.phone) }}</td>
+                        <td>{{ form_errors(form.phone) }}{{ form_widget(form.phone) }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ form_label(form.mensaje) }}</td>
+                        <td>{{ form_errors(form.mensaje) }}{{ form_widget(form.mensaje) }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ form_label(form.wantNewsletter) }}</td>
+                        <td>{{ form_errors(form.wantNewsletter) }}{{ form_widget(form.wantNewsletter) }}</td>
+                    </tr>
+                </tbody>
+                {{ form_rest(form) }}
+                <tfoot>
+                    <tr>
+                        <th><input type="submit" value="Enviar"></th>
+                    </tr>
+                </tfoot>
+                </form>
+            </table>
         </div>
     </div>
 {% endblock %}

@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Session\Session;
+use IonaIona\PageBundle\Form\Store;
 
 class BotigaController extends Controller
 {
@@ -56,11 +57,29 @@ class BotigaController extends Controller
             }
         }
 
+        // Construye el formulario de contacto
+        $formulario = $this->createForm(new Store());
+        if ($this->getRequest()->isMethod('POST')) {
+            $formulario->bind($this->getRequest());
+            if ($formulario->isValid()) {
+                // Logica para guardar el pedido, enviar notificacion
+                // y registrar al cliente nuevo antes de cargar la vista del paso 3 de compra
+                return $this->render('PageBundle:Botiga:step3.html.twig', array(
+                    'items' => $items,
+                    'cistell' => $cistell,
+                    'fee_carrier' => $this->container->getParameter('fee_carrier'),
+                    'fee_iva' => $this->container->getParameter('fee_iva'),
+                    'form' => $formulario->createView(),
+                ));
+            }
+        }
+
         return $this->render('PageBundle:Botiga:step2.html.twig', array(
             'items' => $items,
             'cistell' => $cistell,
             'fee_carrier' => $this->container->getParameter('fee_carrier'),
             'fee_iva' => $this->container->getParameter('fee_iva'),
+            'form' => $formulario->createView(),
         ));
     }
 
