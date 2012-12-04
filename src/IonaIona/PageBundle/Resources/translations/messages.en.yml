@@ -35,3 +35,5 @@ store.subtotal: sum
 store.iva: iva
 store.carrier: shipping costs
 store.total: TOTAL
+store.seguircompra: continue shopping
+store.confirmarcompra: confirm purchase

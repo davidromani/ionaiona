@@ -33,30 +33,33 @@
                             <td><img src="{{ vich_uploader_asset(item, 'image1File') | imagine_filter('imatge80') }}" alt="" title=""></td>
                             <td><strong>{{ item.name }}</strong><br>{{ item.code }}</td>
                             <td style="text-align:right"><strong>1<strong></td>
-                            <td style="text-align:right"><strong>{{ item.price }} €<strong></td>
+                            <td style="text-align:right"><strong>{{ item.price | number_format(2, '\'', '.') }} €<strong></td>
                             {% set subtotal = subtotal + item.price %}
                         </tr>
                     {% endfor %}
                 </tbody>
                 <tfoot>
                     <tr>
-                        <th colspan="4">{% trans %}store.subtotal{% endtrans %}</th>
-                        <th><strong>{{ subtotal }} €<strong></th>
-                    </tr>
-                    <tr>
-                        <th colspan="4">{% trans %}store.iva{% endtrans %} %</th>
-                        <th>{{ subtotal }} €</th>
-                    </tr>
-                    <tr>
                         <th colspan="4">{% trans %}store.carrier{% endtrans %}</th>
-                        <th>{{ subtotal }} €</th>
+                        <th>{{ fee_carrier | number_format(2, '\'', '.') }} €</th>
                     </tr>
+                    <tr>
+                        <th colspan="4">{% trans %}store.subtotal{% endtrans %}</th>
+                        <th><strong>{{ (subtotal + fee_carrier) | number_format(2, '\'', '.') }} €<strong></th>
+                    </tr>
+                    <tr>
+                        <th colspan="4">{% trans %}store.iva{% endtrans %} {{ fee_iva }}%</th>
+                        <th>{{ (( (subtotal + fee_carrier) * fee_iva ) / 100) | number_format(2, '\'', '.') }} €</th>
+                    </tr>
+
                     <tr>
                         <th colspan="4">{% trans %}store.total{% endtrans %}</th>
-                        <th>{{ subtotal }} €</th>
+                        <th>{{ (( subtotal + fee_carrier ) + ( (subtotal + fee_carrier) * fee_iva ) / 100) | number_format(2, '\'', '.') }} €</th>
                     </tr>
                 </tfoot>
             </table>
+            <a style="float:left;margin-top:30px;margin-right:30px" class="call-to-action grey" href="{{ path( 'armari_' ~ app.request.locale ) }}">{% trans %}store.seguircompra{% endtrans %}</a>
+            <a style="float:left;margin-top:30px" class="call-to-action green" href="{{ path( 'buy_step_2_' ~ app.request.locale ) }}">{% trans %}store.confirmarcompra{% endtrans %}</a>
         </div>
     </div>
 {% endblock %}

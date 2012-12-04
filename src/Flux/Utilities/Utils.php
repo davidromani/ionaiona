@@ -3,6 +3,11 @@ namespace Flux\Utilities;
 
 class Utils 
 {
+    static public function getCoinFormat($value)
+    {
+        return number_format($value, 2, "'", '.');
+    }
+
     static public function getStringMonth($monthValue)
     {
         if ($monthValue == 1) {

@@ -36,6 +36,8 @@ class BotigaController extends Controller
         return $this->render('PageBundle:Botiga:step1.html.twig', array(
             'items' => $items,
             'cistell' => $cistell,
+            'fee_carrier' => $this->container->getParameter('fee_carrier'),
+            'fee_iva' => $this->container->getParameter('fee_iva'),
         ));
     }
 
@@ -47,16 +49,8 @@ class BotigaController extends Controller
         $items = array();
 
         if (count($cistell) > 0) {
-            /*$index = 0; $found = false;
-            while (!$found && $index < count($cistell)) {
-                if ($cistell[$index] == $id) {
-                    unset($cistell[$index]);
-                    $found = true;
-                }
-                $index++;
-            }*/
             $array2 = array($id);
-            $cistell = array_diff($cistell, $array2);
+            $cistell = array_diff($cistell, $array2); // WARNING: elimina tots els duplicats
             $session->set('cistell', $cistell); // guarda cistell en sessio
         }
 
@@ -71,6 +65,8 @@ class BotigaController extends Controller
         return $this->render('PageBundle:Botiga:step1.html.twig', array(
             'items' => $items,
             'cistell' => $cistell,
+            'fee_carrier' => $this->container->getParameter('fee_carrier'),
+            'fee_iva' => $this->container->getParameter('fee_iva'),
         ));
     }
 

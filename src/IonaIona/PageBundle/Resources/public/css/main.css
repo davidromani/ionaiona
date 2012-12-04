@@ -347,6 +347,14 @@ a.call-to-action.red {
     background: #D84359;
 }
 
+a.call-to-action.grey {
+    background: #999;
+}
+
+a.call-to-action.green {
+    background: #8BC06D;
+}
+
 a.call-to-action:hover {
 
     box-shadow: 1px 1px 1px #AAA;
