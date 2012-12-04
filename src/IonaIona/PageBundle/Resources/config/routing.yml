@@ -259,18 +259,21 @@ buy_step_1_ca:
     defaults:       { _controller: PageBundle:Botiga:step1 }
     requirements:
         _locale:    ca
+        id:         \d+
 
 buy_step_1_es:
     pattern:        /{_locale}/tienda/{id}
     defaults:       { _controller: PageBundle:Botiga:step1 }
     requirements:
         _locale:    es
+        id:         \d+
 
 buy_step_1_en:
     pattern:        /{_locale}/shop/{id}
     defaults:       { _controller: PageBundle:Botiga:step1 }
     requirements:
         _locale:    en
+        id:         \d+
 
 buy_step_2_ca:
     pattern:        /{_locale}/botiga/confirmar

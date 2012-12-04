@@ -41,6 +41,29 @@ class BotigaController extends Controller
         ));
     }
 
+    public function step2Action()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $session = $this->getRequest()->getSession();
+        $cistell = $session->get('cistell');
+        $items = array();
+
+        // Transforma el cistell (matriu de punters) amb objectes del tipus producte per enviar a la vista
+        foreach ($cistell as $item) {
+            $product = $em->getRepository('FluxProductBundle:Product')->find($item);
+            if ($product) {
+                array_push($items, $product);
+            }
+        }
+
+        return $this->render('PageBundle:Botiga:step2.html.twig', array(
+            'items' => $items,
+            'cistell' => $cistell,
+            'fee_carrier' => $this->container->getParameter('fee_carrier'),
+            'fee_iva' => $this->container->getParameter('fee_iva'),
+        ));
+    }
+
     public function removeAction($id)
     {
         $em = $this->getDoctrine()->getManager();
