@@ -100,7 +100,7 @@ class BotigaController extends Controller
                     $compra->setPrice($item->getPrice());
                     $em->persist($compra);
                     $item->setStock($item->getStock() - 1);
-                    if ($item->getStock() <= 0) $item->setIsActive(false);
+                    if ($item->getStock() <= 0) $item->setIsActive(false);  // Si no hay stock, desactiva el producto
                     $em->persist($item);
                 }
 
@@ -114,16 +114,17 @@ class BotigaController extends Controller
                     ->setSubject('Nova comanda web ionaiona.com')
                     ->setFrom(array('maria@ionaiona.com' => 'Botiga ionaiona.com'))
                     ->setTo(array('maria@ionaiona.com' => 'Maria Pons', 'david@flux.cat' => 'David Romaní', 'karmekiare@gmail.com' => 'Carme Pons'))
-                    ->setBody($this->renderView('PageBundle:Emails:formulari.comanda.html.twig', array('customer' => $storeCustomer, 'comment' => $comment, 'items' => $items, 'fee_carrier' => $this->container->getParameter('fee_carrier'), 'fee_iva' => $this->container->getParameter('fee_iva'))), 'text/html')
-                ;
+                    ->setBody($this->renderView('PageBundle:Emails:formulari.comanda.html.twig', array('customer' => $storeCustomer, 'comment' => $comment, 'items' => $items, 'fee_carrier' => $this->container->getParameter('fee_carrier'), 'fee_iva' => $this->container->getParameter('fee_iva'))), 'text/html');
                 $this->get('mailer')->send($message);
                 $em->flush();
+                $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '003-001'));
                 return $this->render('PageBundle:Botiga:step3.html.twig', array(
                     'items' => $items,
                     'cistell' => $cistell,
                     'fee_carrier' => $this->container->getParameter('fee_carrier'),
                     'fee_iva' => $this->container->getParameter('fee_iva'),
                     'form' => $formulario->createView(),
+                    'pagina' => $pagina,
                 ));
             }
         }

@@ -194,6 +194,48 @@ class Pages implements FixtureInterface
 
         $manager->persist($page);
 
+        $page = new Page();
+        $page->setCode('003-001');
+        $page->setTitle('Botiga');
+        $page->setSummary('botiga...');
+        $page->setText1("Gràcies per la vostra compra.<br>En el termini de 2 laborals iona iona es posarà en contacte amb tu.<br>(...)");
+        $page->setPosition(1);
+        $page->setIsActive(true);
+
+        $translation = new PageTranslation();
+        $translation->setLocale('en');
+        $translation->setField('title');
+        $translation->setContent('Store');
+        $page->addTranslation($translation);
+        $translation = new PageTranslation();
+        $translation->setLocale('en');
+        $translation->setField('summary');
+        $translation->setContent('store...');
+        $page->addTranslation($translation);
+        $translation = new PageTranslation();
+        $translation->setLocale('en');
+        $translation->setField('text1');
+        $translation->setContent("Thanks for your purchase.<br>Within 2 working Iona Iona will contact you.<br>(...)");
+        $page->addTranslation($translation);
+
+        $translation = new PageTranslation();
+        $translation->setLocale('es');
+        $translation->setField('title');
+        $translation->setContent('Tienda');
+        $page->addTranslation($translation);
+        $translation = new PageTranslation();
+        $translation->setLocale('es');
+        $translation->setField('summary');
+        $translation->setContent('tienda...');
+        $page->addTranslation($translation);
+        $translation = new PageTranslation();
+        $translation->setLocale('es');
+        $translation->setField('text1');
+        $translation->setContent("Gracias por su compra.<br>En el plazo de 2 laborales Iona Iona se pondrá en contacto contigo.<br>(...)");
+        $page->addTranslation($translation);
+
+        $manager->persist($page);
+
         $manager->flush();
     }
 }
