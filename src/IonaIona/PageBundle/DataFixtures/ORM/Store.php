@@ -9,7 +9,7 @@ use Flux\ProductBundle\Entity\Translation\CategoryTranslation;
 use Flux\ProductBundle\Entity\Product;
 use Flux\ProductBundle\Entity\Translation\ProductTranslation;
 
-class Categories implements FixtureInterface
+class Store implements FixtureInterface
 {
     public function load(ObjectManager $manager)
     {

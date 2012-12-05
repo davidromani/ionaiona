@@ -183,6 +183,22 @@ class Post
     }
 
     /**
+     * Add category
+     * @param Category
+     */
+    public function addCategory($category) {
+        $this->categories->add($category);
+    }
+
+    /**
+     * Remove category
+     * @param Category
+     */
+    public function removeCategory($category) {
+        $this->categories->removeElement($category);
+    }
+
+    /**
      * Get id
      *
      * @return integer 
