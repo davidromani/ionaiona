@@ -1,0 +1,92 @@
+<p>S'ha rebut una comanda nova a través de la pàgina web <a href="http://www.ionaiona.com">www.ionainoa.com</a></p>
+<table style="margin:20px auto;padding:8px;background:#CBDCED;color:#2269B5">
+    <thead>
+        <tr>
+            <th style="padding:8px;margin:10px;"></th>
+            <th colspan="4" style="padding:8px;margin:10px;">Formulari de comanda</th>
+            <th style="padding:8px;margin:10px;"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="padding:8px;margin:10px;"></td>
+            <td style="padding:8px;margin:10px;">Nom i cognoms:</td>
+            <td style="padding:8px;background:#FFF;color:#000;margin:10px;">{{ customer.name }}</td>
+            <td style="padding:8px;margin:10px;">Email:</td>
+            <td style="padding:8px;background:#FFF;color:#000;margin:10px;">{{ customer.email }}</td>
+            <td style="padding:8px;margin:10px;"></td>
+        </tr>
+        <tr>
+            <td style="padding:8px;margin:10px;"></td>
+            <td style="padding:8px;margin:10px;">Adreça:</td>
+            <td style="padding:8px;background:#FFF;color:#000;margin:10px;">{{ customer.address }}</td>
+            <td style="padding:8px;margin:10px;">Telèfon:</td>
+            <td style="padding:8px;background:#FFF;color:#000;margin:10px;">{{ customer.phone }}</td>
+            <td style="padding:8px;margin:10px;"></td>
+        </tr>
+        <tr>
+            <td style="padding:8px;margin:10px;"></td>
+            <td style="padding:8px;margin:10px;">Codi postal:</td>
+            <td style="padding:8px;background:#FFF;color:#000;margin:10px;">{{ customer.postalCode }}</td>
+            <td style="padding:8px;margin:10px;">Comentari:</td>
+            <td style="padding:8px;background:#FFF;color:#000;margin:10px;vertical-align:text-top;" rowspan="2">{{ comment }}</td>
+            <td style="padding:8px;margin:10px;" rowspan="2"></td>
+        </tr>
+        <tr>
+            <td style="padding:8px"></td>
+            <td style="padding:8px">Població:</td>
+            <td style="padding:8px;background:#FFF;color:#000;">{{ customer.city }}</td>
+        </tr>
+        <tr>
+            <td style="padding:8px;margin:10px;" colspan="6"></td>
+        </tr>
+        <tr>
+            <th style="padding:8px;margin:10px;"></th>
+            <th style="padding:8px;margin:10px;text-align:left">imatge</th>
+            <th style="padding:8px;margin:10px;text-align:left">producte</th>
+            <th style="padding:8px;margin:10px;text-align:right">quantitat</th>
+            <th style="padding:8px;margin:10px;text-align:right">import</th>
+            <th style="padding:8px;margin:10px;"></th>
+        </tr>
+        {% set subtotal = 0 %}
+        {% for item in items %}
+        <tr>
+            <th style="padding:8px;margin:10px;"></th>
+            <td style="padding:8px;margin:10px;background:#FFF"><img src="{{ vich_uploader_asset(item, 'image1File') | imagine_filter('imatge80') }}" alt="" title=""></td>
+            <td style="padding:8px;margin:10px;background:#FFF"><strong>{{ item.name }}</strong><br>{{ item.code }}</td>
+            <td style="padding:8px;margin:10px;text-align:right;background:#FFF"><strong>1<strong></td>
+            <td style="padding:8px;margin:10px;text-align:right;background:#FFF"><strong>{{ item.price | number_format(2, '\'', '.') }} €<strong></td>
+            <th style="padding:8px;margin:10px;"></th>
+            {% set subtotal = subtotal + item.price %}
+        </tr>
+        {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <th style="padding:8px;margin:10px;"></th>
+            <th colspan="3"style="padding:8px;margin:10px;text-align:right;">{% trans %}store.carrier{% endtrans %}</th>
+            <td style="padding:8px;margin:10px;text-align:right;background:#FFF"><strong>{{ fee_carrier | number_format(2, '\'', '.') }} €</strong></td>
+            <th style="padding:8px;margin:10px;"></th>
+        </tr>
+        <tr>
+            <th style="padding:8px;margin:10px;"></th>
+            <th colspan="3" style="padding:8px;margin:10px;text-align:right;">{% trans %}store.subtotal{% endtrans %}</th>
+            <td style="padding:8px;margin:10px;text-align:right;background:#FFF"><strong>{{ (subtotal + fee_carrier) | number_format(2, '\'', '.') }} €<strong></td>
+            <th style="padding:8px;margin:10px;"></th>
+        </tr>
+        <tr>
+            <th style="padding:8px;margin:10px;"></th>
+            <th colspan="3" style="padding:8px;margin:10px;text-align:right;">{% trans %}store.iva{% endtrans %} {{ fee_iva }}%</th>
+            <td style="padding:8px;margin:10px;text-align:right;background:#FFF"><strong>{{ (( (subtotal + fee_carrier) * fee_iva ) / 100) | number_format(2, '\'', '.') }} €</strong></td>
+            <th style="padding:8px;margin:10px;"></th>
+        </tr>
+        <tr>
+            <th style="padding:8px;margin:10px;"></th>
+            <th colspan="3" style="padding:8px;margin:10px;text-align:right;">{% trans %}store.total{% endtrans %}</th>
+            <td style="padding:8px;margin:10px;text-align:right;background:#FFF"><strong>{{ (( subtotal + fee_carrier ) + ( (subtotal + fee_carrier) * fee_iva ) / 100) | number_format(2, '\'', '.') }} €</strong></td>
+            <th style="padding:8px;margin:10px;"></th>
+        </tr>
+    </tfoot>
+</table>
+<p>No respondre aquest missatge, s'ha generat automàticament per una màquina. Per atendre a la persona que fa la comanda has de respondre a
+    <a href="mailto:{{ customer.email }}">{{ customer.email }}</a></p>

@@ -7,6 +7,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Session\Session;
 use IonaIona\PageBundle\Form\Store;
+use IonaIona\PageBundle\Entity\StoreCustomer;
 
 class BotigaController extends Controller
 {
@@ -58,12 +59,25 @@ class BotigaController extends Controller
         }
 
         // Construye el formulario de contacto
-        $formulario = $this->createForm(new Store());
+        $storeCustomer = new StoreCustomer();
+        $formulario = $this->createForm(new Store(), $storeCustomer);
         if ($this->getRequest()->isMethod('POST')) {
             $formulario->bind($this->getRequest());
             if ($formulario->isValid()) {
                 // Logica para guardar el pedido, enviar notificacion
                 // y registrar al cliente nuevo antes de cargar la vista del paso 3 de compra
+                $comment = $formulario->get('mensaje')->getData();
+                $logger = $this->get('logger');
+                $logger->debug('[step2] Valid POST form!');
+                $logger->debug('[step2] StoreCustomer = '.$storeCustomer);
+                $logger->debug('[step2] comment = '.$comment);
+                $message = \Swift_Message::newInstance()
+                    ->setSubject('Comanda nova de pàgina web ionaiona.com')
+                    ->setFrom(array('maria@ionaiona.com' => 'botiga ionaiona.com'))
+                    ->setTo(array('maria@ionaiona.com' => 'Maria Pons', 'david@flux.cat' => 'David Romaní', 'karmekiare@gmail.com' => 'Carme Pons'))
+                    ->setBody($this->renderView('PageBundle:Emails:formulari.comanda.html.twig', array('customer' => $storeCustomer, 'comment' => $comment, 'items' => $items, 'fee_carrier' => $this->container->getParameter('fee_carrier'), 'fee_iva' => $this->container->getParameter('fee_iva'))), 'text/html')
+                ;
+                $this->get('mailer')->send($message);
                 return $this->render('PageBundle:Botiga:step3.html.twig', array(
                     'items' => $items,
                     'cistell' => $cistell,
