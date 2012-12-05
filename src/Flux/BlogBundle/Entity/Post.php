@@ -109,7 +109,7 @@ class Post
 
     /**
      * @ORM\OneToMany(
-     *  targetEntity="Flux\BlogBundle\Entity\Translation\BlogTranslation",
+     *  targetEntity="Flux\BlogBundle\Entity\Translation\PostTranslation",
      *  mappedBy="object",
      *  cascade={"persist", "remove"}
      * )
@@ -118,10 +118,17 @@ class Post
     private $translations;
 
     /**
+     * @ORM\ManyToMany(targetEntity="Flux\BlogBundle\Entity\Category", inversedBy="posts")
+     * @ORM\JoinTable(name="flux_blog_post_categories")
+     **/
+    private $categories;
+
+    /**
      * Constructor
      */
     public function __construct() {
         $this->translations = new ArrayCollection();
+        $this->categories = new ArrayCollection();
     }
 
     /**
@@ -161,6 +168,18 @@ class Post
      */
     public function removeTranslation($translation) {
         $this->translations->removeElement($translation);
+    }
+
+    public function setCategories($categories)
+    {
+        $this->categories = $categories;
+
+        return $this;
+    }
+
+    public function getCategories()
+    {
+        return $this->categories;
     }
 
     /**
