@@ -66,18 +66,36 @@ class BotigaController extends Controller
             if ($formulario->isValid()) {
                 // Logica para guardar el pedido, enviar notificacion
                 // y registrar al cliente nuevo antes de cargar la vista del paso 3 de compra
+                $customer = $em->getRepository('PageBundle:StoreCustomer')->findOneBy(array('email' => $storeCustomer->getEmail()));
+                if ($customer) {
+                    // El cliente NO es nuevo
+                } else {
+                    // El cliente es nuevo
+                    $customer = new StoreCustomer();
+                    $customer->setEmail($storeCustomer->getEmail());
+                }
+                $customer->setName($storeCustomer->getName());
+                $customer->setAddress($storeCustomer->getAddress());
+                $customer->setCity($storeCustomer->getCity());
+                $customer->setPhone($storeCustomer->getPhone());
+                $customer->setPostalCode($storeCustomer->getPostalCode());
+                $customer->setState($storeCustomer->getState());
+                $customer->setWantNewsletter($storeCustomer->getWantNewsletter());
+                $em->persist($customer);
+
                 $comment = $formulario->get('mensaje')->getData();
                 $logger = $this->get('logger');
                 $logger->debug('[step2] Valid POST form!');
                 $logger->debug('[step2] StoreCustomer = '.$storeCustomer);
                 $logger->debug('[step2] comment = '.$comment);
                 $message = \Swift_Message::newInstance()
-                    ->setSubject('Comanda nova de pàgina web ionaiona.com')
-                    ->setFrom(array('maria@ionaiona.com' => 'botiga ionaiona.com'))
+                    ->setSubject('Nova comanda web ionaiona.com')
+                    ->setFrom(array('maria@ionaiona.com' => 'Botiga ionaiona.com'))
                     ->setTo(array('maria@ionaiona.com' => 'Maria Pons', 'david@flux.cat' => 'David Romaní', 'karmekiare@gmail.com' => 'Carme Pons'))
                     ->setBody($this->renderView('PageBundle:Emails:formulari.comanda.html.twig', array('customer' => $storeCustomer, 'comment' => $comment, 'items' => $items, 'fee_carrier' => $this->container->getParameter('fee_carrier'), 'fee_iva' => $this->container->getParameter('fee_iva'))), 'text/html')
                 ;
                 $this->get('mailer')->send($message);
+                $em->flush();
                 return $this->render('PageBundle:Botiga:step3.html.twig', array(
                     'items' => $items,
                     'cistell' => $cistell,

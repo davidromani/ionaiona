@@ -30,6 +30,7 @@ class Store extends AbstractType
             ->add('address', null, array('required' => true))
             ->add('postalCode', null, array('required' => true))
             ->add('city', null, array('required' => true))
+            ->add('state', null, array('required' => true))
             ->add('email', null, array('required' => true))
             ->add('phone', null, array('required' => true))
             ->add('mensaje', 'textarea', array('mapped' => false, 'required' => false))

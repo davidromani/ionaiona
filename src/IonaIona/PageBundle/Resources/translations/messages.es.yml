@@ -42,6 +42,7 @@ store.form.name: nombre y apellidos
 store.form.address: dirección
 store.form.postalCode: código postal
 store.form.city: ciudad
+store.form.state: provincia
 store.form.email: email
 store.form.phone: teléfono
 store.form.mensaje: comentario

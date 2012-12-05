@@ -42,6 +42,7 @@ store.form.name: nom i cognoms
 store.form.address: adreça
 store.form.postalCode: codi postal
 store.form.city: ciutat
+store.form.state: província
 store.form.email: email
 store.form.phone: telèfon
 store.form.mensaje: comentari

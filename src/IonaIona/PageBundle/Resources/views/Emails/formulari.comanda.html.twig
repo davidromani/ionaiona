@@ -26,6 +26,14 @@
         </tr>
         <tr>
             <td style="padding:8px;margin:10px;"></td>
+            <td style="padding:8px;margin:10px;">Població:</td>
+            <td style="padding:8px;background:#FFF;color:#000;margin:10px;">{{ customer.city }}</td>
+            <td style="padding:8px;margin:10px;">Província:</td>
+            <td style="padding:8px;background:#FFF;color:#000;margin:10px;">{{ customer.state }}</td>
+            <td style="padding:8px;margin:10px;"></td>
+        </tr>
+        <tr>
+            <td style="padding:8px;margin:10px;"></td>
             <td style="padding:8px;margin:10px;">Codi postal:</td>
             <td style="padding:8px;background:#FFF;color:#000;margin:10px;">{{ customer.postalCode }}</td>
             <td style="padding:8px;margin:10px;">Comentari:</td>
@@ -34,8 +42,8 @@
         </tr>
         <tr>
             <td style="padding:8px"></td>
-            <td style="padding:8px">Població:</td>
-            <td style="padding:8px;background:#FFF;color:#000;">{{ customer.city }}</td>
+            <td style="padding:8px">Vol newsletter:</td>
+            <td style="padding:8px;background:#FFF;color:#000;">{{ customer.wantNewsletter ? 'sí' : 'no' }}</td>
         </tr>
         <tr>
             <td style="padding:8px;margin:10px;" colspan="6"></td>
@@ -52,7 +60,7 @@
         {% for item in items %}
         <tr>
             <th style="padding:8px;margin:10px;"></th>
-            <td style="padding:8px;margin:10px;background:#FFF"><img src="http://devel.ionaiona.com/uploads/cache/imatge80/uploads/images/{{ item.image1 }}" alt="imatge en miniatura producte {{ item.code }}" title="{{ item.image1 }}"></td>
+            <td style="padding:8px;margin:10px;background:#FFF"><img src="http://www.ionaiona.com/uploads/cache/imatge80/uploads/images/{{ item.image1 }}" alt="imatge en miniatura producte {{ item.code }}" title="{{ item.image1 }}"></td>
             <td style="padding:8px;margin:10px;background:#FFF"><strong>{{ item.name }}</strong><br>{{ item.code }}</td>
             <td style="padding:8px;margin:10px;text-align:right;background:#FFF"><strong>1<strong></td>
             <td style="padding:8px;margin:10px;text-align:right;background:#FFF"><strong>{{ item.price | number_format(2, '\'', '.') }} €<strong></td>
