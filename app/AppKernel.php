@@ -55,6 +55,7 @@ class AppKernel extends Kernel
             new IonaIona\PageBundle\PageBundle(),
             new Flux\PageBundle\FluxPageBundle(),
             new Flux\ProductBundle\FluxProductBundle(),
+            new Flux\BlogBundle\FluxBlogBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

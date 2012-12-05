@@ -1,3 +1,8 @@
+flux_blog:
+    resource: "@FluxBlogBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 flux_product:
     resource: "@FluxProductBundle/Controller/"
     type:     annotation
