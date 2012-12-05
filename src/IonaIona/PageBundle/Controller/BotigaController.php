@@ -87,7 +87,7 @@ class BotigaController extends Controller
                 $customer->setUpdated(new \DateTime());
                 $em->persist($customer);
 
-                // Registra la compra realizada
+                // Registra la compra realizada y descuenta las unidades vendidas del estoc actual
                 foreach ($items as $item) {
                     $compra = new StoreCustomerProduct();
                     $compra->setStoreCustomer($customer);
@@ -95,6 +95,9 @@ class BotigaController extends Controller
                     $compra->setCreated(new \DateTime());
                     $compra->setPrice($item->getPrice());
                     $em->persist($compra);
+                    $item->setStock($item->getStock() - 1);
+                    if ($item->getStock() <= 0) $item->setIsActive(false);
+                    $em->persist($item);
                 }
 
                 // Envia una notificacion de pedido nuevo
