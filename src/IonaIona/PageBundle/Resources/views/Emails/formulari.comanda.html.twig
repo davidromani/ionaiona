@@ -52,7 +52,7 @@
         {% for item in items %}
         <tr>
             <th style="padding:8px;margin:10px;"></th>
-            <td style="padding:8px;margin:10px;background:#FFF"><img src="{{ vich_uploader_asset(item, 'image1File') | imagine_filter('imatge80') }}" alt="" title=""></td>
+            <td style="padding:8px;margin:10px;background:#FFF"><img src="http://devel.ionaiona.com/uploads/cache/imatge80/uploads/images/{{ item.image1 }}" alt="imatge en miniatura producte {{ item.code }}" title="{{ item.image1 }}"></td>
             <td style="padding:8px;margin:10px;background:#FFF"><strong>{{ item.name }}</strong><br>{{ item.code }}</td>
             <td style="padding:8px;margin:10px;text-align:right;background:#FFF"><strong>1<strong></td>
             <td style="padding:8px;margin:10px;text-align:right;background:#FFF"><strong>{{ item.price | number_format(2, '\'', '.') }} €<strong></td>
