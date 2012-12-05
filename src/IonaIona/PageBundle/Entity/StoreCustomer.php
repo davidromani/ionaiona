@@ -2,7 +2,7 @@
 namespace IonaIona\PageBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\ArrayCollection as ACollection;
 use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Mapping\Annotation as Gedmo;
 
@@ -73,6 +73,11 @@ class StoreCustomer
      * @ORM\Column(type="datetime")
      */
     private $updated;
+
+    /**
+     * @ORM\OneToMany(targetEntity="IonaIona\PageBundle\Entity\StoreCustomerProduct", mappedBy="storeCustomer")
+     */
+    private $storeCustomerProducts;
 
     public function getId()
     {
@@ -177,6 +182,24 @@ class StoreCustomer
     public function getUpdated()
     {
         return $this->updated;
+    }
+
+    public function setStoreCustomerProducts($storeCustomerProducts)
+    {
+        $this->storeCustomerProducts = $storeCustomerProducts;
+    }
+
+    public function getStoreCustomerProducts()
+    {
+        return $this->storeCustomerProducts;
+    }
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->storeCustomerProducts = new ACollection();
     }
 
     function __toString()

@@ -8,6 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Session\Session;
 use IonaIona\PageBundle\Form\Store;
 use IonaIona\PageBundle\Entity\StoreCustomer;
+use IonaIona\PageBundle\Entity\StoreCustomerProduct;
 
 class BotigaController extends Controller
 {
@@ -75,6 +76,7 @@ class BotigaController extends Controller
                     $customer->setEmail($storeCustomer->getEmail());
                     $customer->setCreated(new \DateTime());
                 }
+                // Actualiza los campos del cliente
                 $customer->setName($storeCustomer->getName());
                 $customer->setAddress($storeCustomer->getAddress());
                 $customer->setCity($storeCustomer->getCity());
@@ -85,6 +87,17 @@ class BotigaController extends Controller
                 $customer->setUpdated(new \DateTime());
                 $em->persist($customer);
 
+                // Registra la compra realizada
+                foreach ($items as $item) {
+                    $compra = new StoreCustomerProduct();
+                    $compra->setStoreCustomer($customer);
+                    $compra->setProduct($item);
+                    $compra->setCreated(new \DateTime());
+                    $compra->setPrice($item->getPrice());
+                    $em->persist($compra);
+                }
+
+                // Envia una notificacion de pedido nuevo
                 $comment = $formulario->get('mensaje')->getData();
                 $logger = $this->get('logger');
                 $logger->debug('[step2] Valid POST form!');
