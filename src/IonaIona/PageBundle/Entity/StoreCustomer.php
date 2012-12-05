@@ -148,7 +148,8 @@ class StoreCustomer
 
     function __toString()
     {
-        return 'N:'.$this->getName().' · E:'.$this->getEmail().' · P:'.$this->getPhone().' · W:'.$this->getWantNewsletter();
+        return $this->getName();
+        //return 'N:'.$this->getName().' · E:'.$this->getEmail().' · P:'.$this->getPhone().' · W:'.$this->getWantNewsletter();
     }
 
 }

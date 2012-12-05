@@ -103,6 +103,7 @@ sonata_admin:
         groups:
             Pàgines:
             Productes:
+            Botiga:
 
 
 # Sonata Block
@@ -251,3 +252,8 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, group: Productes, label: Producte }
         arguments: [null, Flux\ProductBundle\Entity\Product, FluxProductBundle:ProductAdmin]
+    ionaiona.admin.store:
+            class: IonaIona\PageBundle\Admin\StoreCustomerAdmin
+            tags:
+                - { name: sonata.admin, manager_type: orm, group: Botiga, label: Client }
+            arguments: [null, IonaIona\PageBundle\Entity\StoreCustomer, PageBundle:StoreCustomerAdmin]
