@@ -49,3 +49,7 @@ store.form.mensaje: comentari
 store.form.wantNewsletter: sí, vull rebre informació sobre nous productes
 store.form.cancel: cancel·lar
 store.form.send: enviar
+store.steps: passos per comprar
+store.step.1: comprovar el cistell
+store.step.2: omplir el formulari
+store.step.3: finalitzar

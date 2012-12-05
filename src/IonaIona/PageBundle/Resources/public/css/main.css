@@ -277,6 +277,19 @@ div#principal div.constrictor.clearfix div.detall-item-armari-dreta h2 {
     margin-top: 0;
 }
 
+div#principal div.constrictor.clearfix div.detall-item-armari-dreta ol {
+    margin: 0;
+    padding: 0 0 0 30px;
+}
+
+div#principal div.constrictor.clearfix div.detall-item-armari-dreta ol li {
+    padding: 10px 2px;
+}
+
+div#principal div.constrictor.clearfix div.detall-item-armari-dreta ol li.current {
+    color: #D84359;
+}
+
 div#principal div.constrictor.clearfix div.detall-item-armari-dreta p {
     font-size: 0.95em;
     line-height: 1.9em;

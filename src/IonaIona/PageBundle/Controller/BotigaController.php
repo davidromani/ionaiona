@@ -12,12 +12,29 @@ use IonaIona\PageBundle\Entity\StoreCustomerProduct;
 
 class BotigaController extends Controller
 {
+    /**
+     * Transforma el cistell (matriu de punters) passat per paramtre amb una matriu d'objectes del tipus producte
+     * @param $em
+     * @param $cistell
+     * @return array
+     */
+    protected static function transformPointersToObjects($em, $cistell)
+    {
+        $items = array();
+        foreach ($cistell as $item) {
+            $product = $em->getRepository('FluxProductBundle:Product')->find($item);
+            if ($product) {
+                array_push($items, $product);
+            }
+        }
+        return $items;
+    }
+
     public function step1Action($id)
     {
         $em = $this->getDoctrine()->getManager();
         $session = $this->getRequest()->getSession();
         $cistell = $session->get('cistell');
-        $items = array();
 
         if (count($cistell) > 0) {
             // Ja existeien items al cistell, no cal fer res
@@ -28,13 +45,7 @@ class BotigaController extends Controller
         array_push($cistell, $id); // afegeix item al cistell. WARNING: no comprova duplicats
         $session->set('cistell', $cistell); // guarda cistell en sessio
 
-        // Transforma el cistell (matriu de punters) amb objectes del tipus producte per enviar a la vista
-        foreach ($cistell as $item) {
-            $product = $em->getRepository('FluxProductBundle:Product')->find($item);
-            if ($product) {
-                array_push($items, $product);
-            }
-        }
+        $items = self::transformPointersToObjects($em, $cistell);
 
         return $this->render('PageBundle:Botiga:step1.html.twig', array(
             'items' => $items,
@@ -49,15 +60,8 @@ class BotigaController extends Controller
         $em = $this->getDoctrine()->getManager();
         $session = $this->getRequest()->getSession();
         $cistell = $session->get('cistell');
-        $items = array();
 
-        // Transforma el cistell (matriu de punters) amb objectes del tipus producte per enviar a la vista
-        foreach ($cistell as $item) {
-            $product = $em->getRepository('FluxProductBundle:Product')->find($item);
-            if ($product) {
-                array_push($items, $product);
-            }
-        }
+        $items = self::transformPointersToObjects($em, $cistell);
 
         // Construye el formulario de contacto
         $storeCustomer = new StoreCustomer();
@@ -138,7 +142,6 @@ class BotigaController extends Controller
         $em = $this->getDoctrine()->getManager();
         $session = $this->getRequest()->getSession();
         $cistell = $session->get('cistell');
-        $items = array();
 
         if (count($cistell) > 0) {
             $array2 = array($id);
@@ -146,13 +149,7 @@ class BotigaController extends Controller
             $session->set('cistell', $cistell); // guarda cistell en sessio
         }
 
-        // Transforma el cistell (matriu de punters) amb objectes del tipus producte per enviar a la vista
-        foreach ($cistell as $item) {
-            $product = $em->getRepository('FluxProductBundle:Product')->find($item);
-            if ($product) {
-                array_push($items, $product);
-            }
-        }
+        $items = self::transformPointersToObjects($em, $cistell);
 
         return $this->render('PageBundle:Botiga:step1.html.twig', array(
             'items' => $items,

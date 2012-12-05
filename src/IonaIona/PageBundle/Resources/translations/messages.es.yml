@@ -49,3 +49,7 @@ store.form.mensaje: comentario
 store.form.wantNewsletter: sí, quiero recibir información sobre nuevos productos
 store.form.cancel: cancelar
 store.form.send: enviar
+store.steps: pasos para comprar
+store.step.1: comprobar la cesta
+store.step.2: rellenar el formulario
+store.step.3: finalizar

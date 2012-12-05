@@ -49,3 +49,7 @@ store.form.mensaje: comment
 store.form.wantNewsletter: yes, I want to recieve information about new products
 store.form.cancel: cancel
 store.form.send: send
+store.steps: steps to buy
+store.step.1: check the cart
+store.step.2: fill the form
+store.step.3: finish

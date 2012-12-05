@@ -8,10 +8,15 @@
 {% endblock %}
 {% block principal %}
     <div class="constrictor clearfix">
-        <div class="detall-item-armari-dreta">
-            store step 2
+        <div class="detall-item-armari-dreta" style="width:30%">
+            <h2>{% trans %}store.steps{% endtrans %}</h2>
+            <ol>
+                <li>{% trans %}store.step.1{% endtrans %}</li>
+                <li class="current">{% trans %}store.step.2{% endtrans %}</li>
+                <li>{% trans %}store.step.3{% endtrans %}</li>
+            </ol>
         </div>
-        <div class="detall-item-armari-esquerra">
+        <div class="detall-item-armari-esquerra" style="width:60%">
             <table>
                 <thead>
                     <tr>
