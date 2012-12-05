@@ -73,6 +73,7 @@ class BotigaController extends Controller
                     // El cliente es nuevo
                     $customer = new StoreCustomer();
                     $customer->setEmail($storeCustomer->getEmail());
+                    $customer->setCreated(new \DateTime());
                 }
                 $customer->setName($storeCustomer->getName());
                 $customer->setAddress($storeCustomer->getAddress());
@@ -81,6 +82,7 @@ class BotigaController extends Controller
                 $customer->setPostalCode($storeCustomer->getPostalCode());
                 $customer->setState($storeCustomer->getState());
                 $customer->setWantNewsletter($storeCustomer->getWantNewsletter());
+                $customer->setUpdated(new \DateTime());
                 $em->persist($customer);
 
                 $comment = $formulario->get('mensaje')->getData();

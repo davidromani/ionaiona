@@ -1,0 +1,1 @@
+sf fos:user:create --super-admin ionaiona admin@ionaiona.com 10n410n4

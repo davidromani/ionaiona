@@ -21,9 +21,10 @@ class StoreCustomerAdmin extends Admin
         $translator = new Translator($locale);
         $listMapper
             //->addIdentifier('id')
+            ->add('created', 'datetime', array('label' => 'Data alta'))
             ->addIdentifier('name', null, array('label' => 'Nom'))
-            ->addIdentifier('email', null, array('label' => 'Email'))
-            ->addIdentifier('postalCode', null, array('label' => 'Codi postal'))
+            ->add('email', null, array('label' => 'Email'))
+            ->add('postalCode', null, array('label' => 'Codi postal'))
             ->add('wantNewsletter', 'boolean', array('label' => 'Newsletter'))
             // add custom action links
             ->add('_action', 'actions', array(
@@ -57,6 +58,8 @@ class StoreCustomerAdmin extends Admin
         $locale = $this->getRequest()->get('locale');
         $translator = new Translator($locale);
         $formMapper
+            ->add('created', 'datetime', array('label' => 'Data alta', 'read_only' => true))
+            ->add('updated', 'datetime', array('label' => 'Date modificació', 'read_only' => true))
             ->add('email', 'text', array('label' => 'Email', 'read_only' => true))
             ->add('name', 'text', array('label' => 'Nom i cognoms'))
             ->add('address', 'text', array('label' => 'Adreça'))

@@ -4,6 +4,7 @@ namespace IonaIona\PageBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity
@@ -60,6 +61,18 @@ class StoreCustomer
      * @ORM\Column(type="boolean")
      */
     protected $wantNewsletter;
+
+    /**
+     * @Gedmo\Timestampable(on="create")
+     * @ORM\Column(type="datetime")
+     */
+    private $created;
+
+    /**
+     * @Gedmo\Timestampable(on="update")
+     * @ORM\Column(type="datetime")
+     */
+    private $updated;
 
     public function getId()
     {
@@ -144,6 +157,26 @@ class StoreCustomer
     public function getWantNewsletter()
     {
         return $this->wantNewsletter;
+    }
+
+    public function setCreated($created)
+    {
+        $this->created = $created;
+    }
+
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    public function setUpdated($updated)
+    {
+        $this->updated = $updated;
+    }
+
+    public function getUpdated()
+    {
+        return $this->updated;
     }
 
     function __toString()
