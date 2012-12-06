@@ -9,14 +9,10 @@
     <div class="constrictor clearfix">
         <div class="blog-panel-izquierdo">
             <div class="pblock">
-                <a href="{{ path( 'diari_post_' ~ app.request.locale, {'year' : post.postDate | date('Y'), 'month' : post.postDate | date('m'), 'day' : post.postDate | date('d'), 'title' : post.titleSlug, 'id' : post.id } ) }}">
-                    <img src="{{ vich_uploader_asset(post, 'image1File') | imagine_filter('imatge260') }}" alt="" title="">
-                 </a>
-                <div class="pblock-left">
-                    <h3>{{ post.postDate | date('d/m/Y') }}</h3>
-                    <a href="{{ path( 'diari_post_' ~ app.request.locale, {'year' : post.postDate | date('Y'), 'month' : post.postDate | date('m'), 'day' : post.postDate | date('d'), 'title' : post.titleSlug, 'id' : post.id } ) }}"><h4>{{ post.title }}</h4></a>
-                    <p>{{ post.summary }}</p>
-                </div>
+                <img src="{{ vich_uploader_asset(post, 'image2File') | imagine_filter('imatge600') }}" alt="" title="">
+                <h3>{{ post.postDate | date('d/m/Y') }}</h3>
+                <h4>{{ post.title }}</h4>
+                <p>{{ post.text1 | raw }}</p>
             </div>
         </div>
         <div class="blog-panel-derecho">
