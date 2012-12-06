@@ -6,6 +6,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Flux\Utilities\Utils;
 
 /**
  * @ORM\Entity
@@ -241,7 +242,17 @@ class Post
     public function getTitle()
     {
         return $this->title;
-    } 
+    }
+
+    /**
+     * Get title slug
+     *
+     * @return string
+     */
+    public function getTitleSlug()
+    {
+        return Utils::getSlug($this->title);
+    }
 
     /**
      * Set subtitle

@@ -253,6 +253,24 @@ diari_en:
     requirements:
         _locale:    en
 
+diari_post_ca:
+    pattern:        /{_locale}/el-diari/{year}/{month}/{day}/{title}/{id}/
+    defaults:       { _controller: PageBundle:Diari:post }
+    requirements:
+        _locale:    ca
+
+diari_post_es:
+    pattern:        /{_locale}/diario/{year}/{month}/{day}/{title}/{id}/
+    defaults:       { _controller: PageBundle:Diari:post }
+    requirements:
+        _locale:    es
+
+diari_post_en:
+    pattern:        /{_locale}/newspaper/{year}/{month}/{day}/{title}/{id}/
+    defaults:       { _controller: PageBundle:Diari:post }
+    requirements:
+        _locale:    en
+
 ############################ BOTIGA
 buy_step_1_ca:
     pattern:        /{_locale}/botiga/{id}

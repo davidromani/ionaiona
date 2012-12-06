@@ -115,8 +115,9 @@ header {
     font-family: 'GothamRnd', arial, helvetica;
     margin-bottom: 40px;
     height: 260px;
-    position: fixed;
-    z-index: 20;
+    /*
+    background: url('/images/points940.png') 0 0 no-repeat; //ENABLE TO FIX
+    */
     width: 100%;
     top: 0;
     background: #FFF;
@@ -173,7 +174,9 @@ header div.constrictor.clearfix ul li.current a {
  */
 div#principal {
     font-family: 'GothamRnd', arial, helvetica;
-    margin-top: 300px;
+    /*
+    margin-top: 300px; //ENABLE TO FIX
+    */
 }
 
 div#principal div.constrictor.clearfix div.bloc {
@@ -317,6 +320,55 @@ div#principal div.constrictor.clearfix div.blog-panel-izquierdo {
     width: 65%;
 }
 
+div#principal div.constrictor.clearfix div.blog-panel-izquierdo div.pblock {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    padding-top: 15px;
+    margin-bottom: 40px;
+    background: url('/images/points940.png') 0 0 no-repeat;
+}
+
+div#principal div.constrictor.clearfix div.blog-panel-izquierdo div.pblock a {
+    text-decoration: none;
+}
+
+div#principal div.constrictor.clearfix div.blog-panel-izquierdo div.pblock a img {
+    transition: opacity 0.35s;
+    -moz-transition: opacity 0.35s;
+    -webkit-transition: opacity 0.35s;
+    -o-transition: opacity 0.35s;
+}
+
+div#principal div.constrictor.clearfix div.blog-panel-izquierdo div.pblock a img:hover {
+    opacity: 0.75;
+}
+
+div#principal div.constrictor.clearfix div.blog-panel-izquierdo div.pblock div.pblock-left {
+    width: 50%;
+    float: right;
+}
+
+div#principal div.constrictor.clearfix div.blog-panel-izquierdo div.pblock div.pblock-left h3 {
+    margin: 0;
+    padding-bottom: 10px;
+    color: #D84359;
+    font-size: 1em;
+}
+
+div#principal div.constrictor.clearfix div.blog-panel-izquierdo div.pblock div.pblock-left h4 {
+    margin: 0;
+    padding-bottom: 10px;
+    color: #D84359;
+    font-size: 1.2em;
+}
+
+div#principal div.constrictor.clearfix div.blog-panel-izquierdo div.pblock div.pblock-left p {
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 0.8em;
+}
+
 div#principal div.constrictor.clearfix div.blog-panel-derecho {
     float: right;
     width: 25%;
@@ -357,9 +409,14 @@ footer {
     margin-top: 40px;
 }
 
+footer div.constrictor.clearfix {
+
+}
+
 footer div.constrictor.clearfix h6 {
-    border-bottom: dotted 2px #000;
     margin: 10px 0;
+    background: url('/images/points940.png') 0 0 no-repeat;
+    height: 5px;
 }
 
 footer div.constrictor.clearfix div {

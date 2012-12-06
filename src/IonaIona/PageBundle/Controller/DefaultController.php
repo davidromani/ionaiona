@@ -40,9 +40,13 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
         $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '001-004'));
         $categories = $em->getRepository('FluxBlogBundle:Category')->getActiveItemsSortedByTitle();
+        $postsQuery = $em->getRepository('FluxBlogBundle:Post')->getAllPostsSortedByDateQuery();
+        $paginator = $this->get('knp_paginator');
+        $posts = $paginator->paginate($postsQuery, $this->getRequest()->query->get('page', 1), 8 /*limit per page*/);
         return $this->render('PageBundle:Default:diari.html.twig', array(
             'pagina' => $pagina,
             'categories' => $categories,
+            'posts' => $posts,
         ));
     }
 }

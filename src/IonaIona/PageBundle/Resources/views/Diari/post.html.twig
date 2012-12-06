@@ -8,19 +8,16 @@
 {% block principal %}
     <div class="constrictor clearfix">
         <div class="blog-panel-izquierdo">
-            {% for post in posts %}
-                <div class="pblock">
-                    <a href="{{ path( 'diari_post_' ~ app.request.locale, {'year' : post.postDate | date('Y'), 'month' : post.postDate | date('m'), 'day' : post.postDate | date('d'), 'title' : post.titleSlug, 'id' : post.id } ) }}">
-                        <img src="{{ vich_uploader_asset(post, 'image1File') | imagine_filter('imatge260') }}" alt="" title="">
-                     </a>
-                    <div class="pblock-left">
-                        <h3>{{ post.postDate | date('d/m/Y') }}</h3>
-                        <a href="{{ path( 'diari_post_' ~ app.request.locale, {'year' : post.postDate | date('Y'), 'month' : post.postDate | date('m'), 'day' : post.postDate | date('d'), 'title' : post.titleSlug, 'id' : post.id } ) }}"><h4>{{ post.title }}</h4></a>
-                        <p>{{ post.summary }}</p>
-                    </div>
+            <div class="pblock">
+                <a href="{{ path( 'diari_post_' ~ app.request.locale, {'year' : post.postDate | date('Y'), 'month' : post.postDate | date('m'), 'day' : post.postDate | date('d'), 'title' : post.titleSlug, 'id' : post.id } ) }}">
+                    <img src="{{ vich_uploader_asset(post, 'image1File') | imagine_filter('imatge260') }}" alt="" title="">
+                 </a>
+                <div class="pblock-left">
+                    <h3>{{ post.postDate | date('d/m/Y') }}</h3>
+                    <a href="{{ path( 'diari_post_' ~ app.request.locale, {'year' : post.postDate | date('Y'), 'month' : post.postDate | date('m'), 'day' : post.postDate | date('d'), 'title' : post.titleSlug, 'id' : post.id } ) }}"><h4>{{ post.title }}</h4></a>
+                    <p>{{ post.summary }}</p>
                 </div>
-            {% endfor %}
-            {{ posts.render() | raw }}
+            </div>
         </div>
         <div class="blog-panel-derecho">
             <div class="vblock">
