@@ -54,3 +54,6 @@ store.step.1: comprobar la cesta
 store.step.2: rellenar el formulario
 store.step.3: finalizar
 store.thankyou: Gracias
+blog.search: buscador
+blog.categories: categorías
+blog.archive: archivo

@@ -54,3 +54,6 @@ store.step.1: check the cart
 store.step.2: fill the form
 store.step.3: finish
 store.thankyou: Thank you
+blog.search: search
+blog.categories: categories
+blog.archive: archive

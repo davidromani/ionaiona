@@ -312,6 +312,43 @@ div#principal div.constrictor.clearfix div.taller-panel-derecho {
     width: 30%;
 }
 
+div#principal div.constrictor.clearfix div.blog-panel-izquierdo {
+    float: left;
+    width: 65%;
+}
+
+div#principal div.constrictor.clearfix div.blog-panel-derecho {
+    float: right;
+    width: 25%;
+}
+
+div#principal div.constrictor.clearfix div.blog-panel-derecho div.vblock {
+    width: 100%;
+    float: left;
+    margin-bottom: 40px;
+}
+
+div#principal div.constrictor.clearfix div.blog-panel-derecho h2 {
+    background: url('/images/points235.png') 0 0 no-repeat;
+    margin: 0;
+    padding: 15px 0 5px 0;
+    color: #AAA;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+div#principal div.constrictor.clearfix div.blog-panel-derecho a {
+    color: #AAA;
+    font-size: 0.9em;
+    margin: 0 0 5px 0;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+div#principal div.constrictor.clearfix div.blog-panel-derecho a:hover {
+    color: #000;
+}
+
 footer {
     font-family: 'GothamRnd', arial, helvetica;
     color: #000;

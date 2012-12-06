@@ -39,8 +39,10 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '001-004'));
+        $categories = $em->getRepository('FluxBlogBundle:Category')->getActiveItemsSortedByTitle();
         return $this->render('PageBundle:Default:diari.html.twig', array(
             'pagina' => $pagina,
+            'categories' => $categories,
         ));
     }
 }
