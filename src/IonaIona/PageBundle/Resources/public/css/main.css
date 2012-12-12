@@ -429,7 +429,7 @@ div#principal div.constrictor.clearfix div.blog-panel-derecho a:hover {
 footer {
     font-family: 'GothamRnd', arial, helvetica;
     color: #000;
-    font-size: 0.85em;
+    font-size: 0.75em;
     padding-bottom: 40px;
     margin-top: 40px;
 }
@@ -448,7 +448,7 @@ footer div.constrictor.clearfix div {
     float: left;
     width: 135px;
     height: 170px;
-    margin-right: 60px;
+    margin-right: 30px;
 }
 
 footer div.constrictor.clearfix div a {
