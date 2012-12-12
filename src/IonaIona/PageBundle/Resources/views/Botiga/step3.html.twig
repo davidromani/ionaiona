@@ -8,7 +8,7 @@
 {% endblock %}
 {% block principal %}
     <div class="constrictor clearfix">
-        <div class="detall-item-armari-dreta" style="width:30%">
+        <div class="detall-item-armari-dreta">
             <h2>{% trans %}store.steps{% endtrans %}</h2>
             <ol>
                 <li>{% trans %}store.step.1{% endtrans %}</li>
@@ -16,7 +16,7 @@
                 <li class="current">{% trans %}store.step.3{% endtrans %}</li>
             </ol>
         </div>
-        <div class="detall-item-armari-esquerra" style="width:60%">
+        <div class="detall-item-armari-esquerra" style="width:70%">
             <h2 style="color:#D84359">{% trans %}store.thankyou{% endtrans %}</h2>
             <p>
                 {{ pagina.text1 | raw }}
