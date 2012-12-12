@@ -283,6 +283,8 @@ div#principal div.constrictor.clearfix div.detall-item-armari-esquerra table {
     border-collapse: collapse;
     border-top: 2px dotted #000;
     border-bottom: 2px dotted #000;
+    font-size: 0.85em;
+    font-family: 'GothamBook', arial, helvetica;
 }
 
 div#principal div.constrictor.clearfix div.detall-item-armari-esquerra table thead {
@@ -291,6 +293,7 @@ div#principal div.constrictor.clearfix div.detall-item-armari-esquerra table the
 
 div#principal div.constrictor.clearfix div.detall-item-armari-esquerra table thead tr th {
     border-bottom: 2px dotted #000;
+    font-weight: normal;
 }
 
 div#principal div.constrictor.clearfix div.detall-item-armari-esquerra table tfoot tr th {
@@ -314,11 +317,13 @@ div#principal div.constrictor.clearfix div.detall-item-armari-dreta h2 {
 
 div#principal div.constrictor.clearfix div.detall-item-armari-dreta ol {
     margin: 0;
-    padding: 0 0 0 30px;
+    padding: 0 0 0 18px;
+    font-size: 0.85em;
 }
 
 div#principal div.constrictor.clearfix div.detall-item-armari-dreta ol li {
-    padding: 10px 2px;
+    padding: 5px 2px;
+    font-family: 'GothamBook', arial, helvetica;
 }
 
 div#principal div.constrictor.clearfix div.detall-item-armari-dreta ol li.current {
