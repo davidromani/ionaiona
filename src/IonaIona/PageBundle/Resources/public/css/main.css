@@ -148,7 +148,8 @@ header div.constrictor.clearfix h1.invisible {
 
 header div.constrictor.clearfix h2 {
     float: right;
-    margin-top: 70px;
+    margin-top: 86px;
+    font-size: 1.3em;
 }
 
 header div.constrictor.clearfix a img {
