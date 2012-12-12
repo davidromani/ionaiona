@@ -226,7 +226,11 @@ div#principal div.constrictor.clearfix div.bloc:last-child {
 
 div#principal div.constrictor.clearfix div.conjunt-items-armari div.file-block {
     float: left;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
+}
+
+div#principal div.constrictor.clearfix div.conjunt-items-armari div.file-block:last-child {
+    margin-bottom: 0;
 }
 
 div#principal div.constrictor.clearfix div.conjunt-items-armari div.file-block div.one-item-block {
@@ -303,8 +307,9 @@ div#principal div.constrictor.clearfix div.detall-item-armari-dreta {
 div#principal div.constrictor.clearfix div.detall-item-armari-dreta h2 {
     border-top: 2px #000 dotted;
     border-bottom: 2px #000 dotted;
-    padding: 5px 0;
+    padding: 3px 0;
     margin-top: 0;
+    font-size: 0.85em;
 }
 
 div#principal div.constrictor.clearfix div.detall-item-armari-dreta ol {
@@ -321,7 +326,8 @@ div#principal div.constrictor.clearfix div.detall-item-armari-dreta ol li.curren
 }
 
 div#principal div.constrictor.clearfix div.detall-item-armari-dreta p {
-    font-size: 0.95em;
+    font-family: 'GothamBook', arial, helvetica;
+    font-size: 0.85em;
     line-height: 1.9em;
 }
 
