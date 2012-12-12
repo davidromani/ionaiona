@@ -54,6 +54,7 @@ class Builder extends ContainerAware
         $menu->addChild('pitet', array('route' => 'armari_pitet_ca'));
         $menu->addChild('ocell', array('route' => 'armari_ocell_ca'));
         $menu->addChild('banderola', array('route' => 'armari_banderola_ca'));
+        $menu->setChildrenAttribute('class', 'level2');
         return $menu;
     }
 

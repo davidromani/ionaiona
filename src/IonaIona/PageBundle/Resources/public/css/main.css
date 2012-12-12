@@ -32,6 +32,24 @@ body {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'GothamBook';
+    src: url('/fonts/otf/gothamrndbook.otf');
+    src: url('/fonts/ttf/gothamrndbook.ttf') format('truetype'),
+         url('/fonts/svg/gothamrndbook.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothamLight';
+    src: url('/fonts/otf/gothamrndlight.otf');
+    src: url('/fonts/ttf/gothamrndlight.ttf') format('truetype'),
+         url('/fonts/svg/gothamrndlight.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection declarations have to be separate.
@@ -149,6 +167,10 @@ header div.constrictor.clearfix ul {
 
 header div.constrictor.clearfix ul:last-child {
     border-bottom: dotted 2px #000;
+}
+
+header div.constrictor.clearfix ul.level2 {
+    font-family: 'GothamBook', arial, helvetica;
 }
 
 header div.constrictor.clearfix ul li {
