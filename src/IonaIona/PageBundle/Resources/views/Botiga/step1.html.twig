@@ -23,8 +23,7 @@
                         <th colspan="5" style="color:#D84359;font-family:'GothamRnd'">{% trans %}store.cistell{% endtrans %}</th>
                     </tr>
                     <tr>
-                        <th></th>
-                        <th>{% trans %}store.imatge{% endtrans %}</th>
+                        <th colspan="2">{% trans %}store.imatge{% endtrans %}</th>
                         <th>{% trans %}store.producte{% endtrans %}</th>
                         <th style="text-align:right">{% trans %}store.quantitat{% endtrans %}</th>
                         <th style="text-align:right">{% trans %}store.import{% endtrans %}</th>
@@ -58,8 +57,8 @@
                     </tr>
 
                     <tr>
-                        <th colspan="4">{% trans %}store.total{% endtrans %}</th>
-                        <th>{{ (( subtotal + fee_carrier ) + ( (subtotal + fee_carrier) * fee_iva ) / 100) | number_format(2, '\'', '.') }} €</th>
+                        <th colspan="4"><strong>{% trans %}store.total{% endtrans %}</strong></th>
+                        <th><strong>{{ (( subtotal + fee_carrier ) + ( (subtotal + fee_carrier) * fee_iva ) / 100) | number_format(2, '\'', '.') }} €</strong></th>
                     </tr>
                 </tfoot>
             </table>
