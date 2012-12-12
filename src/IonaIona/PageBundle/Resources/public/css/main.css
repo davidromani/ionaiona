@@ -157,6 +157,7 @@ header div.constrictor.clearfix a img {
 
 header div.constrictor.clearfix ul {
     border-top: dotted 2px #000;
+    border-bottom: dotted 2px #000;
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -166,11 +167,12 @@ header div.constrictor.clearfix ul {
 }
 
 header div.constrictor.clearfix ul:last-child {
-    border-bottom: dotted 2px #000;
+    /*border-bottom: dotted 2px #000;*/
 }
 
 header div.constrictor.clearfix ul.level2 {
     font-family: 'GothamBook', arial, helvetica;
+    margin-top: -2px;
 }
 
 header div.constrictor.clearfix ul li {
