@@ -223,6 +223,10 @@ liip_imagine:
             quality: 90
             filters:
                 thumbnail: { size: [80, null], mode: outbound }
+        imatge220:
+            quality: 90
+            filters:
+                thumbnail: { size: [220, null], mode: outbound }
         imatge260:
             quality: 90
             filters:

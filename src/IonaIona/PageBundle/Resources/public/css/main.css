@@ -406,24 +406,38 @@ div#principal div.constrictor.clearfix div.blog-panel-izquierdo div.pblock div.p
     float: right;
 }
 
+div#principal div.constrictor.clearfix div.blog-panel-izquierdo div.pblock h3 {
+    font-size: 0.85em;
+}
+
+div#principal div.constrictor.clearfix div.blog-panel-izquierdo div.pblock h4 {
+    font-size: 0.85em;
+}
+
+div#principal div.constrictor.clearfix div.blog-panel-izquierdo div.pblock p {
+    font-family: 'GothamBook', arial, helvetica;
+    font-size: 0.85em;
+}
+
 div#principal div.constrictor.clearfix div.blog-panel-izquierdo div.pblock div.pblock-left h3 {
     margin: 0;
     padding-bottom: 10px;
     color: #D84359;
-    font-size: 1em;
+    font-size: 0.85em;
 }
 
 div#principal div.constrictor.clearfix div.blog-panel-izquierdo div.pblock div.pblock-left h4 {
     margin: 0;
     padding-bottom: 10px;
     color: #D84359;
-    font-size: 1.2em;
+    font-size: 0.85em;
 }
 
 div#principal div.constrictor.clearfix div.blog-panel-izquierdo div.pblock div.pblock-left p {
     margin: 0;
     padding-bottom: 10px;
-    font-size: 0.8em;
+    font-size: 0.85em;
+    font-family: 'GothamBook', arial, helvetica;
 }
 
 div#principal div.constrictor.clearfix div.blog-panel-derecho {
@@ -440,18 +454,17 @@ div#principal div.constrictor.clearfix div.blog-panel-derecho div.vblock {
 div#principal div.constrictor.clearfix div.blog-panel-derecho h2 {
     background: url('/images/points235.png') 0 0 no-repeat;
     margin: 0;
-    padding: 15px 0 5px 0;
+    padding: 5px 0 5px 0;
     color: #AAA;
-    font-weight: bold;
-    font-size: 1em;
+    font-size: 0.85em;
 }
 
 div#principal div.constrictor.clearfix div.blog-panel-derecho a {
     color: #AAA;
-    font-size: 0.9em;
+    font-size: 0.85em;
     margin: 0 0 5px 0;
     text-decoration: none;
-    font-weight: normal;
+    font-family: 'GothamBook', arial, helvetica;
 }
 
 div#principal div.constrictor.clearfix div.blog-panel-derecho a:hover {

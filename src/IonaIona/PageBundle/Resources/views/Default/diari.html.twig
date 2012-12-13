@@ -11,7 +11,7 @@
             {% for post in posts %}
                 <div class="pblock">
                     <a href="{{ path( 'diari_post_' ~ app.request.locale, {'year' : post.postDate | date('Y'), 'month' : post.postDate | date('m'), 'day' : post.postDate | date('d'), 'title' : post.titleSlug, 'id' : post.id } ) }}">
-                        <img src="{{ vich_uploader_asset(post, 'image1File') | imagine_filter('imatge260') }}" alt="" title="">
+                        <img src="{{ vich_uploader_asset(post, 'image1File') | imagine_filter('imatge220') }}" alt="" title="">
                      </a>
                     <div class="pblock-left">
                         <h3>{{ post.postDate | date('d/m/Y') }}</h3>
