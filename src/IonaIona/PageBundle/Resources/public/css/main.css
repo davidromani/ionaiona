@@ -141,6 +141,12 @@ header {
     background: #FFF;
 }
 
+header div.constrictor.clearfix h6 {
+    margin: 0 0 3px 0;
+    background: url('/images/points940.png') 0 0 no-repeat;
+    height: 5px;
+}
+
 header div.constrictor.clearfix h1.invisible {
     font-size: 0.5em;
     margin: 0;
@@ -157,9 +163,10 @@ header div.constrictor.clearfix a img {
 }
 
 header div.constrictor.clearfix ul {
-    border-top: dotted 2px #000;
-    border-bottom: dotted 2px #000;
-    margin: 0;
+    /*border-top: dotted 2px #000;
+    border-bottom: dotted 2px #000;*/
+    background: url('/images/points940.png') 0 100% no-repeat;
+    margin: 3px 0 0 0;
     padding: 0;
     list-style-type: none;
     float: left;
@@ -173,7 +180,7 @@ header div.constrictor.clearfix ul:last-child {
 
 header div.constrictor.clearfix ul.level2 {
     font-family: 'GothamBook', arial, helvetica;
-    margin-top: -2px;
+    margin-top: 0;
 }
 
 header div.constrictor.clearfix ul li {
