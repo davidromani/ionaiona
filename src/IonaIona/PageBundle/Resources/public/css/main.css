@@ -295,8 +295,7 @@ div#principal div.constrictor.clearfix div.detall-item-armari-esquerra a:hover {
 div#principal div.constrictor.clearfix div.detall-item-armari-esquerra table {
     width: 100%;
     border-collapse: collapse;
-    border-top: 2px dotted #000;
-    border-bottom: 2px dotted #000;
+    background: url('/images/points940.png') 0 0 no-repeat;
     font-size: 0.85em;
     font-family: 'GothamBook', arial, helvetica;
 }
@@ -306,15 +305,19 @@ div#principal div.constrictor.clearfix div.detall-item-armari-esquerra table the
 }
 
 div#principal div.constrictor.clearfix div.detall-item-armari-esquerra table thead tr th {
-    border-bottom: 2px dotted #000;
+    /*border-bottom: 2px dotted #000;*/
     font-weight: normal;
     padding: 3px 0;
 }
 
+div#principal div.constrictor.clearfix div.detall-item-armari-esquerra table tfoot {
+    background: url('/images/points940.png') 0 0 no-repeat;
+}
+
 div#principal div.constrictor.clearfix div.detall-item-armari-esquerra table tfoot tr th {
     text-align: right;
-    border-top: 2px dotted #000;
-    border-bottom: 2px dotted #000;
+    /*border-top: 2px dotted #000;
+    border-bottom: 2px dotted #000;*/
     padding: 3px 0;
 }
 
