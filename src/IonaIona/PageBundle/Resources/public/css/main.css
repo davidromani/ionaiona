@@ -264,11 +264,18 @@ div#principal div.constrictor.clearfix div.conjunt-items-armari div.file-block d
 }
 
 div#principal div.constrictor.clearfix div.conjunt-items-armari div.file-block div.one-item-block div.one-item-foot {
-    padding: 3px 0;
+    padding: 5px 0;
     margin-top: 15px;
-    border-bottom: 2px black dotted;
-    border-top: 2px black dotted;
+    /*border-bottom: 2px black dotted;
+    border-top: 2px black dotted;*/
+    background: url('/images/points470.png') 0 0 no-repeat;
     height: 17px;
+}
+
+div#principal div.constrictor.clearfix div.conjunt-items-armari div.file-block div.one-item-block div.one-item-foot h6 {
+    margin: 0 0 12px 0;
+    background: url('/images/points470.png') 0 100% no-repeat;
+    height: 20px;
 }
 
 div#principal div.constrictor.clearfix div.detall-item-armari-esquerra {
@@ -318,13 +325,13 @@ div#principal div.constrictor.clearfix div.detall-item-armari-esquerra table tbo
 div#principal div.constrictor.clearfix div.detall-item-armari-dreta {
     float: right;
     width: 25%;
+    background: url('/images/points235.png') 0 0 no-repeat;
 }
 
 div#principal div.constrictor.clearfix div.detall-item-armari-dreta h2 {
-    border-top: 2px #000 dotted;
-    border-bottom: 2px #000 dotted;
+    background: url('/images/points235.png') 0 100% no-repeat;
     padding: 3px 0;
-    margin-top: 0;
+    margin-top: 2px;
     font-size: 0.85em;
 }
 
