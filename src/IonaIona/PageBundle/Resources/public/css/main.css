@@ -131,8 +131,8 @@ div.constrictor {
  */
 header {
     font-family: 'GothamRnd', arial, helvetica;
-    margin-bottom: 9px;
-    height: 260px;
+    margin-bottom: 60px;
+    height: 200px;
     /*
     background: url('/images/points940.png') 0 0 no-repeat; //ENABLE TO FIX
     */
@@ -206,6 +206,7 @@ header div.constrictor.clearfix ul li.current a {
  */
 div#principal {
     font-family: 'GothamRnd', arial, helvetica;
+    min-height: 400px;
     /*
     margin-top: 300px; //ENABLE TO FIX
     */
@@ -486,7 +487,7 @@ footer {
     color: #000;
     font-size: 0.75em;
     padding-bottom: 40px;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 footer div.constrictor.clearfix {
