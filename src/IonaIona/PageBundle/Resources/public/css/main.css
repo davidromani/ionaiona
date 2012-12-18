@@ -180,7 +180,7 @@ header div.constrictor.clearfix ul:last-child {
 
 header div.constrictor.clearfix ul.level2 {
     font-family: 'GothamBook', arial, helvetica;
-    margin-top: 0;
+    margin-top: 2px;
 }
 
 header div.constrictor.clearfix ul li {
