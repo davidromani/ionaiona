@@ -281,15 +281,37 @@ div#principal div.constrictor.clearfix div.conjunt-items-armari div.file-block d
 
 div#principal div.constrictor.clearfix div.detall-item-armari-esquerra {
     float: left;
-    width: 50%;
+    width: 530px;
 }
 
-div#principal div.constrictor.clearfix div.detall-item-armari-esquerra a {
+div#principal div.constrictor.clearfix div.detall-item-armari-esquerra img {
+    margin-top: -32px;
+}
+
+div#principal div.constrictor.clearfix div.detall-item-armari-esquerra div.detall-item-armari-esquerra-botonera {
+    padding: 10px;
+    float: left;
+    width: 510px;
+}
+
+div#principal div.constrictor.clearfix div.detall-item-armari-esquerra div.detall-item-armari-esquerra-botonera a {
     text-decoration: none;
     color: #000;
 }
 
-div#principal div.constrictor.clearfix div.detall-item-armari-esquerra a:hover {
+div#principal div.constrictor.clearfix div.detall-item-armari-esquerra div.detall-item-armari-esquerra-botonera a.esquerra {
+    float: left;
+    position: relative;
+    top: 10px;
+}
+
+div#principal div.constrictor.clearfix div.detall-item-armari-esquerra div.detall-item-armari-esquerra-botonera a.dreta {
+    float: right;
+    position: relative;
+    top: 10px;
+}
+
+div#principal div.constrictor.clearfix div.detall-item-armari-esquerra div.detall-item-armari-esquerra-botonera a:hover {
     color: #D84359;
 }
 

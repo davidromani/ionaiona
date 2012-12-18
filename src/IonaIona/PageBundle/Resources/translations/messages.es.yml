@@ -25,6 +25,9 @@ detall.armari.quantitat: cantidad de telas
 detall.armari.especificacions: especificaciones
 detall.armari.preu: precio
 detall.armari.comprar: comprar
+detall.armari.altimatge: imagen producto
+detall.armari.boto.esq: botón izquierda
+detall.armari.boto.dre: botón derecha
 noitems: lo sentimos, actualmente no hay ningún muñeco disponible en esta categoría.
 store.cistell: la cesta
 store.imatge: imagen

@@ -25,6 +25,9 @@ detall.armari.quantitat: quantitat de teles
 detall.armari.especificacions: especificacions
 detall.armari.preu: preu
 detall.armari.comprar: comprar
+detall.armari.altimatge: imatge producte
+detall.armari.boto.esq: botó esquerra
+detall.armari.boto.dre: botó dreta
 noitems: ho sentim, actualment no hi ha cap ninot disponible en aquesta categoria.
 store.cistell: el cistell
 store.imatge: imatge

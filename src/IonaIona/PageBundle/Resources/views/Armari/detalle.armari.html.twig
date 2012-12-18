@@ -23,13 +23,19 @@
             <a style="width: 30%;margin-top: 30px" class="call-to-action red" href="{{ path( 'buy_step_1_' ~ app.request.locale, { id : item.id } ) }}">{% trans %}detall.armari.comprar{% endtrans %}</a>
         </div>
         <div class="detall-item-armari-esquerra">
-            {% if needsPrev == true %}
-                <a href="{{ path( 'armari_items_' ~ app.request.locale, { nom : prev.slug, id : prev.id }) }}"><</a>
-            {% endif %}
-            <img src="{{ vich_uploader_asset(item, 'image1File') | imagine_filter('imatge530') }}" alt="" title="">
-            {% if needsNext == true %}
-                <a href="{{ path( 'armari_items_' ~ app.request.locale, { nom : next.slug, id : next.id }) }}">></a>
-            {% endif %}
+            <div class="detall-item-armari-esquerra-botonera">
+                {% if needsPrev == true %}
+                    <a class="esquerra" href="{{ path( 'armari_items_' ~ app.request.locale, { nom : prev.slug, id : prev.id }) }}">
+                        <img src="/images/button_left.png" alt="{% trans %}detall.armari.boto.esq{% endtrans %}">
+                    </a>
+                {% endif %}
+                {% if needsNext == true %}
+                    <a class="dreta" href="{{ path( 'armari_items_' ~ app.request.locale, { nom : next.slug, id : next.id }) }}">
+                        <img src="/images/button_right.png" alt="{% trans %}detall.armari.boto.dre{% endtrans %}">
+                    </a>
+                {% endif %}
+            </div>
+            <img src="{{ vich_uploader_asset(item, 'image1File') | imagine_filter('imatge530') }}" alt="{% trans %}detall.armari.altimatge{% endtrans %} {{ item.name }}" title="{{ item.name }}">
         </div>
     </div>
 {% endblock %}

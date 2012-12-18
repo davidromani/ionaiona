@@ -25,6 +25,9 @@ detall.armari.quantitat: amount of fabrics
 detall.armari.especificacions: specifications
 detall.armari.preu: price
 detall.armari.comprar: buy
+detall.armari.altimatge: product image
+detall.armari.boto.esq: button left
+detall.armari.boto.dre: button right
 noitems: sorry, there are no currently available in this category doll.
 store.cistell: the shopping cart
 store.imatge: image
