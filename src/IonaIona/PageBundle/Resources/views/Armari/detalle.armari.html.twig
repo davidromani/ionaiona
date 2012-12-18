@@ -11,14 +11,14 @@
         <div class="detall-item-armari-dreta">
             <h2>{% trans %}detall.armari.cartilla{% endtrans %}</h2>
             <p>
-                {% trans %}detall.armari.nom{% endtrans %} <strong style="color:#D84359">{{ item.name }}</strong><br>
-                {% trans %}detall.armari.referencia{% endtrans %} <strong style="color:#D84359">{{ item.code }}</strong><br>
-                {% trans %}detall.armari.naixement{% endtrans %} <strong style="color:#D84359">{{ item.birth }}</strong><br>
-                {% trans %}detall.armari.dimensions{% endtrans %} <strong style="color:#D84359">{{ item.dimensions }}</strong><br>
-                {% trans %}detall.armari.pes{% endtrans %} <strong style="color:#D84359">{{ item.weight }} gr.</strong><br>
-                {% trans %}detall.armari.quantitat{% endtrans %} <strong style="color:#D84359">{{ item.fabrics }}</strong><br>
-                {% trans %}detall.armari.especificacions{% endtrans %} <strong style="color:#D84359">{{ item.specifications }}</strong><br>
-                {% trans %}detall.armari.preu{% endtrans %} <strong style="color:#D84359">{{ item.price }} €</strong><br>
+                {% trans %}detall.armari.nom{% endtrans %} <span style="color:#D84359">{{ item.name }}</span><br>
+                {% trans %}detall.armari.referencia{% endtrans %} <span style="color:#D84359">{{ item.code }}</span><br>
+                {% trans %}detall.armari.naixement{% endtrans %} <span style="color:#D84359">{{ item.birth }}</span><br>
+                {% trans %}detall.armari.dimensions{% endtrans %} <span style="color:#D84359">{{ item.dimensions }}</span><br>
+                {% trans %}detall.armari.pes{% endtrans %} <span style="color:#D84359">{{ item.weight }} gr.</span><br>
+                {% trans %}detall.armari.quantitat{% endtrans %} <span style="color:#D84359">{{ item.fabrics }}</span><br>
+                {% trans %}detall.armari.especificacions{% endtrans %} <span style="color:#D84359">{{ item.specifications }}</span><br>
+                {% trans %}detall.armari.preu{% endtrans %} <span style="color:#D84359">{{ item.price }} €</span><br>
             </p>
             <a style="width: 30%;margin-top: 30px" class="call-to-action red" href="{{ path( 'buy_step_1_' ~ app.request.locale, { id : item.id } ) }}">{% trans %}detall.armari.comprar{% endtrans %}</a>
         </div>
