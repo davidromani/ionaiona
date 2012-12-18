@@ -15,17 +15,17 @@ idiomas.ingles: anglès
 puntosdeventa: punts de venda
 puntosdeventa.amposta: amposta
 enconstruccio: en construcció
-detall.armari.cartilla: La cartilla
-detall.armari.nom: Nom
-detall.armari.referencia: Referència
-detall.armari.naixement: Nascuda a
-detall.armari.dimensions: Dimensions
-detall.armari.pes: Pes
-detall.armari.quantitat: Quantitat de teles
-detall.armari.especificacions: Especificacions
-detall.armari.preu: Preu
+detall.armari.cartilla: la cartilla
+detall.armari.nom: nom
+detall.armari.referencia: referència
+detall.armari.naixement: nascuda a
+detall.armari.dimensions: dimensions
+detall.armari.pes: pes
+detall.armari.quantitat: quantitat de teles
+detall.armari.especificacions: especificacions
+detall.armari.preu: preu
 detall.armari.comprar: comprar
-noitems: Ho sentim, actualment no hi ha cap ninot disponible en aquesta categoria.
+noitems: ho sentim, actualment no hi ha cap ninot disponible en aquesta categoria.
 store.cistell: el cistell
 store.imatge: imatge
 store.producte: producte
@@ -34,7 +34,7 @@ store.import: import
 store.subtotal: suma
 store.iva: iva
 store.carrier: despeses enviament
-store.total: TOTAL
+store.total: total
 store.seguircompra: seguir comprant
 store.confirmarcompra: confirmar compra
 store.form: formulari
@@ -53,7 +53,7 @@ store.steps: passos per comprar
 store.step.1: comprovar el cistell
 store.step.2: omplir el formulari
 store.step.3: finalitzar
-store.thankyou: Gràcies
+store.thankyou: gràcies
 blog.search: buscador
 blog.categories: categories
 blog.archive: arxiu

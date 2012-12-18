@@ -15,17 +15,17 @@ idiomas.ingles: english
 puntosdeventa: selling points
 puntosdeventa.amposta: amposta
 enconstruccio: under construction
-detall.armari.cartilla: The card
-detall.armari.nom: Name
-detall.armari.referencia: Reference
-detall.armari.naixement: Born at
-detall.armari.dimensions: Dimensions
-detall.armari.pes: Weight
-detall.armari.quantitat: Amount of fabrics
-detall.armari.especificacions: Specifications
-detall.armari.preu: Price
+detall.armari.cartilla: the card
+detall.armari.nom: name
+detall.armari.referencia: reference
+detall.armari.naixement: born at
+detall.armari.dimensions: dimensions
+detall.armari.pes: weight
+detall.armari.quantitat: amount of fabrics
+detall.armari.especificacions: specifications
+detall.armari.preu: price
 detall.armari.comprar: buy
-noitems: Sorry, there are no currently available in this category doll.
+noitems: sorry, there are no currently available in this category doll.
 store.cistell: the shopping cart
 store.imatge: image
 store.producte: product
@@ -34,7 +34,7 @@ store.import: value
 store.subtotal: sum
 store.iva: iva
 store.carrier: shipping costs
-store.total: TOTAL
+store.total: total
 store.seguircompra: continue shopping
 store.confirmarcompra: confirm purchase
 store.form: form

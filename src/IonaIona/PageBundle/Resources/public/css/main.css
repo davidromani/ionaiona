@@ -334,8 +334,8 @@ div#principal div.constrictor.clearfix div.detall-item-armari-dreta {
 
 div#principal div.constrictor.clearfix div.detall-item-armari-dreta h2 {
     background: url('/images/points235.png') 0 100% no-repeat;
-    padding: 3px 0;
-    margin-top: 2px;
+    padding: 2px 0 3px 0;
+    margin-top: 4px;
     font-size: 0.85em;
 }
 

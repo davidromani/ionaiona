@@ -15,17 +15,17 @@ idiomas.ingles: inglés
 puntosdeventa: puntos de venta
 puntosdeventa.amposta: amposta
 enconstruccio: en construcción
-detall.armari.cartilla: La cartilla
-detall.armari.nom: Nombre
-detall.armari.referencia: Referencia
-detall.armari.naixement: Nacida en
-detall.armari.dimensions: Dimensiones
-detall.armari.pes: Peso
-detall.armari.quantitat: Cantidad de telas
-detall.armari.especificacions: Especificaciones
-detall.armari.preu: Precio
+detall.armari.cartilla: la cartilla
+detall.armari.nom: nombre
+detall.armari.referencia: referencia
+detall.armari.naixement: nacida en
+detall.armari.dimensions: dimensiones
+detall.armari.pes: peso
+detall.armari.quantitat: cantidad de telas
+detall.armari.especificacions: especificaciones
+detall.armari.preu: precio
 detall.armari.comprar: comprar
-noitems: Lo sentimos, actualmente no hay ningún muñeco disponible en esta categoría.
+noitems: lo sentimos, actualmente no hay ningún muñeco disponible en esta categoría.
 store.cistell: la cesta
 store.imatge: imagen
 store.producte: producto
@@ -34,7 +34,7 @@ store.import: importe
 store.subtotal: suma
 store.iva: iva
 store.carrier: gastos de envío
-store.total: TOTAL
+store.total: total
 store.seguircompra: seguir comprando
 store.confirmarcompra: confirmar compra
 store.form: formulario
@@ -53,7 +53,7 @@ store.steps: pasos para comprar
 store.step.1: comprobar la cesta
 store.step.2: rellenar el formulario
 store.step.3: finalizar
-store.thankyou: Gracias
+store.thankyou: gracias
 blog.search: buscador
 blog.categories: categorías
 blog.archive: archivo
