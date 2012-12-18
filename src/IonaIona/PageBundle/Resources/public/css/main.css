@@ -132,7 +132,7 @@ div.constrictor {
 header {
     font-family: 'GothamRnd', arial, helvetica;
     margin-bottom: 60px;
-    height: 200px;
+    height: 186px;
     /*
     background: url('/images/points940.png') 0 0 no-repeat; //ENABLE TO FIX
     */
@@ -485,7 +485,7 @@ div#principal div.constrictor.clearfix div.blog-panel-derecho a:hover {
 footer {
     font-family: 'GothamRnd', arial, helvetica;
     color: #000;
-    font-size: 0.75em;
+    font-size: 0.65em;
     padding-bottom: 40px;
     margin-top: 60px;
 }
@@ -495,9 +495,9 @@ footer div.constrictor.clearfix {
 }
 
 footer div.constrictor.clearfix h6 {
-    margin: 10px 0 3px 0;
+    margin: 0 0 3px 0;
     background: url('/images/points940.png') 0 0 no-repeat;
-    height: 5px;
+    height: 2px;
 }
 
 footer div.constrictor.clearfix div {
