@@ -518,18 +518,17 @@ footer div.constrictor.clearfix div a:hover {
 }
 
 a.call-to-action {
-    padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: 3px 3px 3px #AAA;
+    padding: 5px 20px;
+    border-radius: 2px;
     color: white;
     text-decoration: none;
-    font-weight: bold;
     display: block;
     transition: opacity 0.35s;
     -moz-transition: opacity 0.35s;
     -webkit-transition: opacity 0.35s;
     -o-transition: opacity 0.35s;
     text-align: center;
+    font-size: 0.85em;
 }
 
 a.call-to-action.red {
@@ -545,9 +544,7 @@ a.call-to-action.green {
 }
 
 a.call-to-action:hover {
-
-    box-shadow: 1px 1px 1px #AAA;
-    margin: 2px 0 0 2px;
+    opacity: 0.75;
 }
 
 
