@@ -39,7 +39,7 @@ class Store implements FixtureInterface
         $product->setWeight(200);
         $product->setFabrics(4);
         $product->setSpecifications('100% cotó orgànic');
-        $product->setImage1('whale1.png');
+        $product->setImage1('_MG_1928.jpg');
         $product->setPrice(35);
         $product->setStock(1);
         $product->setPosition(1);
@@ -160,7 +160,7 @@ class Store implements FixtureInterface
         $product->setWeight(200);
         $product->setFabrics(4);
         $product->setSpecifications('100% cotó orgànic');
-        $product->setImage1('jiraffe1.png');
+        $product->setImage1('_MG_2246.jpg');
         $product->setPrice(39);
         $product->setStock(1);
         $product->setPosition(1);
