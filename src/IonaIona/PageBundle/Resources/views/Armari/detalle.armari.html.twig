@@ -26,7 +26,7 @@
             {% if needsPrev == true %}
                 <a href="{{ path( 'armari_items_' ~ app.request.locale, { nom : prev.slug, id : prev.id }) }}"><</a>
             {% endif %}
-            <img src="{{ vich_uploader_asset(item, 'image1File') | imagine_filter('imatge600') }}" alt="" title="">
+            <img src="{{ vich_uploader_asset(item, 'image1File') | imagine_filter('imatge530') }}" alt="" title="">
             {% if needsNext == true %}
                 <a href="{{ path( 'armari_items_' ~ app.request.locale, { nom : next.slug, id : next.id }) }}">></a>
             {% endif %}
