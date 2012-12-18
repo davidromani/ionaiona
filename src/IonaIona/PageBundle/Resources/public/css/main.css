@@ -508,6 +508,10 @@ footer div.constrictor.clearfix div {
     width: 100px;
 }
 
+footer div.constrictor.clearfix div span {
+    font-family: 'GothamRnd', arial, helvetica;
+}
+
 footer div.constrictor.clearfix div a {
     color: #000;
     text-decoration: none;
@@ -529,6 +533,7 @@ a.call-to-action {
     -o-transition: opacity 0.35s;
     text-align: center;
     font-size: 0.85em;
+    font-weight: normal;
 }
 
 a.call-to-action.red {
@@ -545,6 +550,7 @@ a.call-to-action.green {
 
 a.call-to-action:hover {
     opacity: 0.75;
+    font-weight: normal;
 }
 
 
