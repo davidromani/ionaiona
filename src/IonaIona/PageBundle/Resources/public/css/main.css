@@ -265,7 +265,7 @@ div#principal div.constrictor.clearfix div.conjunt-items-armari div.file-block d
 }
 
 div#principal div.constrictor.clearfix div.conjunt-items-armari div.file-block div.one-item-block div.one-item-foot {
-    padding: 5px 0;
+    padding: 6px 0;
     margin-top: 15px;
     /*border-bottom: 2px black dotted;
     border-top: 2px black dotted;*/
@@ -276,7 +276,7 @@ div#principal div.constrictor.clearfix div.conjunt-items-armari div.file-block d
 div#principal div.constrictor.clearfix div.conjunt-items-armari div.file-block div.one-item-block div.one-item-foot h6 {
     margin: 0 0 12px 0;
     background: url('/images/points470.png') 0 100% no-repeat;
-    height: 20px;
+    height: 22px;
 }
 
 div#principal div.constrictor.clearfix div.detall-item-armari-esquerra {
