@@ -10,7 +10,7 @@
     <div class="constrictor clearfix">
         <div class="botiga-item-armari-esquerra">
             <h3>{% trans %}store.cistell{% endtrans %}</h3>
-            <table>
+            <table style="background:none;border-bottom:solid 1px #000">
                 <thead>
                     <tr>
                         <th>{% trans %}store.producte{% endtrans %}</th>
@@ -50,49 +50,45 @@
                     </tr>
                 </tfoot>
             </table>
-            <table style="margin-top:30px">
-                <thead>
-                    <tr>
-                        <th colspan="2" style="color:#D84359;text-align:center">{% trans %}store.form{% endtrans %}</th>
-                    </tr>
-                </thead>
+            <h3 style="margin-bottom:1px">{% trans %}store.form{% endtrans %}</h3>
+            <table class="formulari">
                 <form action="{{ path('buy_step_2_' ~ app.request.locale) }}" method="post" {{ form_enctype(form) }}>
                 {{ form_errors(form) }}
                 <tbody>
                     <tr>
-                        <td>{{ 'store.form.name' | trans }}</td>
+                        <th style="width:200px">{{ 'store.form.name' | trans }}</th>
                         <td>{{ form_errors(form.name) }}{{ form_widget(form.name) }}</td>
                     </tr>
                     <tr>
-                        <td>{{ 'store.form.address' | trans }}</td>
+                        <th>{{ 'store.form.address' | trans }}</th>
                         <td>{{ form_errors(form.address) }}{{ form_widget(form.address) }}</td>
                     </tr>
                     <tr>
-                        <td>{{ 'store.form.postalCode' | trans }}</td>
+                        <th>{{ 'store.form.postalCode' | trans }}</th>
                         <td>{{ form_errors(form.postalCode) }}{{ form_widget(form.postalCode) }}</td>
                     </tr>
                     <tr>
-                        <td>{{ 'store.form.city' | trans }}</td>
+                        <th>{{ 'store.form.city' | trans }}</th>
                         <td>{{ form_errors(form.city) }}{{ form_widget(form.city) }}</td>
                     </tr>
                     <tr>
-                        <td>{{ 'store.form.state' | trans }}</td>
+                        <th>{{ 'store.form.state' | trans }}</th>
                         <td>{{ form_errors(form.state) }}{{ form_widget(form.state) }}</td>
                     </tr>
                     <tr>
-                        <td>{{ 'store.form.email' | trans }}</td>
+                        <th>{{ 'store.form.email' | trans }}</th>
                         <td>{{ form_errors(form.email) }}{{ form_widget(form.email) }}</td>
                     </tr>
                     <tr>
-                        <td>{{ 'store.form.phone' | trans }}</td>
+                        <th>{{ 'store.form.phone' | trans }}</th>
                         <td>{{ form_errors(form.phone) }}{{ form_widget(form.phone) }}</td>
                     </tr>
                     <tr>
-                        <td>{{ 'store.form.mensaje' | trans }}</td>
+                        <th>{{ 'store.form.mensaje' | trans }}</th>
                         <td>{{ form_errors(form.mensaje) }}{{ form_widget(form.mensaje) }}</td>
                     </tr>
                     <tr>
-                        <td>{{ 'store.form.wantNewsletter' | trans }}</td>
+                        <th>{{ 'store.form.wantNewsletter' | trans }}</th>
                         <td>{{ form_errors(form.wantNewsletter) }}{{ form_widget(form.wantNewsletter) }}</td>
                     </tr>
                 </tbody>

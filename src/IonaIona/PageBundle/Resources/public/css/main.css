@@ -368,8 +368,31 @@ div#principal div.constrictor.clearfix div.botiga-item-armari-esquerra table tfo
     background: url('/images/points940.png') 0 0 no-repeat;
 }
 
-div#principal div.constrictor.clearfix div.botiga-item-armari-esquerra table tbody tr td input {
-    border: none;
+div#principal div.constrictor.clearfix div.botiga-item-armari-esquerra table.formulari tbody tr th {
+    padding: 2px 0;
+    text-align: left;
+    font-weight: normal;
+    font-family: 'GothamBook', arial, helvetica;
+}
+
+div#principal div.constrictor.clearfix div.botiga-item-armari-esquerra table.formulari tbody tr td {
+    padding: 2px 0;
+    background: none;
+    font-weight: normal;
+    font-family: 'GothamBook', arial, helvetica;
+    /*background: url('/images/points940.png') 0 100% no-repeat;*/
+}
+
+div#principal div.constrictor.clearfix div.botiga-item-armari-esquerra table.formulari tbody tr td input {
+    border: dotted 1px #000;
+    width: 346px;
+    height: 20px;
+}
+
+div#principal div.constrictor.clearfix div.botiga-item-armari-esquerra table.formulari tbody tr td textarea {
+    border: dotted 1px #000;
+    resize: none;
+    width: 344px;
 }
 
 div#principal div.constrictor.clearfix div.detall-item-armari-dreta {
