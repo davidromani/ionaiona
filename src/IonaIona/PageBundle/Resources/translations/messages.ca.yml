@@ -32,6 +32,7 @@ noitems: ho sentim, actualment no hi ha cap ninot disponible en aquesta categori
 store.cistell: el cistell
 store.imatge: imatge
 store.producte: producte
+store.descripcio: descripció
 store.quantitat: quantitat
 store.import: import
 store.subtotal: suma

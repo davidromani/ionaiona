@@ -331,6 +331,7 @@ div#principal div.constrictor.clearfix div.botiga-item-armari-esquerra h3 {
 
 div#principal div.constrictor.clearfix div.botiga-item-armari-esquerra table {
     width: 100%;
+    background: url('/images/points940.png') 0 100% no-repeat;
     border-collapse: collapse;
     font-size: 0.85em;
     font-family: 'GothamBook', arial, helvetica;
@@ -352,15 +353,19 @@ div#principal div.constrictor.clearfix div.botiga-item-armari-esquerra table tbo
     background: url('/images/points940.png') 0 100% no-repeat;
 }
 
-div#principal div.constrictor.clearfix div.botiga-item-armari-esquerra table tfoot {
-    background: url('/images/points940.png') 0 0 no-repeat;
+div#principal div.constrictor.clearfix div.botiga-item-armari-esquerra table tbody tr td a {
+    text-decoration: none;
+    color: #000;
 }
 
 div#principal div.constrictor.clearfix div.botiga-item-armari-esquerra table tfoot tr th {
     text-align: right;
-    /*border-top: 2px dotted #000;
-    border-bottom: 2px dotted #000;*/
-    padding: 3px 0;
+    font-weight: normal;
+    padding: 4px 0 3px 0;
+}
+
+div#principal div.constrictor.clearfix div.botiga-item-armari-esquerra table tfoot tr.final th {
+    background: url('/images/points940.png') 0 0 no-repeat;
 }
 
 div#principal div.constrictor.clearfix div.botiga-item-armari-esquerra table tbody tr td input {
@@ -377,6 +382,7 @@ div#principal div.constrictor.clearfix div.detall-item-armari-dreta h2 {
     background: url('/images/points235.png') 0 100% no-repeat;
     padding: 2px 0 3px 0;
     margin-top: 4px;
+    margin-bottom: 3px;
     font-size: 0.85em;
     font-weight: normal;
 }
@@ -385,6 +391,7 @@ div#principal div.constrictor.clearfix div.detall-item-armari-dreta ol {
     margin: 0;
     padding: 0 0 0 18px;
     font-size: 0.85em;
+    line-height: 1.25;
 }
 
 div#principal div.constrictor.clearfix div.detall-item-armari-dreta ol li {
@@ -586,6 +593,10 @@ a.call-to-action.grey {
 
 a.call-to-action.green {
     background: #8BC06D;
+}
+
+a.call-to-action.black {
+    background: #000;
 }
 
 a.call-to-action:hover {

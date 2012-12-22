@@ -32,6 +32,7 @@ noitems: lo sentimos, actualmente no hay ningún muñeco disponible en esta cate
 store.cistell: la cesta
 store.imatge: imagen
 store.producte: producto
+store.descripcio: descripción
 store.quantitat: cantidad
 store.import: importe
 store.subtotal: suma

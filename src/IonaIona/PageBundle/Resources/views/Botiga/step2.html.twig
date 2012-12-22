@@ -8,23 +8,13 @@
 {% endblock %}
 {% block principal %}
     <div class="constrictor clearfix">
-        <div class="detall-item-armari-dreta">
-            <h2>{% trans %}store.steps{% endtrans %}</h2>
-            <ol>
-                <li>{% trans %}store.step.1{% endtrans %}</li>
-                <li class="current">{% trans %}store.step.2{% endtrans %}</li>
-                <li>{% trans %}store.step.3{% endtrans %}</li>
-            </ol>
-        </div>
-        <div class="detall-item-armari-esquerra" style="width:70%">
+        <div class="botiga-item-armari-esquerra">
+            <h3>{% trans %}store.cistell{% endtrans %}</h3>
             <table>
                 <thead>
                     <tr>
-                        <th colspan="4" style="color:#D84359;text-align:center">{% trans %}store.cistell{% endtrans %}</th>
-                    </tr>
-                    <tr>
-                        <th>{% trans %}store.imatge{% endtrans %}</th>
                         <th>{% trans %}store.producte{% endtrans %}</th>
+                        <th>{% trans %}store.descripcio{% endtrans %}</th>
                         <th style="text-align:right">{% trans %}store.quantitat{% endtrans %}</th>
                         <th style="text-align:right">{% trans %}store.import{% endtrans %}</th>
                     </tr>
@@ -35,8 +25,8 @@
                         <tr>
                             <td><img src="{{ vich_uploader_asset(item, 'image1File') | imagine_filter('imatge80') }}" alt="" title=""></td>
                             <td><strong>{{ item.name }}</strong><br>{{ item.code }}</td>
-                            <td style="text-align:right"><strong>1<strong></td>
-                            <td style="text-align:right"><strong>{{ item.price | number_format(2, '\'', '.') }} €<strong></td>
+                            <td style="text-align:right">1</td>
+                            <td style="text-align:right">{{ item.price | number_format(2, '\'', '.') }} €</td>
                             {% set subtotal = subtotal + item.price %}
                         </tr>
                     {% endfor %}
@@ -48,16 +38,15 @@
                     </tr>
                     <tr>
                         <th colspan="3">{% trans %}store.subtotal{% endtrans %}</th>
-                        <th><strong>{{ (subtotal + fee_carrier) | number_format(2, '\'', '.') }} €<strong></th>
+                        <th>{{ (subtotal + fee_carrier) | number_format(2, '\'', '.') }} €</th>
                     </tr>
                     <tr>
                         <th colspan="3">{% trans %}store.iva{% endtrans %} {{ fee_iva }}%</th>
                         <th>{{ (( (subtotal + fee_carrier) * fee_iva ) / 100) | number_format(2, '\'', '.') }} €</th>
                     </tr>
-
-                    <tr>
-                        <th colspan="3">{% trans %}store.total{% endtrans %}</th>
-                        <th>{{ (( subtotal + fee_carrier ) + ( (subtotal + fee_carrier) * fee_iva ) / 100) | number_format(2, '\'', '.') }} €</th>
+                    <tr class="final">
+                        <th colspan="3"><strong>{% trans %}store.total{% endtrans %}</strong></th>
+                        <th><strong>{{ (( subtotal + fee_carrier ) + ( (subtotal + fee_carrier) * fee_iva ) / 100) | number_format(2, '\'', '.') }} €</strong></th>
                     </tr>
                 </tfoot>
             </table>
@@ -116,6 +105,14 @@
                 </tfoot>
                 </form>
             </table>
+        </div>
+        <div class="detall-item-armari-dreta">
+            <h2>{% trans %}store.steps{% endtrans %}</h2>
+            <ol>
+                <li>{% trans %}store.step.1{% endtrans %}</li>
+                <li class="current">{% trans %}store.step.2{% endtrans %}</li>
+                <li>{% trans %}store.step.3{% endtrans %}</li>
+            </ol>
         </div>
     </div>
 {% endblock %}

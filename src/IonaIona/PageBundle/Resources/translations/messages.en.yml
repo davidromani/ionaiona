@@ -32,6 +32,7 @@ noitems: sorry, there are no currently available in this category doll.
 store.cistell: the shopping cart
 store.imatge: image
 store.producte: product
+store.descripcio: description
 store.quantitat: amount
 store.import: value
 store.subtotal: sum
