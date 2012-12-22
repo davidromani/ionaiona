@@ -383,6 +383,10 @@ div#principal div.constrictor.clearfix div.botiga-item-armari-esquerra table.for
     /*background: url('/images/points940.png') 0 100% no-repeat;*/
 }
 
+div#principal div.constrictor.clearfix div.botiga-item-armari-esquerra table.formulari tbody tr td span.help-inline {
+    color: #D84359;
+}
+
 div#principal div.constrictor.clearfix div.botiga-item-armari-esquerra table.formulari tbody tr td input {
     border: dotted 1px #000;
     width: 346px;
