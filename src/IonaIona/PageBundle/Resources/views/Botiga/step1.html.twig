@@ -8,22 +8,13 @@
 {% endblock %}
 {% block principal %}
     <div class="constrictor clearfix">
-        <div class="detall-item-armari-dreta">
-            <h2>{% trans %}store.steps{% endtrans %}</h2>
-            <ol>
-                <li class="current">{% trans %}store.step.1{% endtrans %}</li>
-                <li>{% trans %}store.step.2{% endtrans %}</li>
-                <li>{% trans %}store.step.3{% endtrans %}</li>
-            </ol>
-        </div>
-        <div class="detall-item-armari-esquerra" style="width:70%">
+        <div class="botiga-item-armari-esquerra">
+            <h3>{% trans %}store.cistell{% endtrans %}</h3>
             <table>
                 <thead>
                     <tr>
-                        <th colspan="5" style="color:#D84359;font-family:'GothamRnd'">{% trans %}store.cistell{% endtrans %}</th>
-                    </tr>
-                    <tr>
-                        <th colspan="2">{% trans %}store.imatge{% endtrans %}</th>
+                        <th></th>
+                        <th>{% trans %}store.imatge{% endtrans %}</th>
                         <th>{% trans %}store.producte{% endtrans %}</th>
                         <th style="text-align:right">{% trans %}store.quantitat{% endtrans %}</th>
                         <th style="text-align:right">{% trans %}store.import{% endtrans %}</th>
@@ -64,6 +55,14 @@
             </table>
             <a style="float:left;margin-top:30px;margin-right:30px" class="call-to-action grey" href="{{ path( 'armari_' ~ app.request.locale ) }}">{% trans %}store.seguircompra{% endtrans %}</a>
             <a style="float:left;margin-top:30px" class="call-to-action green" href="{{ path( 'buy_step_2_' ~ app.request.locale ) }}">{% trans %}store.confirmarcompra{% endtrans %}</a>
+        </div>
+        <div class="detall-item-armari-dreta">
+            <h2>{% trans %}store.steps{% endtrans %}</h2>
+            <ol>
+                <li class="current">{% trans %}store.step.1{% endtrans %}</li>
+                <li>{% trans %}store.step.2{% endtrans %}</li>
+                <li>{% trans %}store.step.3{% endtrans %}</li>
+            </ol>
         </div>
     </div>
 {% endblock %}
