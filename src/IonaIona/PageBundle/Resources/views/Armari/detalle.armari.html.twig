@@ -35,7 +35,7 @@
                     </a>
                 {% endif %}
             </div>
-            <img src="{{ vich_uploader_asset(item, 'image1File') | imagine_filter('imatge530') }}" alt="{% trans %}detall.armari.altimatge{% endtrans %} {{ item.name }}" title="{{ item.name }}">
+            <img id="fix-it" src="{{ vich_uploader_asset(item, 'image1File') | imagine_filter('imatge530') }}" alt="{% trans %}detall.armari.altimatge{% endtrans %} {{ item.name }}" title="{{ item.name }}">
         </div>
     </div>
 {% endblock %}

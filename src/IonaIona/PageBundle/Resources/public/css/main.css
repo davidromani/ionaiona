@@ -284,8 +284,10 @@ div#principal div.constrictor.clearfix div.detall-item-armari-esquerra {
     width: 530px;
 }
 
-div#principal div.constrictor.clearfix div.detall-item-armari-esquerra img {
-    margin-top: -32px;
+div#principal div.constrictor.clearfix div.detall-item-armari-esquerra img#fix-it {
+    margin-top: -47px;
+    position: relative;
+    z-index: -1;
 }
 
 div#principal div.constrictor.clearfix div.detall-item-armari-esquerra div.detall-item-armari-esquerra-botonera {
@@ -301,14 +303,10 @@ div#principal div.constrictor.clearfix div.detall-item-armari-esquerra div.detal
 
 div#principal div.constrictor.clearfix div.detall-item-armari-esquerra div.detall-item-armari-esquerra-botonera a.esquerra {
     float: left;
-    position: relative;
-    top: 10px;
 }
 
 div#principal div.constrictor.clearfix div.detall-item-armari-esquerra div.detall-item-armari-esquerra-botonera a.dreta {
     float: right;
-    position: relative;
-    top: 10px;
 }
 
 div#principal div.constrictor.clearfix div.detall-item-armari-esquerra div.detall-item-armari-esquerra-botonera a:hover {
@@ -555,7 +553,6 @@ a.call-to-action {
     -o-transition: opacity 0.35s;
     text-align: center;
     font-size: 0.85em;
-    font-weight: normal;
 }
 
 a.call-to-action.red {
@@ -572,7 +569,6 @@ a.call-to-action.green {
 
 a.call-to-action:hover {
     opacity: 0.75;
-    font-weight: normal;
 }
 
 
