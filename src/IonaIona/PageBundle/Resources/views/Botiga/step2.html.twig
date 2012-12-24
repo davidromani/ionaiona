@@ -52,7 +52,7 @@
             </table>
             <h3 style="margin-bottom:1px">{% trans %}store.form{% endtrans %}</h3>
             <table class="formulari">
-                <form action="{{ path('buy_step_2_' ~ app.request.locale) }}" method="post" {{ form_enctype(form) }}>
+                <form id="store-form" action="{{ path('buy_step_2_' ~ app.request.locale) }}" method="post" {{ form_enctype(form) }}>
                 {{ form_errors(form) }}
                 <tbody>
                     <tr>
@@ -93,14 +93,14 @@
                     </tr>
                 </tbody>
                 {{ form_rest(form) }}
-                <tfoot>
-                    <tr>
-                        <th><input type="submit" value="{{ 'store.form.cancel' | trans }}"></th>
-                        <th><input type="submit" value="{{ 'store.form.send' | trans }}"></th>
-                    </tr>
-                </tfoot>
-                </form>
             </table>
+
+                            <input style="float:right;margin-top:30px;margin-left:50px" type="submit" value="{{ 'store.form.send' | trans }}">
+                            <a style="float:right;margin-top:30px" class="call-to-action grey" href="{{ path( 'armari_' ~ app.request.locale ) }}">{% trans %}store.form.cancel{% endtrans %}</a>
+
+
+                </form>
+            <!-- /table -->
         </div>
         <div class="detall-item-armari-dreta">
             <h2>{% trans %}store.steps{% endtrans %}</h2>

@@ -358,6 +358,10 @@ div#principal div.constrictor.clearfix div.botiga-item-armari-esquerra table tbo
     color: #000;
 }
 
+div#principal div.constrictor.clearfix div.botiga-item-armari-esquerra table tbody tr td a:hover {
+    color: #D84359;
+}
+
 div#principal div.constrictor.clearfix div.botiga-item-armari-esquerra table tfoot tr th {
     text-align: right;
     font-weight: normal;
@@ -397,6 +401,26 @@ div#principal div.constrictor.clearfix div.botiga-item-armari-esquerra table.for
     border: dotted 1px #000;
     resize: none;
     width: 344px;
+}
+
+div#principal div.constrictor.clearfix div.botiga-item-armari-esquerra input[type="submit"] {
+    padding: 5px 20px;
+    border-radius: 2px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: opacity 0.35s;
+    -moz-transition: opacity 0.35s;
+    -webkit-transition: opacity 0.35s;
+    -o-transition: opacity 0.35s;
+    text-align: center;
+    border: none;
+    background: #000;
+}
+
+div#principal div.constrictor.clearfix div.botiga-item-armari-esquerra input[type="submit"]:hover {
+    opacity: 0.75;
+    cursor: pointer;
 }
 
 div#principal div.constrictor.clearfix div.detall-item-armari-dreta {
@@ -634,6 +658,7 @@ a.call-to-action.black {
 
 a.call-to-action:hover {
     opacity: 0.75;
+    cursor: pointer;
 }
 
 
