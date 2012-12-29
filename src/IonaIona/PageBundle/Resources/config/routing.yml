@@ -143,6 +143,24 @@ armari_banderola_en:
     requirements:
         _locale:    en
 
+armari_mobil_ca:
+    pattern:        /{_locale}/l-armari/mobil
+    defaults:       { _controller: PageBundle:Armari:mobil }
+    requirements:
+        _locale:    ca
+
+armari_mobil_es:
+    pattern:        /{_locale}/armario/movil
+    defaults:       { _controller: PageBundle:Armari:mobil }
+    requirements:
+        _locale:    es
+
+armari_mobil_en:
+    pattern:        /{_locale}/wardrobe/mobile
+    defaults:       { _controller: PageBundle:Armari:mobil }
+    requirements:
+        _locale:    en
+
 armari_items_ca:
     pattern:        /{_locale}/l-armari/{nom}/{id}
     defaults:       { _controller: PageBundle:Armari:items }

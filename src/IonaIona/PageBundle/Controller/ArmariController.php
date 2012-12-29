@@ -100,4 +100,15 @@ class ArmariController extends Controller
             'items' => $micos,
         ));
     }
+
+    public function mobilAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '001-004'));
+        $mobils = $em->getRepository('FluxProductBundle:Product')->getSortedActiveItemsFromCategoryCode('00A-00G');
+        return $this->render('PageBundle:Armari:categoria.armari.html.twig', array(
+            'pagina' => $pagina,
+            'items' => $mobils,
+        ));
+    }
 }

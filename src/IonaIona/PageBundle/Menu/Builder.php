@@ -54,6 +54,7 @@ class Builder extends ContainerAware
         $menu->addChild('pitet', array('route' => 'armari_pitet_ca'));
         $menu->addChild('ocell', array('route' => 'armari_ocell_ca'));
         $menu->addChild('banderola', array('route' => 'armari_banderola_ca'));
+        $menu->addChild('mòbil', array('route' => 'armari_mobil_ca'));
         $menu->setChildrenAttribute('class', 'level2');
         return $menu;
     }
@@ -89,6 +90,7 @@ class Builder extends ContainerAware
         $menu->addChild('babero', array('route' => 'armari_pitet_es'));
         $menu->addChild('pájaro', array('route' => 'armari_ocell_es'));
         $menu->addChild('banderola', array('route' => 'armari_banderola_es'));
+        $menu->addChild('móvil', array('route' => 'armari_mobil_es'));
         $menu->setChildrenAttribute('class', 'level2');
         return $menu;
     }
@@ -124,6 +126,7 @@ class Builder extends ContainerAware
         $menu->addChild('bib', array('route' => 'armari_pitet_en'));
         $menu->addChild('bird', array('route' => 'armari_ocell_en'));
         $menu->addChild('flag', array('route' => 'armari_banderola_en'));
+        $menu->addChild('mobile', array('route' => 'armari_mobil_en'));
         $menu->setChildrenAttribute('class', 'level2');
         return $menu;
     }
