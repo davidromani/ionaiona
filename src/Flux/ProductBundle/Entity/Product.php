@@ -26,7 +26,7 @@ class Product
     protected $id;
 
     /**
-     * @ORM\Column(type="string", length=10, unique=true)
+     * @ORM\Column(type="string", length=20, unique=true)
      * @Assert\NotBlank()
      */
     protected $code;
