@@ -156,6 +156,15 @@ header div.constrictor.clearfix h2 {
     float: right;
     margin-top: 60px;
     font-size: 1.3em;
+    cursor: none;
+    transition: color 0.75s;
+    -moz-transition: color 0.75s;
+    -webkit-transition: color 0.75s;
+    -o-transition: color 0.75s;
+}
+
+header div.constrictor.clearfix h2:hover {
+    color: #D84359;
 }
 
 header div.constrictor.clearfix a img {
@@ -195,6 +204,14 @@ header div.constrictor.clearfix ul li a {
     padding: 3px 0;
     margin-right: 15px;
     display: block;
+    transition: color 0.75s;
+    -moz-transition: color 0.75s;
+    -webkit-transition: color 0.75s;
+    -o-transition: color 0.75s;
+}
+
+header div.constrictor.clearfix ul li a:hover {
+    color: #D84359;
 }
 
 header div.constrictor.clearfix ul li.current a {
