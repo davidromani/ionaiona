@@ -246,6 +246,17 @@ div#principal div.constrictor.clearfix div.home-panel-derecho a img {
     margin-bottom: 20px;
 }
 
+div#principal div.constrictor.clearfix div.home-panel-derecho a img.resalte {
+    transition: opacity 0.35s;
+    -moz-transition: opacity 0.35s;
+    -webkit-transition: opacity 0.35s;
+    -o-transition: opacity 0.35s;
+}
+
+div#principal div.constrictor.clearfix div.home-panel-derecho a img.resalte:hover {
+    opacity: 0.75;
+}
+
 div#principal div.constrictor.clearfix div.conjunt-items-armari div.file-block {
     float: left;
     margin-bottom: 60px;

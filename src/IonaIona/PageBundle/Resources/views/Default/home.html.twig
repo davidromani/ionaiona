@@ -2,18 +2,56 @@
 {% block titulo %}
     {% trans %}inicio{% endtrans %}
 {% endblock %}
+{% block recursos %}
+    <style type="text/css" media="screen">
+        .slides_container {
+            width:459px;
+            height:693px;
+        }
+        .slides_container div {
+            width:459px;
+            height:693px;
+            display:block;
+        }
+    </style>
+    <script type="text/javascript" src="{{ asset('bundles/page/js/vendor/slides.min.jquery.js') }}"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#slides").slides({
+                preload: true,
+                generateNextPrev: false,
+                pagination: false,
+                effect: 'slide',
+                play: 3000,
+                generatePagination: false
+            });
+        });
+    </script>
+{% endblock %}
 {% block menu %}
     {{ knp_menu_render('PageBundle:Builder:main_' ~ app.request.locale ~ '_Menu') }}
 {% endblock %}
 {% block principal %}
     <div class="constrictor clearfix">
         <div class="home-panel-izquierdo">
-            <img src="{{ asset( '/images/ionaiona_home_01.jpg' ) }}" alt="ballena iona iona patchdoll" title="Foto principal">
+            <div id="slides">
+                <div class="slides_container">
+                    <div>
+                        <img src="{{ asset( '/images/ionaiona_home_01.jpg' ) }}" alt="ballena iona iona patchdoll" title="Foto principal">
+                    </div>
+                    <div>
+                        <img src="{{ asset( '/images/ionaiona_home_02.jpg' ) }}" alt="ballena iona iona patchdoll" title="Foto principal">
+                    </div>
+                    <div>
+                        <img src="{{ asset( '/images/ionaiona_home_03.jpg' ) }}" alt="ballena iona iona patchdoll" title="Foto principal">
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="home-panel-derecho">
-            <a href=""><img src="{{ asset( '/images/ionaiona_home_destacat_01.jpg' ) }}" alt="" title=""></a>
-            <a href=""><img src="{{ asset( '/images/ionaiona_home_destacat_02.jpg' ) }}" alt="" title=""></a>
-            <a href=""><img src="{{ asset( '/images/ionaiona_home_destacat_03.jpg' ) }}" alt="" title="" style="margin-bottom:0"></a>
+            <a href=""><img src="{{ asset( '/images/ionaiona_home_destacat_01.jpg' ) }}" alt="" title="" class="resalte"></a>
+            <a href="{{ path( 'armari_' ~ app.request.locale ) }}"><img src="{{ asset( '/images/ionaiona_home_destacat_02.jpg' ) }}" alt="" title="" class="resalte"></a>
+            <a href=""><img src="{{ asset( '/images/ionaiona_home_destacat_03.jpg' ) }}" alt="" title="" class="resalte" style="margin-bottom:0"></a>
         </div>
     </div>
 {% endblock %}
