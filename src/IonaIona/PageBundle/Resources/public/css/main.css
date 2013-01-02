@@ -232,6 +232,20 @@ div#principal div.constrictor.clearfix div.bloc:last-child {
     margin-right: 0;
 }
 
+div#principal div.constrictor.clearfix div.home-panel-izquierdo {
+    float: left;
+    width: 460px;
+}
+
+div#principal div.constrictor.clearfix div.home-panel-derecho {
+    float: right;
+    width: 340px;
+}
+
+div#principal div.constrictor.clearfix div.home-panel-derecho a img {
+    margin-bottom: 20px;
+}
+
 div#principal div.constrictor.clearfix div.conjunt-items-armari div.file-block {
     float: left;
     margin-bottom: 60px;

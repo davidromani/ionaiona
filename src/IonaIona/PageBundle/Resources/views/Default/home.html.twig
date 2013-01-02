@@ -7,13 +7,13 @@
 {% endblock %}
 {% block principal %}
     <div class="constrictor clearfix">
-        <img src="{{ vich_uploader_asset(pagina, 'image1File') | imagine_filter('imatge814') }}" alt="ballena iona iona patchdoll" title="Foto principal">
-        <div class="bloc verd">
-            <a href="{{ path( 'armari_' ~ app.request.locale ) }}"><img src="/images/door.png" alt="door heart closed" title="the door" style="position:relative;"></a>
-            <span style="float:right;width:200px;">{{ pagina.text1 }}</span>
+        <div class="home-panel-izquierdo">
+            <img src="{{ asset( '/images/ionaiona_home_01.jpg' ) }}" alt="ballena iona iona patchdoll" title="Foto principal">
         </div>
-        <div class="bloc vermell" style="width:20%;float:right;">
-            {{ pagina.text2 }}
+        <div class="home-panel-derecho">
+            <a href=""><img src="{{ asset( '/images/ionaiona_home_destacat_01.jpg' ) }}" alt="" title=""></a>
+            <a href=""><img src="{{ asset( '/images/ionaiona_home_destacat_02.jpg' ) }}" alt="" title=""></a>
+            <a href=""><img src="{{ asset( '/images/ionaiona_home_destacat_03.jpg' ) }}" alt="" title="" style="margin-bottom:0"></a>
         </div>
     </div>
 {% endblock %}
