@@ -596,7 +596,7 @@ class Product
      *
      * @return string
      */
-    public function getFacebookPhoto()
+    public function getUrlFacebookPhoto()
     {
         return $this->urlFacebookPhoto;
     }
@@ -619,7 +619,7 @@ class Product
      *
      * @return string
      */
-    public function getFacebookAlbum()
+    public function getUrlFacebookAlbum()
     {
         return $this->urlFacebookAlbum;
     }

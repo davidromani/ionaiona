@@ -22,6 +22,10 @@ page.weight: Peso
 page.fabrics: Cantidad de telas
 page.price: Precio
 page.stock: Estoc
+page.pinterest.pin: URL pin Pinterest
+page.pinterest.pinboard: URL tablero Pinterest
+page.facebook.photo: URL foto Facebook
+page.facebook.album: URL álbum Facebook
 page.gender: Sexo
 page.gender.male: masculino
 page.gender.female: femenino

@@ -22,6 +22,10 @@ page.weight: Weight
 page.fabrics: Fabrics amount
 page.price: Price
 page.stock: Stock
+page.pinterest.pin: Pinterest pin URL
+page.pinterest.pinboard: Pinterest pinboard URL
+page.facebook.photo: Facebook photo URL
+page.facebook.album: Facebook album URL
 page.gender: Sex
 page.gender.male: male
 page.gender.female: female
