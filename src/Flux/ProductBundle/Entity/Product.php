@@ -110,6 +110,30 @@ class Product
     protected $gender;
 
     /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Url()
+     */
+    protected $urlPinterestPin = NULL;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Url()
+     */
+    protected $urlPinterestPinboard = NULL;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Url()
+     */
+    protected $urlFacebookPhoto = NULL;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Url()
+     */
+    protected $urlFacebookAlbum = NULL;
+
+    /**
      * @ORM\Column(type="smallint")
      */
     protected $position;
@@ -506,6 +530,98 @@ class Product
     public function getGender()
     {
         return $this->gender;
+    }
+
+    /**
+     * Set urlPinterestPin
+     *
+     * @param string $pinterestPin
+     * @return Product
+     */
+    public function setUrlPinterestPin($pinterestPin)
+    {
+        $this->urlPinterestPin = $pinterestPin;
+
+        return $this;
+    }
+
+    /**
+     * Get urlPinterestPin
+     *
+     * @return string
+     */
+    public function getUrlPinterestPin()
+    {
+        return $this->urlPinterestPin;
+    }
+
+    /**
+     * Set urlPinterestPinboard
+     *
+     * @param string $pinterestPinboard
+     * @return Product
+     */
+    public function setUrlPinterestPinboard($pinterestPinboard)
+    {
+        $this->urlPinterestPinboard = $pinterestPinboard;
+
+        return $this;
+    }
+
+    /**
+     * Get urlPinterestPinboard
+     *
+     * @return string
+     */
+    public function getUrlPinterestPinboard()
+    {
+        return $this->urlPinterestPinboard;
+    }
+
+    /**
+     * Set urlFacebookPhoto
+     *
+     * @param string $facebookPhoto
+     * @return Product
+     */
+    public function setUrlFacebookPhoto($facebookPhoto)
+    {
+        $this->urlFacebookPhoto = $facebookPhoto;
+
+        return $this;
+    }
+
+    /**
+     * Get urlFacebookPhoto
+     *
+     * @return string
+     */
+    public function getFacebookPhoto()
+    {
+        return $this->urlFacebookPhoto;
+    }
+
+    /**
+     * Set urlFacebookAlbum
+     *
+     * @param string $facebookAlbum
+     * @return Product
+     */
+    public function setUrlFacebookAlbum($facebookAlbum)
+    {
+        $this->urlFacebookAlbum = $facebookAlbum;
+
+        return $this;
+    }
+
+    /**
+     * Get urlFacebookAlbum
+     *
+     * @return string
+     */
+    public function getFacebookAlbum()
+    {
+        return $this->urlFacebookAlbum;
     }
 
     /**
