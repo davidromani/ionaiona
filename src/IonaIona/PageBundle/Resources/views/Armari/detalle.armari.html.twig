@@ -24,6 +24,7 @@
                     {% endif %}
                     <span style="color:#D84359">{{ item.birth }}</span><br>
                 {% endif %}
+                {% if item.size %}{% trans %}detall.armari.size{% endtrans %} <span style="color:#D84359">{{ item.size }}</span><br>{% endif %}
                 {% if item.dimensions %}{% trans %}detall.armari.dimensions{% endtrans %} <span style="color:#D84359">{{ item.dimensions }}</span><br>{% endif %}
                 {% if item.weight %}{% trans %}detall.armari.pes{% endtrans %} <span style="color:#D84359">{{ item.weight }} gr.</span><br>{% endif %}
                 {% if item.fabrics %}{% trans %}detall.armari.quantitat{% endtrans %} <span style="color:#D84359">{{ item.fabrics }}</span><br>{% endif %}

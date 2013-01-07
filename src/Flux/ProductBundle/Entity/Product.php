@@ -65,6 +65,11 @@ class Product
      * @Gedmo\Translatable
      */
     protected $specifications;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    protected $size;
     
     /**
      * @Assert\File(
@@ -373,6 +378,29 @@ class Product
     public function getSpecifications()
     {
         return $this->specifications;
+    }
+
+    /**
+     * Set size
+     *
+     * @param string $size
+     * @return Product
+     */
+    public function setSize($size)
+    {
+        $this->size = $size;
+
+        return $this;
+    }
+
+    /**
+     * Get size
+     *
+     * @return string
+     */
+    public function getSize()
+    {
+        return $this->size;
     }
 
     /**

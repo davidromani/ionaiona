@@ -83,6 +83,7 @@ class ProductAdmin extends Admin
             ->add('image2', null, array('label' => $translator->trans('page.image2'), 'required' => false, 'read_only' => true))
             ->add('weight', 'integer', array('label' => $translator->trans('page.weight'), 'required' => false))
             ->add('fabrics', 'integer', array('label' => $translator->trans('page.fabrics'), 'required' => false))
+            ->add('size', null, array('label' => $translator->trans('page.size')))
             ->add('price', null, array('label' => $translator->trans('page.price')))
             ->add('stock', null, array('label' => $translator->trans('page.stock')))
             //->add('urlPinterestPin', null, array('label' => $translator->trans('page.pinterest.pin')))
