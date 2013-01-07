@@ -30,8 +30,8 @@
                 {% if item.specifications %}{% trans %}detall.armari.especificacions{% endtrans %} <span style="color:#D84359">{{ item.specifications }}</span><br>{% endif %}
                 {% trans %}detall.armari.preu{% endtrans %} <span style="color:#D84359">{{ item.price }} €</span><br>
             </p>
-            <a style="width:30%;margin-top:30px" class="call-to-action red" href="{{ url( 'buy_step_1_' ~ app.request.locale, { id : item.id } ) }}">{% trans %}detall.armari.comprar{% endtrans %}</a>
-            <a style="margin-top:30px;display:block" href="http://pinterest.com/pin/create/button/?url={{ path('armari_items_' ~ app.request.locale, { nom : item.slug, id : item.id } ) }}&media=http%3A%2F%2Fwww.ionaiona.com%2Fuploads%2Fimages%2F{{ item.image1File }}" class="pin-it-button" count-layout="horitzontal"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a>
+            <a style="width:30%;margin-top:30px" class="call-to-action red" href="{{ path( 'buy_step_1_' ~ app.request.locale, { id : item.id } ) }}">{% trans %}detall.armari.comprar{% endtrans %}</a>
+            <a style="margin-top:30px;display:block" href="http://pinterest.com/pin/create/button/?url={{ url('armari_items_' ~ app.request.locale, { nom : item.slug, id : item.id } ) }}&media=http%3A%2F%2Fwww.ionaiona.com%2Fuploads%2Fimages%2F{{ item.image1 }}" class="pin-it-button" count-layout="horitzontal"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a>
         </div>
         <div class="detall-item-armari-esquerra">
             <div class="detall-item-armari-esquerra-botonera">
