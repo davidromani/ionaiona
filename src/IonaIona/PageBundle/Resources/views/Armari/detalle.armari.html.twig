@@ -1,6 +1,6 @@
 {% extends 'PageBundle:Global:layout.html.twig' %}
 {% block titulo %}
-    {% trans %}menu.armari{% endtrans %}
+    {% trans %}menu.armari{% endtrans %} · {{ item.name }}
 {% endblock %}
 {% block menu %}
     {{ knp_menu_render('PageBundle:Builder:main_' ~ app.request.locale ~ '_Menu') }}
