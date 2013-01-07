@@ -38,7 +38,9 @@ class DiariController extends Controller
             'pagina' => $pagina,
             'categories' => $categories,
             'posts' => $posts,
-            'archives' => $archives
+            'archives' => $archives,
+            'month' => $month,
+            'year' => $year
         ));
     }
 

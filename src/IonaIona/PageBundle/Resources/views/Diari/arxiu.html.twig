@@ -35,7 +35,7 @@
             <div class="vblock">
                 <h2>{% trans %}blog.archive{% endtrans %}</h2>
                 {% for archive in archives %}
-                    <a href="{{ path( 'diari_arxiu_' ~ app.request.locale, {'year' : archive.hit | date('Y'), 'month' : archive.hit | date('m') } ) }}">{{ archive.hit | date('m/Y') }}</a><br>
+                    <a href="{{ path( 'diari_arxiu_' ~ app.request.locale, {'year' : archive.hit | date('Y'), 'month' : archive.hit | date('m') } ) }}" {% if archive.hit | date('m') == month and archive.hit | date('Y') == year %}style="color:#000"{% endif %}>{{ archive.hit | date('m/Y') }}</a><br>
                 {% endfor %}
             </div>
         </div>
