@@ -49,8 +49,8 @@
                 {% endif %}
             </div>
             <img id="fix-it" src="{{ vich_uploader_asset(item, 'image1File') | imagine_filter('imatge530') }}" alt="{% trans %}detall.armari.altimatge{% endtrans %} {{ item.name }}" title="{{ item.name }}">
-            <a style="margin:5px 30px 0 0;display:block" href="http://pinterest.com/pin/create/button/?url={{ url('armari_items_' ~ app.request.locale, { nom : item.slug, id : item.id } ) }}&media=http%3A%2F%2Fwww.ionaiona.com%2Fuploads%2Fimages%2F{{ item.image1 }}" class="pin-it-button" count-layout="horitzontal"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a>
-            <iframe src="//www.facebook.com/plugins/like.php?href={{ url('armari_items_' ~ app.request.locale, { nom : item.slug, id : item.id } ) }}&amp;send=false&amp;layout=button_count&amp;width=250&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21&amp;appId=167440589985790" scrolling="no" frameborder="0" style="border:none; overflow:visible; width:250px; height:21px;" allowTransparency="true"></iframe>
+            <a style="margin:10px 30px 0 0" href="http://pinterest.com/pin/create/button/?url={{ url('armari_items_' ~ app.request.locale, { nom : item.slug, id : item.id } ) }}&media=http%3A%2F%2Fwww.ionaiona.com%2Fuploads%2Fimages%2F{{ item.image1 }}" class="pin-it-button" count-layout="horitzontal"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a>
+            <iframe src="//www.facebook.com/plugins/like.php?href={{ url('armari_items_' ~ app.request.locale, { nom : item.slug, id : item.id } ) }}&amp;send=false&amp;layout=button_count&amp;width=250&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21&amp;appId=167440589985790" scrolling="no" frameborder="0" style="margin-top: 10px; border:none; overflow:visible; width:250px; height:21px;" allowTransparency="true"></iframe>
         </div>
     </div>
 {% endblock %}
