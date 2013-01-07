@@ -5,6 +5,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Flux\Utilities\Utils;
 
 /**
  * @ORM\Entity
@@ -139,7 +140,17 @@ class Category
     public function getTitle()
     {
         return $this->title;
-    } 
+    }
+
+    /**
+     * Get title slug
+     *
+     * @return string
+     */
+    public function getTitleSlug()
+    {
+        return Utils::getSlug($this->title);
+    }
 
     /**
      * Set isActive

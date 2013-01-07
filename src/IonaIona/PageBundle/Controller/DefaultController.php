@@ -48,11 +48,13 @@ class DefaultController extends Controller
         $categories = $em->getRepository('FluxBlogBundle:Category')->getActiveItemsSortedByTitle();
         $postsQuery = $em->getRepository('FluxBlogBundle:Post')->getAllPostsSortedByDateQuery();
         $paginator = $this->get('knp_paginator');
-        $posts = $paginator->paginate($postsQuery, $this->getRequest()->query->get('page', 1), 8 /*limit per page*/);
+        $posts = $paginator->paginate($postsQuery, $this->getRequest()->query->get('page', 1), 10 /*limit per page*/);
+        $archives = $em->getRepository('FluxBlogBundle:Post')->getArrayOfArchives();
         return $this->render('PageBundle:Default:diari.html.twig', array(
             'pagina' => $pagina,
             'categories' => $categories,
             'posts' => $posts,
+            'archives' => $archives
         ));
     }
 }

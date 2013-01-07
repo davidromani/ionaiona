@@ -289,6 +289,42 @@ diari_post_en:
     requirements:
         _locale:    en
 
+diari_arxiu_ca:
+    pattern:        /{_locale}/el-diari/arxiu/{year}/{month}/
+    defaults:       { _controller: PageBundle:Diari:arxiu }
+    requirements:
+        _locale:    ca
+
+diari_arxiu_es:
+    pattern:        /{_locale}/diario/archivo/{year}/{month}/
+    defaults:       { _controller: PageBundle:Diari:arxiu }
+    requirements:
+        _locale:    es
+
+diari_arxiu_en:
+    pattern:        /{_locale}/newspaper/archive/{year}/{month}/
+    defaults:       { _controller: PageBundle:Diari:arxiu }
+    requirements:
+        _locale:    en
+
+diari_categories_ca:
+    pattern:        /{_locale}/el-diari/categoria/{category}/{id}/
+    defaults:       { _controller: PageBundle:Diari:categories }
+    requirements:
+        _locale:    ca
+
+diari_categories_es:
+    pattern:        /{_locale}/diario/categoria/{category}/{id}/
+    defaults:       { _controller: PageBundle:Diari:categories }
+    requirements:
+        _locale:    es
+
+diari_categories_en:
+    pattern:        /{_locale}/newspaper/category/{category}/{id}/
+    defaults:       { _controller: PageBundle:Diari:categories }
+    requirements:
+        _locale:    en
+
 ############################ BOTIGA
 buy_step_1_ca:
     pattern:        /{_locale}/botiga/{id}

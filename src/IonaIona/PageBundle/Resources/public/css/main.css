@@ -599,6 +599,20 @@ div#principal div.constrictor.clearfix div.blog-panel-izquierdo div.pblock div.p
     font-family: 'GothamBook', arial, helvetica;
 }
 
+div#principal div.constrictor.clearfix div.blog-panel-izquierdo div.pagination span.current {
+    color: #000;
+}
+
+div#principal div.constrictor.clearfix div.blog-panel-izquierdo div.pagination a {
+    color: #AAA;
+    text-decoration: none;
+}
+
+div#principal div.constrictor.clearfix div.blog-panel-izquierdo div.pagination a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
 div#principal div.constrictor.clearfix div.blog-panel-derecho {
     float: right;
     width: 25%;
