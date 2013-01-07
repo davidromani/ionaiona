@@ -107,6 +107,11 @@ class Product
     /**
      * @ORM\Column(type="smallint")
      */
+    protected $gender;
+
+    /**
+     * @ORM\Column(type="smallint")
+     */
     protected $position;
 
     /**
@@ -478,6 +483,29 @@ class Product
     public function getStock()
     {
         return $this->stock;
+    }
+
+    /**
+     * Set gender
+     *
+     * @param integer $gender
+     * @return Product
+     */
+    public function setGender($gender)
+    {
+        $this->gender = $gender;
+
+        return $this;
+    }
+
+    /**
+     * Get gender
+     *
+     * @return integer
+     */
+    public function getGender()
+    {
+        return $this->gender;
     }
 
     /**

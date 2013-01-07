@@ -22,6 +22,8 @@ detall.armari.cartilla: la cartilla
 detall.armari.nom: nombre
 detall.armari.referencia: referencia
 detall.armari.naixement: nacida el
+detall.armari.naixement.masculi: nacido el
+detall.armari.naixement.femeni: nacida el
 detall.armari.dimensions: dimensiones
 detall.armari.pes: peso
 detall.armari.quantitat: cantidad de telas

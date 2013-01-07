@@ -17,8 +17,11 @@ page.actions: Accions
 page.category: Categoria
 page.dimensions: Dimensions
 page.specifications: Especificacions
-page.birth: Nascuda el
+page.birth: Data de naixement
 page.weight: Pes
 page.fabrics: Quantitat de teles
 page.price: Preu
 page.stock: Estoc
+page.gender: Sexe
+page.gender.male: masculí
+page.gender.female: femení

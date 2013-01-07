@@ -27,6 +27,7 @@ class ProductAdmin extends Admin
             ->add('image1', null, array('label' => $translator->trans('page.image1')))
             ->add('price', null, array('label' => $translator->trans('page.price')))
             ->add('stock', null, array('label' => $translator->trans('page.stock')))
+            //->add('gender', null, array('label' => $translator->trans('page.gender')))
             ->add('position', null, array('label' => $translator->trans('page.position')))
             ->add('is_active', 'boolean', array('label' => $translator->trans('page.active')))
             // add custom action links
@@ -84,6 +85,7 @@ class ProductAdmin extends Admin
             ->add('fabrics', 'integer', array('label' => $translator->trans('page.fabrics'), 'required' => false))
             ->add('price', null, array('label' => $translator->trans('page.price')))
             ->add('stock', null, array('label' => $translator->trans('page.stock')))
+            ->add('gender', 'choice', array('label' => $translator->trans('page.gender'), 'choices' => array(0 => $translator->trans('page.gender.male'), 1 => $translator->trans('page.gender.female'))))
             ->add('position', 'integer', array('label' => $translator->trans('page.position')))
             ->add('is_active', 'checkbox', array('label' => $translator->trans('page.active'), 'required' => false))
             // help messages like this

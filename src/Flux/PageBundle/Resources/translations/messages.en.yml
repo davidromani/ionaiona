@@ -17,8 +17,11 @@ page.actions: Actions
 page.category: Category
 page.dimensions: Dimensions
 page.specifications: Specifications
-page.birth: Born
+page.birth: Birth date
 page.weight: Weight
 page.fabrics: Fabrics amount
 page.price: Price
 page.stock: Stock
+page.gender: Sex
+page.gender.male: male
+page.gender.female: female

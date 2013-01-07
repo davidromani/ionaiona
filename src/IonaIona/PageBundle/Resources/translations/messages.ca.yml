@@ -22,6 +22,8 @@ detall.armari.cartilla: la cartilla
 detall.armari.nom: nom
 detall.armari.referencia: referència
 detall.armari.naixement: nascuda el
+detall.armari.naixement.masculi: nascut el
+detall.armari.naixement.femeni: nascuda el
 detall.armari.dimensions: dimensions
 detall.armari.pes: pes
 detall.armari.quantitat: quantitat de teles

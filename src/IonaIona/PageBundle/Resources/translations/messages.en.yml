@@ -22,6 +22,8 @@ detall.armari.cartilla: the card
 detall.armari.nom: name
 detall.armari.referencia: reference
 detall.armari.naixement: born
+detall.armari.naixement.masculi: born
+detall.armari.naixement.femeni: born
 detall.armari.dimensions: dimensions
 detall.armari.pes: weight
 detall.armari.quantitat: amount of fabrics
