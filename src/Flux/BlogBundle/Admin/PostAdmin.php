@@ -58,7 +58,7 @@ class PostAdmin extends Admin
         $translator = new Translator($locale);
         $formMapper
             ->add('postDate', null, array('label' => $translator->trans('blog.date')))
-            //->add('category', 'sonata_type_model', array('label' => $translator->trans('blog.category')), array('by_reference' => false))
+            ->add('categories', 'sonata_type_model_list', array('label' => $translator->trans('blog.category')), array(/*'by_reference' => false*/))
             ->add('title', 'text', array('label' => $translator->trans('blog.title')))
             ->add('subtitle', 'text', array('label' => $translator->trans('blog.subtitle'), 'required' => false))
             ->add('summary', 'text', array('label' => $translator->trans('blog.summary'), 'required' => false))

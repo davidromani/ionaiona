@@ -1,0 +1,48 @@
+{% extends 'PageBundle:Global:layout.html.twig' %}
+{% block titulo %}
+    {% trans %}menu.diari{% endtrans %}
+{% endblock %}
+{% block menu %}
+    {{ knp_menu_render('PageBundle:Builder:main_' ~ app.request.locale ~ '_Menu') }}
+{% endblock %}
+{% block principal %}
+    <div class="constrictor clearfix">
+        <div class="blog-panel-izquierdo">
+            {% for post in posts %}
+                <div class="pblock">
+                    <a href="{{ path( 'diari_post_' ~ app.request.locale, {'year' : post.postDate | date('Y'), 'month' : post.postDate | date('m'), 'day' : post.postDate | date('d'), 'title' : post.titleSlug, 'id' : post.id } ) }}">
+                        <img src="{{ vich_uploader_asset(post, 'image1File') | imagine_filter('imatge220') }}" alt="" title="">
+                     </a>
+                    <div class="pblock-left">
+                        <h3>{{ post.postDate | date('d/m/Y') }}</h3>
+                        <a href="{{ path( 'diari_post_' ~ app.request.locale, {'year' : post.postDate | date('Y'), 'month' : post.postDate | date('m'), 'day' : post.postDate | date('d'), 'title' : post.titleSlug, 'id' : post.id } ) }}"><h4>{{ post.title }}</h4></a>
+                        <p>{{ post.summary }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+            {# posts.render() | raw #}
+        </div>
+        <div class="blog-panel-derecho">
+            <div class="vblock">
+                <h2>{% trans %}blog.search{% endtrans %}</h2>
+            </div>
+            <div class="vblock">
+                <h2>{% trans %}blog.categories{% endtrans %}</h2>
+                {% for category in categories %}
+                    <a href="{{ path( 'diari_categories_' ~ app.request.locale, {'category' : category.titleSlug, 'id' : category.id } ) }}" {% if category.id == cid %}style="color:#000"{% endif %}>{{ category.title }}</a><br>
+                {% endfor %}
+            </div>
+            <div class="vblock">
+                <h2>{% trans %}blog.archive{% endtrans %}</h2>
+                {% for archive in archives %}
+                    <a href="{{ path( 'diari_arxiu_' ~ app.request.locale, {'year' : archive.hit | date('Y'), 'month' : archive.hit | date('m') } ) }}">{{ archive.hit | date('m/Y') }}</a><br>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block peuidiomes %}
+    <a href="{{ path('diari_ca', {'_locale' : 'ca'}) }}">{% trans %}idiomas.catalan{% endtrans %}</a><br>
+    <a href="{{ path('diari_es', {'_locale' : 'es'}) }}">{% trans %}idiomas.espanol{% endtrans %}</a><br>
+    <a href="{{ path('diari_en', {'_locale' : 'en'}) }}">{% trans %}idiomas.ingles{% endtrans %}</a>
+{% endblock %} 

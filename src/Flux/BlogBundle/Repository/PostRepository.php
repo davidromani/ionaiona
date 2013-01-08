@@ -22,10 +22,21 @@ class PostRepository extends EntityRepository
 
     public function getPostsFromCategoryIdSortedByDateQuery($id)
     {
-        $query = $this->getEntityManager()
-            ->createQuery('SELECT p FROM FluxBlogBundle:Post p JOIN p.flux_blog_post_categories c WHERE p.isActive = 1 AND c.id = :id ORDER BY p.postDate DESC');
+        $rsm = new \Doctrine\ORM\Query\ResultSetMapping();
+        $rsm->addEntityResult('FluxBlogBundle:Post', 'p');
+        $query = $this->getEntityManager()->createNativeQuery('SELECT p.* FROM flux_blog_post_categories pc INNER JOIN flux_blog_post p ON p.id = pc.post_id WHERE pc.category_id = ? ORDER BY p.postDate DESC', $rsm);
+        $query->setParameter(1, $id);
+        return $query->getResult();
+        /*$stmt = $this->getEntityManager()
+            ->getConnection()
+            ->prepare('SELECT p.* FROM flux_blog_post_categories pc JOIN flux_blog_post p ON p.id = pc.post_id WHERE p.isActive = 1 AND pc.category_id = :id ORDER BY p.postDate DESC');
+        $stmt->bindValue('id', $id);
+        $stmt->execute();
+        return $stmt->fetchAll();
+        /*$query = $this->getEntityManager()
+            ->createQuery('SELECT p FROM flux_blog_post_categories pc JOIN pc.Post p WHERE p.isActive = 1 AND pc.id = :id ORDER BY p.postDate DESC');
         $query->setParameter('id', $id);
-        return $query;
+        return $query;*/
     }
 
     public function getArrayOfArchives()

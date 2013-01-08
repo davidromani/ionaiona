@@ -50,14 +50,22 @@ class DiariController extends Controller
         $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '001-004'));
         $categories = $em->getRepository('FluxBlogBundle:Category')->getActiveItemsSortedByTitle();
         $postsQuery = $em->getRepository('FluxBlogBundle:Post')->getPostsFromCategoryIdSortedByDateQuery($id);
-        $paginator = $this->get('knp_paginator');
-        $posts = $paginator->paginate($postsQuery, $this->getRequest()->query->get('page', 1), 10 /*limit per page*/);
+        //$paginator = $this->get('knp_paginator');
+        //$posts = $paginator->paginate($postsQuery, $this->getRequest()->query->get('page', 1), 10 /*limit per page*/);
         $archives = $em->getRepository('FluxBlogBundle:Post')->getArrayOfArchives();
+
+        $logger = $this->get('logger');
+        $logger->debug('Hit !! '.$postsQuery.' count='.count($postsQuery));
+        foreach ($postsQuery as $post) {
+            $logger->debug($post);
+        }
+
         return $this->render('PageBundle:Diari:categories.html.twig', array(
             'pagina' => $pagina,
             'categories' => $categories,
-            'posts' => $posts,
-            'archives' => $archives
+            'posts' => $postsQuery, //$posts,
+            'archives' => $archives,
+            'cid' => $id
         ));
     }
 }
