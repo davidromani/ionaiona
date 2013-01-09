@@ -109,6 +109,11 @@ class Category
         return $this->posts;
     }
 
+    public function haveOneOrMorePost()
+    {
+        return count($this->posts) > 0;
+    }
+
     /**
      * Get id
      *
