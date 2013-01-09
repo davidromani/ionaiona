@@ -2,6 +2,9 @@
 {% block titulo %}
     {% trans %}menu.armari{% endtrans %}
 {% endblock %}
+{% block description %}
+    {% trans %}description.global{% endtrans %}
+{% endblock %}
 {% block menu %}
     {{ knp_menu_render('PageBundle:Builder:main_' ~ app.request.locale ~ '_Menu') }}
     {{ knp_menu_render('PageBundle:Builder:armari_' ~ app.request.locale ~ '_Menu') }}
