@@ -33,8 +33,10 @@
     </div>
 </header>
 <div id="principal">
-    <h1>Oops! {% trans %}errors.anerroroccurred{% endtrans %} :-(</h1>
-    <h2 style="margin-bottom:60px">{% trans %}errors.theserverreturneda{% endtrans %} "<span style="color:#F00">{{ status_code }} {{ status_text }}</span>".</h2>
+    <div class="constrictor clearfix">
+        <h1>Oops! {% trans %}errors.anerroroccurred{% endtrans %} :-(</h1>
+        <h2 style="margin-bottom:60px">{% trans %}errors.theserverreturneda{% endtrans %} "<span style="color:#F00">{{ status_code }} {{ status_text }}</span>".</h2>
+    </div>
 </div>
 <footer>
     <div class="constrictor clearfix">

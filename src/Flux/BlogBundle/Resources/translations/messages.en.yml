@@ -13,3 +13,6 @@ blog.date: Publish date
 blog.active: Active
 blog.actions: Actions
 blog.category: Category
+
+errors.anerroroccurred: There was an error
+errors.theserverreturneda: The server returned the message

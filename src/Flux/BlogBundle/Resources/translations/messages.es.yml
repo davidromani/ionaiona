@@ -13,3 +13,6 @@ blog.date: Fecha publicación
 blog.active: Activo
 blog.actions: Acciones
 blog.category: Categoría
+
+errors.anerroroccurred: Se ha producido un error
+errors.theserverreturneda: El servidor ha devuelto el mensaje
