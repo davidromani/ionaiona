@@ -384,6 +384,10 @@ cancel_buy_en:
         _locale:    en
 
 ############################ GLOBAL
+sitemap:
+    pattern:        /sitemap/
+    defaults:       { _controller: PageBundle:Sitemap:sitemap, _format: xml }
+
 inicial:
     pattern:        /
     defaults:       { _controller: PageBundle:Default:home }
