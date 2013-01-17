@@ -11,7 +11,7 @@ class InstruccionsController extends Controller
     public function privacitatAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '004-002'));
+        $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => 'INS-0PR'));
         return $this->render('PageBundle:Instruccions:privacitat.html.twig', array(
             'pagina' => $pagina,
         ));
@@ -20,7 +20,7 @@ class InstruccionsController extends Controller
     public function condicionsAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '004-002'));
+        $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => 'INS-1CO'));
         return $this->render('PageBundle:Instruccions:condicions.html.twig', array(
             'pagina' => $pagina,
         ));
@@ -29,7 +29,7 @@ class InstruccionsController extends Controller
     public function creditsAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '004-002'));
+        $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => 'INS-1CR'));
         return $this->render('PageBundle:Instruccions:credits.html.twig', array(
             'pagina' => $pagina,
         ));
