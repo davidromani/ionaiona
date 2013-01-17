@@ -1,0 +1,27 @@
+{% extends 'PageBundle:Global:layout.html.twig' %}
+{% block titulo %}
+    {% trans %}menu.taller{% endtrans %}
+{% endblock %}
+{% block description %}
+    {% trans %}description.global{% endtrans %}
+{% endblock %}
+{% block menu %}
+    {{ knp_menu_render('PageBundle:Builder:main_' ~ app.request.locale ~ '_Menu') }}
+    {{ knp_menu_render('PageBundle:Builder:taller_' ~ app.request.locale ~ '_Menu') }}
+{% endblock %}
+{% block principal %}
+    <div class="constrictor clearfix">
+        <div class="taller-panel-izquierdo">
+            <h2>{{ pagina.title }}</h2>
+            <p>{{ pagina.text1 | raw }}</p>
+        </div>
+        <div class="taller-panel-derecho">
+            <img src="{{ vich_uploader_asset(pagina, 'image1File') | imagine_filter('imatge260') }}" alt="" title="">
+        </div>
+    </div>
+{% endblock %}
+{% block peuidiomes %}
+    <a href="{{ path('instruccion_privacitat_ca', {'_locale' : 'ca'}) }}">{% trans %}idiomas.catalan{% endtrans %}</a><br>
+    <a href="{{ path('instruccion_privacitat_es', {'_locale' : 'es'}) }}">{% trans %}idiomas.espanol{% endtrans %}</a><br>
+    <a href="{{ path('instruccion_privacitat_en', {'_locale' : 'en'}) }}">{% trans %}idiomas.ingles{% endtrans %}</a>
+{% endblock %} 
