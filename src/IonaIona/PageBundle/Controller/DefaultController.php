@@ -28,17 +28,17 @@ class DefaultController extends Controller
 
     public function tallerAction()
     {
-        $em = $this->getDoctrine()->getManager();
+        /*$em = $this->getDoctrine()->getManager();
         $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '002-001'));
         return $this->render('PageBundle:Taller:historia.html.twig', array(
             'pagina' => $pagina,
-        ));
+        ));*/
 
-        /*$em = $this->getDoctrine()->getManager();
-        $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '001-003'));
+        $em = $this->getDoctrine()->getManager();
+        $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '002-000'));
         return $this->render('PageBundle:Default:taller.html.twig', array(
             'pagina' => $pagina,
-        ));*/
+        ));
     }
 
     public function diariAction()
