@@ -17,6 +17,15 @@ class DefaultController extends Controller
         ));
     }
 
+    public function origenAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '004-001'));
+        return $this->render('PageBundle:Default:origen.html.twig', array(
+            'pagina' => $pagina,
+        ));
+    }
+
     public function armariAction()
     {
         $em = $this->getDoctrine()->getManager();

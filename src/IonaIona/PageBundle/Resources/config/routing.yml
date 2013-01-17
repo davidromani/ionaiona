@@ -35,6 +35,42 @@ origen_en:
     requirements:
         _locale:    en
 
+origen_la_balena_ca:
+    pattern:        /{_locale}/l-origen/la-balena
+    defaults:       { _controller: PageBundle:Origen:balena }
+    requirements:
+        _locale:    ca
+
+origen_la_balena_es:
+    pattern:        /{_locale}/origen/la-ballena
+    defaults:       { _controller: PageBundle:Origen:balena }
+    requirements:
+        _locale:    es
+
+origen_la_balena_en:
+    pattern:        /{_locale}/origin/the-whale
+    defaults:       { _controller: PageBundle:Origin:balena }
+    requirements:
+        _locale:    en
+
+origen_els_patchdolls_ca:
+    pattern:        /{_locale}/l-origen/els-patchdolls
+    defaults:       { _controller: PageBundle:Origen:patchdolls }
+    requirements:
+        _locale:    ca
+
+origen_els_patchdolls_es:
+    pattern:        /{_locale}/origen/los-patchdolls
+    defaults:       { _controller: PageBundle:Origen:patchdolls }
+    requirements:
+        _locale:    es
+
+origen_els_patchdolls_en:
+    pattern:        /{_locale}/origin/the-patchdolls
+    defaults:       { _controller: PageBundle:Origin:patchdolls }
+    requirements:
+        _locale:    en
+
 ############################ ARMARI
 armari_ca:
     pattern:        /{_locale}/l-armari/

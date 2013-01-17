@@ -45,6 +45,16 @@ class Builder extends ContainerAware
         return $menu;
     }
 
+    public function origen_ca_Menu(FactoryInterface $factory, array $options)
+    {
+        $menu = $factory->createItem('origen');
+        $menu->setCurrentUri($this->container->get('request')->getRequestUri());
+        $menu->addChild('la balena', array('route' => 'origen_la_balena_ca'));
+        $menu->addChild('els patchdolls', array('route' => 'origen_els_patchdolls_ca'));
+        $menu->setChildrenAttribute('class', 'level2');
+        return $menu;
+    }
+
     public function armari_ca_Menu(FactoryInterface $factory, array $options)
     {
         $menu = $factory->createItem('armari');
@@ -82,6 +92,16 @@ class Builder extends ContainerAware
         return $menu;
     }
 
+    public function origen_es_Menu(FactoryInterface $factory, array $options)
+    {
+        $menu = $factory->createItem('origen');
+        $menu->setCurrentUri($this->container->get('request')->getRequestUri());
+        $menu->addChild('la ballena', array('route' => 'origen_la_balena_es'));
+        $menu->addChild('los patchdolls', array('route' => 'origen_els_patchdolls_es'));
+        $menu->setChildrenAttribute('class', 'level2');
+        return $menu;
+    }
+
     public function armari_es_Menu(FactoryInterface $factory, array $options)
     {
         $menu = $factory->createItem('armari');
@@ -116,6 +136,16 @@ class Builder extends ContainerAware
         $menu->addChild('wardrobe', array('route' => 'armari_en'));
         $menu->addChild('workshop', array('route' => 'taller_en'));
         $menu->addChild('newspaper', array('route' => 'diari_en'));
+        return $menu;
+    }
+
+    public function origen_en_Menu(FactoryInterface $factory, array $options)
+    {
+        $menu = $factory->createItem('origen');
+        $menu->setCurrentUri($this->container->get('request')->getRequestUri());
+        $menu->addChild('the whale', array('route' => 'origen_la_balena_en'));
+        $menu->addChild('the patchdolls', array('route' => 'origen_els_patchdolls_en'));
+        $menu->setChildrenAttribute('class', 'level2');
         return $menu;
     }
 
