@@ -39,4 +39,11 @@ class ProductRepository extends EntityRepository
             ->getSingleResult();
     }
 
+    public function getLastActiveProductWithStock()
+    {
+        return $this->getEntityManager()
+            ->createQuery('SELECT p FROM FluxProductBundle:Product p WHERE p.isActive = 1 AND p.stock > 0 ORDER BY p.id DESC')
+            ->setMaxResults(1)
+            ->getSingleResult();
+    }
 }

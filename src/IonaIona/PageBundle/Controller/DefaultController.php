@@ -12,8 +12,10 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $pagina = $em->getRepository('FluxPageBundle:Page')->findOneBy(array('code' => '001-001'));
+        $lastProduct = $em->getRepository('FluxProductBundle:Product')->getLastActiveProductWithStock();
         return $this->render('PageBundle:Default:home.html.twig', array(
             'pagina' => $pagina,
+            'lastProduct' => $lastProduct
         ));
     }
 
