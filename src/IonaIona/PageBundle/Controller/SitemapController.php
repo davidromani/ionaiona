@@ -23,6 +23,9 @@ class SitemapController extends Controller
 
         // CA
         array_push($urls, array('loc' => $this->get('router')->generate('home_ca', array('_locale' => 'ca')), 'changefreq' => 'weekly', 'priority' => '1.0'));
+        array_push($urls, array('loc' => $this->get('router')->generate('origen_ca', array('_locale' => 'ca')), 'changefreq' => 'weekly', 'priority' => '1.0'));
+        array_push($urls, array('loc' => $this->get('router')->generate('origen_la_balena_ca', array('_locale' => 'ca')), 'changefreq' => 'weekly', 'priority' => '0.5'));
+        array_push($urls, array('loc' => $this->get('router')->generate('origen_els_patchdolls_ca', array('_locale' => 'ca')), 'changefreq' => 'weekly', 'priority' => '0.5'));
         array_push($urls, array('loc' => $this->get('router')->generate('armari_ca', array('_locale' => 'ca')), 'changefreq' => 'weekly', 'priority' => '0.5'));
         array_push($urls, array('loc' => $this->get('router')->generate('armari_balena_ca', array('_locale' => 'ca')), 'changefreq' => 'weekly', 'priority' => '0.5'));
         array_push($urls, array('loc' => $this->get('router')->generate('armari_girafa_ca', array('_locale' => 'ca')), 'changefreq' => 'weekly', 'priority' => '0.5'));
@@ -51,6 +54,9 @@ class SitemapController extends Controller
                     'title' => $item->getTitleSlug(),
                     'id' => $item->getId())), 'changefreq' => 'weekly', 'priority' => '0.3'));
         }
+        array_push($urls, array('loc' => $this->get('router')->generate('instruccion_privacitat_ca', array('_locale' => 'ca')), 'changefreq' => 'weekly', 'priority' => '0.2'));
+        array_push($urls, array('loc' => $this->get('router')->generate('instruccion_condicions_ca', array('_locale' => 'ca')), 'changefreq' => 'weekly', 'priority' => '0.2'));
+        array_push($urls, array('loc' => $this->get('router')->generate('instruccion_credits_ca', array('_locale' => 'ca')), 'changefreq' => 'weekly', 'priority' => '0.2'));
 
 
 
@@ -58,6 +64,9 @@ class SitemapController extends Controller
 
         // ES
         array_push($urls, array('loc' => $this->get('router')->generate('home_es', array('_locale' => 'es')), 'changefreq' => 'weekly', 'priority' => '1.0'));
+        array_push($urls, array('loc' => $this->get('router')->generate('origen_es', array('_locale' => 'es')), 'changefreq' => 'weekly', 'priority' => '1.0'));
+        array_push($urls, array('loc' => $this->get('router')->generate('origen_la_balena_es', array('_locale' => 'es')), 'changefreq' => 'weekly', 'priority' => '0.5'));
+        array_push($urls, array('loc' => $this->get('router')->generate('origen_els_patchdolls_es', array('_locale' => 'es')), 'changefreq' => 'weekly', 'priority' => '0.5'));
         array_push($urls, array('loc' => $this->get('router')->generate('armari_es', array('_locale' => 'es')), 'changefreq' => 'weekly', 'priority' => '0.5'));
         array_push($urls, array('loc' => $this->get('router')->generate('armari_balena_es', array('_locale' => 'es')), 'changefreq' => 'weekly', 'priority' => '0.5'));
         array_push($urls, array('loc' => $this->get('router')->generate('armari_girafa_es', array('_locale' => 'es')), 'changefreq' => 'weekly', 'priority' => '0.5'));
@@ -86,6 +95,9 @@ class SitemapController extends Controller
                     'title' => $item->getTitleSlug(),
                     'id' => $item->getId())), 'changefreq' => 'weekly', 'priority' => '0.3'));
         }
+        array_push($urls, array('loc' => $this->get('router')->generate('instruccion_privacitat_es', array('_locale' => 'es')), 'changefreq' => 'weekly', 'priority' => '0.2'));
+        array_push($urls, array('loc' => $this->get('router')->generate('instruccion_condicions_es', array('_locale' => 'es')), 'changefreq' => 'weekly', 'priority' => '0.2'));
+        array_push($urls, array('loc' => $this->get('router')->generate('instruccion_credits_es', array('_locale' => 'es')), 'changefreq' => 'weekly', 'priority' => '0.2'));
 
 
 
@@ -93,6 +105,9 @@ class SitemapController extends Controller
 
         // EN
         array_push($urls, array('loc' => $this->get('router')->generate('home_en', array('_locale' => 'en')), 'changefreq' => 'weekly', 'priority' => '1.0'));
+        array_push($urls, array('loc' => $this->get('router')->generate('origen_en', array('_locale' => 'en')), 'changefreq' => 'weekly', 'priority' => '1.0'));
+        array_push($urls, array('loc' => $this->get('router')->generate('origen_la_balena_en', array('_locale' => 'en')), 'changefreq' => 'weekly', 'priority' => '0.5'));
+        array_push($urls, array('loc' => $this->get('router')->generate('origen_els_patchdolls_en', array('_locale' => 'en')), 'changefreq' => 'weekly', 'priority' => '0.5'));
         array_push($urls, array('loc' => $this->get('router')->generate('armari_en', array('_locale' => 'en')), 'changefreq' => 'weekly', 'priority' => '0.5'));
         array_push($urls, array('loc' => $this->get('router')->generate('armari_balena_en', array('_locale' => 'en')), 'changefreq' => 'weekly', 'priority' => '0.5'));
         array_push($urls, array('loc' => $this->get('router')->generate('armari_girafa_en', array('_locale' => 'en')), 'changefreq' => 'weekly', 'priority' => '0.5'));
@@ -121,6 +136,9 @@ class SitemapController extends Controller
                     'title' => $item->getTitleSlug(),
                     'id' => $item->getId())), 'changefreq' => 'weekly', 'priority' => '0.3'));
         }
+        array_push($urls, array('loc' => $this->get('router')->generate('instruccion_privacitat_en', array('_locale' => 'en')), 'changefreq' => 'weekly', 'priority' => '0.2'));
+        array_push($urls, array('loc' => $this->get('router')->generate('instruccion_condicions_en', array('_locale' => 'en')), 'changefreq' => 'weekly', 'priority' => '0.2'));
+        array_push($urls, array('loc' => $this->get('router')->generate('instruccion_credits_en', array('_locale' => 'en')), 'changefreq' => 'weekly', 'priority' => '0.2'));
 
         return array('urls' => $urls, 'hostname' => $hostname);
     }
