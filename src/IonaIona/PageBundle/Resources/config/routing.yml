@@ -16,6 +16,25 @@ home_en:
     requirements:
         _locale:    en
 
+############################ ORIGEN
+origen_ca:
+    pattern:        /{_locale}/l-origen/
+    defaults:       { _controller: PageBundle:Default:origen }
+    requirements:
+        _locale:    ca
+
+origen_es:
+    pattern:        /{_locale}/origen/
+    defaults:       { _controller: PageBundle:Default:origen }
+    requirements:
+        _locale:    es
+
+origen_en:
+    pattern:        /{_locale}/origin/
+    defaults:       { _controller: PageBundle:Default:origen }
+    requirements:
+        _locale:    en
+
 ############################ ARMARI
 armari_ca:
     pattern:        /{_locale}/l-armari/

@@ -38,6 +38,7 @@ class Builder extends ContainerAware
     {
         $menu = $factory->createItem('root');
         $menu->setCurrentUri($this->container->get('request')->getRequestUri());
+        $menu->addChild('l\'origen', array('route' => 'origen_ca'));
         $menu->addChild('l\'armari', array('route' => 'armari_ca'));
         $menu->addChild('el taller', array('route' => 'taller_ca'));
         $menu->addChild('el diari', array('route' => 'diari_ca'));
@@ -74,6 +75,7 @@ class Builder extends ContainerAware
     {
         $menu = $factory->createItem('root');
         $menu->setCurrentUri($this->container->get('request')->getRequestUri());
+        $menu->addChild('origen', array('route' => 'origen_es'));
         $menu->addChild('armario', array('route' => 'armari_es'));
         $menu->addChild('taller', array('route' => 'taller_es'));
         $menu->addChild('diario', array('route' => 'diari_es'));
@@ -110,6 +112,7 @@ class Builder extends ContainerAware
     {
         $menu = $factory->createItem('root');
         $menu->setCurrentUri($this->container->get('request')->getRequestUri());
+        $menu->addChild('origin', array('route' => 'origen_en'));
         $menu->addChild('wardrobe', array('route' => 'armari_en'));
         $menu->addChild('workshop', array('route' => 'taller_en'));
         $menu->addChild('newspaper', array('route' => 'diari_en'));
