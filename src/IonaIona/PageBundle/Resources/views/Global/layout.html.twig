@@ -60,9 +60,9 @@
                 </div>
                 <div>
                     <span>{% trans %}instrucciones{% endtrans %}</span><br>
-                    <a href="">{% trans %}instrucciones.privacidad{% endtrans %}</a><br>
-                    <a href="">{% trans %}instrucciones.condiciones{% endtrans %}</a><br>
-                    <a href="">{% trans %}instrucciones.creditos{% endtrans %}</a><br>
+                    <a href="{{ path( 'instruccion_privacitat_' ~ app.request.locale ) }}">{% trans %}instrucciones.privacidad{% endtrans %}</a><br>
+                    <a href="{{ path( 'instruccion_condicions_' ~ app.request.locale ) }}">{% trans %}instrucciones.condiciones{% endtrans %}</a><br>
+                    <a href="{{ path( 'instruccion_credits_' ~ app.request.locale ) }}">{% trans %}instrucciones.creditos{% endtrans %}</a><br>
                 </div>
             </div>
         </footer>

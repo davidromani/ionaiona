@@ -438,6 +438,61 @@ cancel_buy_en:
     requirements:
         _locale:    en
 
+############################ INSTRUCCIONS
+instruccion_privacitat_ca:
+    pattern:        /{_locale}/instruccions/privacitat
+    defaults:       { _controller: PageBundle:Instruccions:privacitat }
+    requirements:
+        _locale:    ca
+
+instruccion_privacitat_es:
+    pattern:        /{_locale}/instrucciones/privacidad
+    defaults:       { _controller: PageBundle:Instruccions:privacitat }
+    requirements:
+        _locale:    es
+
+instruccion_privacitat_en:
+    pattern:        /{_locale}/instructions/privacy
+    defaults:       { _controller: PageBundle:Instruccions:privacitat }
+    requirements:
+        _locale:    en
+
+instruccion_condicions_ca:
+    pattern:        /{_locale}/instruccions/condicions-de-compra
+    defaults:       { _controller: PageBundle:Instruccions:condicions }
+    requirements:
+        _locale:    ca
+
+instruccion_condicions_es:
+    pattern:        /{_locale}/instrucciones/condiciones-de-compra
+    defaults:       { _controller: PageBundle:Instruccions:condicions }
+    requirements:
+        _locale:    es
+
+instruccion_condicions_en:
+    pattern:        /{_locale}/instructions/terms-of-service
+    defaults:       { _controller: PageBundle:Instruccions:condicions }
+    requirements:
+        _locale:    en
+
+instruccion_credits_ca:
+    pattern:        /{_locale}/instruccions/credits
+    defaults:       { _controller: PageBundle:Instruccions:credits }
+    requirements:
+        _locale:    ca
+
+instruccion_credits_es:
+    pattern:        /{_locale}/instrucciones/creditos
+    defaults:       { _controller: PageBundle:Instruccions:credits }
+    requirements:
+        _locale:    es
+
+instruccion_credits_en:
+    pattern:        /{_locale}/instructions/credits
+    defaults:       { _controller: PageBundle:Instruccions:credits }
+    requirements:
+        _locale:    en
+
 ############################ GLOBAL
 sitemap:
     pattern:        /sitemap/
