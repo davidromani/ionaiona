@@ -522,6 +522,18 @@ div#principal div.constrictor.clearfix div.taller-panel-izquierdo p {
     font-family: 'GothamBook', arial, helvetica;
 }
 
+div#principal div.constrictor.clearfix div.taller-panel-izquierdo p a {
+    color: #D84359;
+}
+
+div#principal div.constrictor.clearfix div.taller-panel-izquierdo p a:visited {
+    color: #D84359;
+}
+
+div#principal div.constrictor.clearfix div.taller-panel-izquierdo p a:active {
+    color: #D84359;
+}
+
 div#principal div.constrictor.clearfix div.taller-panel-derecho {
     float: right;
     /*width: 30%;*/
