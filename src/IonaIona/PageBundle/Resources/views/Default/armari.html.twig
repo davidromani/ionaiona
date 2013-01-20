@@ -15,7 +15,8 @@
                 x : parseInt(n.attr('x')),
                 y : parseInt(n.attr('y')),
                 width : parseInt(n.attr('width')),
-                height : parseInt(n.attr('height'))
+                height : parseInt(n.attr('height')),
+                update : function() {fireInterval(this)}
             };
             n = $('#ninot_girafa');
             APP.girafa = {
@@ -23,7 +24,8 @@
                 x : parseInt(n.attr('x')),
                 y : parseInt(n.attr('y')),
                 width : parseInt(n.attr('width')),
-                height : parseInt(n.attr('height'))
+                height : parseInt(n.attr('height')),
+                update : function() {fireInterval(this)}
             };
             var n = $('#ninot_ocell');
             APP.ocell = {
@@ -31,7 +33,8 @@
                 x : parseInt(n.attr('x')),
                 y : parseInt(n.attr('y')),
                 width : parseInt(n.attr('width')),
-                height : parseInt(n.attr('height'))
+                height : parseInt(n.attr('height')),
+                update : function() {fireInterval(this)}
             };
             var n = $('#ninot_pitet');
             APP.pitet = {
@@ -39,7 +42,8 @@
                 x : parseInt(n.attr('x')),
                 y : parseInt(n.attr('y')),
                 width : parseInt(n.attr('width')),
-                height : parseInt(n.attr('height'))
+                height : parseInt(n.attr('height')),
+                update : function() {fireInterval(this)}
             };
             var n = $('#ninot_gossalsitxa');
             APP.gos = {
@@ -47,13 +51,15 @@
                 x : parseInt(n.attr('x')),
                 y : parseInt(n.attr('y')),
                 width : parseInt(n.attr('width')),
-                height : parseInt(n.attr('height'))
+                height : parseInt(n.attr('height')),
+                update : function() {fireInterval(this)}
             };
-            $(document).trigger('app/setMovement', APP.balena);
-            $(document).trigger('app/setMovement', APP.girafa);
-            $(document).trigger('app/setMovement', APP.ocell);
-            $(document).trigger('app/setMovement', APP.pitet);
-            $(document).trigger('app/setMovement', APP.gos);
+            subject.registerObserver(APP.balena);
+            subject.registerObserver(APP.girafa);
+            subject.registerObserver(APP.ocell);
+            subject.registerObserver(APP.pitet);
+            subject.registerObserver(APP.gos);
+            $(document).trigger('app/setMovement');
         });
     </script>
 {% endblock %}
