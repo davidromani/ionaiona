@@ -143,6 +143,11 @@ fos_user:
     group:
         group_class: Application\Sonata\UserBundle\Entity\Group
 
+# Genemu Form Select 2 Bundle
+genemu_form:
+    select2: ~
+    date: ~
+
 # TinyMCE
 stfalcon_tinymce:
     include_jquery: false
