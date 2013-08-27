@@ -92,7 +92,7 @@ class StoreCustomerProduct
 
     function __toString()
     {
-        return $this->storeCustomer;
+        return $this->getId() ? $this->id : '---';
     }
 
 }

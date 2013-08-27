@@ -8,10 +8,7 @@ use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
-//use Sonata\PageBundle\Model\PageInterface;
-use Knp\Menu\ItemInterface as MenuItemInterface;
-
-use IonaIona\PageBundle\Entity\StoreCustomer;
+use Sonata\AdminBundle\Route\RouteCollection;
 
 class StoreCustomerAdmin extends Admin
 {
@@ -62,11 +59,11 @@ class StoreCustomerAdmin extends Admin
             ->add('updated', 'datetime', array('label' => 'Date modificació', 'read_only' => true))
             ->add('email', 'text', array('label' => 'Email', 'read_only' => true))
             ->add('name', 'text', array('label' => 'Nom i cognoms'))
-            ->add('address', 'text', array('label' => 'Adreça'))
-            ->add('postalCode', 'text', array('label' => 'Codi postal'))
-            ->add('city', 'text', array('label' => 'Població'))
-            ->add('state', 'text', array('label' => 'Provínicia'))
-            ->add('phone', 'text', array('label' => 'Telèfon'))
+            ->add('address', 'text', array('label' => 'Adreça', 'required' => false))
+            ->add('postalCode', 'text', array('label' => 'Codi postal', 'required' => false))
+            ->add('city', 'text', array('label' => 'Població', 'required' => false))
+            ->add('state', 'text', array('label' => 'Provínicia', 'required' => false))
+            ->add('phone', 'text', array('label' => 'Telèfon', 'required' => false))
             ->add('wantNewsletter', 'checkbox', array('label' => 'Vol rebre newsletter', 'required' => false))
             // help messages like this
             /*->setHelps(array(

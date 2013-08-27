@@ -8,10 +8,7 @@ use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
-//use Sonata\PageBundle\Model\PageInterface;
-use Knp\Menu\ItemInterface as MenuItemInterface;
-
-use IonaIona\PageBundle\Entity\StoreCustomer;
+use Sonata\AdminBundle\Route\RouteCollection;
 
 class StoreCustomerProductAdmin extends Admin
 {
@@ -28,6 +25,7 @@ class StoreCustomerProductAdmin extends Admin
                 'actions' => array(
                     //'view' => array(),
                     //'edit' => array(),
+                    //'show' => array(),
                 ),
                 'label' => 'Accions'
             ))
@@ -55,16 +53,11 @@ class StoreCustomerProductAdmin extends Admin
         $locale = $this->getRequest()->get('locale');
         $translator = new Translator($locale);
         $formMapper
-            ->add('created', 'datetime', array('label' => 'Data alta', 'read_only' => true))
-            ->add('updated', 'datetime', array('label' => 'Date modificació', 'read_only' => true))
-            ->add('email', 'text', array('label' => 'Email', 'read_only' => true))
-            ->add('name', 'text', array('label' => 'Nom i cognoms'))
-            ->add('address', 'text', array('label' => 'Adreça'))
-            ->add('postalCode', 'text', array('label' => 'Codi postal'))
-            ->add('city', 'text', array('label' => 'Població'))
-            ->add('state', 'text', array('label' => 'Provínicia'))
-            ->add('phone', 'text', array('label' => 'Telèfon'))
-            ->add('wantNewsletter', 'checkbox', array('label' => 'Vol rebre newsletter', 'required' => false))
+            ->add('created', 'datetime', array('label' => 'Data compra', 'read_only' => true))
+            //->add('updated', 'datetime', array('label' => 'Date modificació', 'read_only' => true))
+            ->add('price', null, array('label' => 'Preu', 'read_only' => true))
+            ->add('product', null, array('label' => 'Producte', 'read_only' => true))
+            ->add('storeCustomer', null, array('label' => 'Client'))
             // help messages like this
             /*->setHelps(array(
                'title' => $this->trans('help_post_title')
@@ -72,7 +65,7 @@ class StoreCustomerProductAdmin extends Admin
             ;
     }
 
-    /*protected function configureShowField(ShowMapper $showMapper)
+    protected function configureShowField(ShowMapper $showMapper)
     {
         $showMapper
             ->add('id')
@@ -83,5 +76,11 @@ class StoreCustomerProductAdmin extends Admin
             ->add('summary')
             ->add('text')
         ;
-    }*/
+    }
+
+    protected function configureRoutes(RouteCollection $collection)
+    {
+        $collection->remove('create');
+        $collection->remove('delete');
+    }
 }
