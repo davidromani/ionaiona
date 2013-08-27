@@ -65,19 +65,6 @@ class ProductAdmin extends Admin
             ->add('birth', 'text', array('label' => $translator->trans('page.birth'), 'required' => false))
             ->add('dimensions', 'text', array('label' => $translator->trans('page.dimensions'), 'required' => false))
             ->add('specifications', 'text', array('label' => $translator->trans('page.specifications'), 'required' => false))
-            ->add('translations', 'a2lix_translations', array(
-                'label' => ' ',
-                'fields' => array(
-                    'name' => array('label' => $translator->trans('page.name')),
-                    'birth' => array('label' => $translator->trans('page.birth')),
-                    'dimensions' => array('label' => $translator->trans('page.dimensions')),
-                    'specifications' => array('label' => $translator->trans('page.specifications')),
-            )))
-            ->add('image1File', 'file', array('label' => $translator->trans('page.upload.image1'), 'required' => false))
-            ->add('image1', null, array('label' => $translator->trans('page.image1'), 'required' => false, 'read_only' => true))
-            // TRY TO PRINT PREVIEW ->add('img1', 'sonata_type_model', array('property_path' => false, 'label' => 'im1', 'required' => false, 'template' => 'FluxPageBundle:Default:img.html.twig'))
-            ->add('image2File', 'file', array('label' => $translator->trans('page.upload.image2'), 'required' => false))
-            ->add('image2', null, array('label' => $translator->trans('page.image2'), 'required' => false, 'read_only' => true))
             ->add('weight', 'integer', array('label' => $translator->trans('page.weight'), 'required' => false))
             ->add('fabrics', 'integer', array('label' => $translator->trans('page.fabrics'), 'required' => false))
             ->add('size', null, array('label' => $translator->trans('page.size')))
@@ -88,6 +75,26 @@ class ProductAdmin extends Admin
             //->add('urlFacebookPhoto', null, array('label' => $translator->trans('page.facebook.photo')))
             //->add('urlFacebookAlbum', null, array('label' => $translator->trans('page.facebook.album')))
             ->add('gender', 'choice', array('label' => $translator->trans('page.gender'), 'choices' => array(0 => $translator->trans('page.gender.male'), 1 => $translator->trans('page.gender.female'))))
+
+            ->with('Imatges') // IMATGES
+            ->add('image1File', 'file', array('label' => $translator->trans('page.upload.image1'), 'required' => false))
+            ->add('image1', null, array('label' => $translator->trans('page.image1'), 'required' => false, 'read_only' => true))
+            // TRY TO PRINT PREVIEW ->add('img1', 'sonata_type_model', array('property_path' => false, 'label' => 'im1', 'required' => false, 'template' => 'FluxPageBundle:Default:img.html.twig'))
+            ->add('image2File', 'file', array('label' => $translator->trans('page.upload.image2'), 'required' => false))
+            ->add('image2', null, array('label' => $translator->trans('page.image2'), 'required' => false, 'read_only' => true))
+
+            ->with('Traduccions') // TRADUCCIONS
+            ->add('translations', 'a2lix_translations_gedmo', array(
+                'translatable_class' => 'Flux\ProductBundle\Entity\Product',
+                'label' => ' ',
+                'fields' => array(
+                    'name' => array('label' => $translator->trans('page.name')),
+                    'birth' => array('label' => $translator->trans('page.birth'), 'required' => false),
+                    'dimensions' => array('label' => $translator->trans('page.dimensions'), 'required' => false),
+                    'specifications' => array('label' => $translator->trans('page.specifications'), 'required' => false),
+            )))
+
+            ->with('Constrols') // CONTROLS
             ->add('position', 'integer', array('label' => $translator->trans('page.position')))
             ->add('is_active', 'checkbox', array('label' => $translator->trans('page.active'), 'required' => false))
             // help messages like this
