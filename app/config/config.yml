@@ -84,14 +84,14 @@ swiftmailer:
     transport:  smtp
     encryption: ssl
     auth_mode:  login
-    host:       %mail_host%
-    username:   %mail_username%
-    password:   %mail_password%
+    host:       %mailer_host%
+    username:   %mailer_user%
+    password:   %mailer_password%
     spool:      { type: memory }
 
 # Sonata Admin
 sonata_admin:
-    title:  'iona iona - administrador de continguts'
+    title:  'iona iona · administrador de continguts'
     title_logo: '/favicon.png'
     templates:
         layout: PageBundle:Admin:standard_layout_tinymce.html.twig
@@ -99,7 +99,7 @@ sonata_admin:
         ajax: SonataAdminBundle::ajax_layout.html.twig
         list: SonataAdminBundle:CRUD:list.html.twig
         show: SonataAdminBundle:CRUD:show.html.twig
-        edit: SonataAdminBundle:CRUD:edit.html.twig
+        edit: FluxPageBundle:Admin:edit.html.twig # antes SonataAdminBundle:CRUD:edit.html.twig en un update de Sonata salta un error en este recurso (linea 35)
     dashboard:
         blocks:
             - { position: left, type: sonata.admin.block.admin_list }
@@ -188,6 +188,10 @@ vich_uploader:
 liip_imagine:
     cache_prefix: /uploads/cache
     filter_sets:
+        imatge60x60:
+            quality: 90
+            filters:
+                thumbnail: { size: [60, 60], mode: outbound }
         imatge80:
             quality: 90
             filters:
