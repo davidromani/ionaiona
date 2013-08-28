@@ -11,6 +11,11 @@
 {% endblock %}
 {% block recursos %}
     <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $('#menu-level-1>li:eq(1)').addClass('current');
+        });
+    </script>
 {% endblock %}
 {% block principal %}
     <div class="constrictor clearfix">
