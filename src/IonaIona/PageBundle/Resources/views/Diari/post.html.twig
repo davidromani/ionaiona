@@ -23,6 +23,9 @@
                 <h3>{{ post.postDate | date('d/m/Y') }}</h3>
                 <h4>{{ post.title }}</h4>
                 <p>{{ post.text1 | raw }}</p>
+                {% if post.image3 %}
+                    <img src="{{ vich_uploader_asset(post, 'image3File') | imagine_filter('imatge600') }}" alt="" title="">
+                {% endif %}
             </div>
         </div>
         <div class="blog-panel-derecho">

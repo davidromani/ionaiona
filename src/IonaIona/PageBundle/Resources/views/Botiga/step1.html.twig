@@ -37,24 +37,24 @@
                     {% endfor %}
                 </tbody>
                 <tfoot>
-                    <tr>
-                        <th colspan="3">{% trans %}store.carrier{% endtrans %}</th>
-                        <th>{{ fee_carrier | number_format(2, '\'', '.') }} €</th>
+                    <!-- <tr>
+                        <th colspan="3">{# trans %}store.carrier{ endtrans #}</th>
+                        <th>{# fee_carrier | number_format(2, '\'', '.') #} €</th>
                         <th style="width:30px"></th>
                     </tr>
                     <tr>
-                        <th colspan="3">{% trans %}store.subtotal{% endtrans %}</th>
-                        <th>{{ (subtotal + fee_carrier) | number_format(2, '\'', '.') }} €</th>
+                        <th colspan="3">{# trans %}store.subtotal{ endtrans #}</th>
+                        <th>{# (subtotal + fee_carrier) | number_format(2, '\'', '.') #} €</th>
                         <th></th>
                     </tr>
                     <tr>
-                        <th colspan="3">{% trans %}store.iva{% endtrans %} {{ fee_iva }}%</th>
-                        <th>{{ (( (subtotal + fee_carrier) * fee_iva ) / 100) | number_format(2, '\'', '.') }} €</th>
+                        <th colspan="3">{# trans %}store.iva{ endtrans #} {{ fee_iva }}%</th>
+                        <th>{# (( (subtotal + fee_carrier) * fee_iva ) / 100) | number_format(2, '\'', '.') #} €</th>
                         <th></th>
-                    </tr>
+                    </tr> -->
                     <tr class="final">
                         <th colspan="3"><strong>{% trans %}store.total{% endtrans %}</strong></th>
-                        <th><strong>{{ (( subtotal + fee_carrier ) + ( (subtotal + fee_carrier) * fee_iva ) / 100) | number_format(2, '\'', '.') }} €</strong></th>
+                        <th><strong>{{ subtotal | number_format(2, '\'', '.') }}{# (( subtotal + fee_carrier ) + ( (subtotal + fee_carrier) * fee_iva ) / 100) | number_format(2, '\'', '.') #} €</strong></th>
                         <th></th>
                     </tr>
                 </tfoot>
