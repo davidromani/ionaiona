@@ -67,7 +67,7 @@ class BotigaController extends Controller
         $storeCustomer = new StoreCustomer();
         $formulario = $this->createForm(new Store(), $storeCustomer);
         if ($this->getRequest()->isMethod('POST')) {
-            $formulario->bind($this->getRequest());
+            $formulario->handleRequest($this->getRequest());
             if ($formulario->isValid()) {
                 // Logica para guardar el pedido, enviar notificacion
                 // y registrar al cliente nuevo antes de cargar la vista del paso 3 de compra

@@ -14,6 +14,7 @@
     <script type="text/javascript">
         jQuery(document).ready(function($) {
             $('#menu-level-1>li:eq(1)').addClass('current');
+            $('#menu-level-2>li:eq({{ menuLevel2Position - 1 }})').addClass('current');
         });
     </script>
 {% endblock %}

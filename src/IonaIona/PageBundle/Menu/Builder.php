@@ -27,6 +27,7 @@ class Builder extends ContainerAware
         $menu->setCurrentUri($this->container->get('request')->getRequestUri());
         $menu->addChild('la balena', array('route' => 'origen_la_balena_ca'));
         $menu->addChild('els patchdolls', array('route' => 'origen_els_patchdolls_ca'));
+        $menu->setChildrenAttribute('id', 'menu-level-2');
         $menu->setChildrenAttribute('class', 'level2');
         return $menu;
     }
@@ -42,6 +43,7 @@ class Builder extends ContainerAware
         $menu->addChild('ocell', array('route' => 'armari_ocell_ca'));
         $menu->addChild('banderola', array('route' => 'armari_banderola_ca'));
         $menu->addChild('mòbil', array('route' => 'armari_mobil_ca'));
+        $menu->setChildrenAttribute('id', 'menu-level-2');
         $menu->setChildrenAttribute('class', 'level2');
         return $menu;
     }
@@ -53,6 +55,7 @@ class Builder extends ContainerAware
         $menu->addChild('història', array('route' => 'taller_historia_ca'));
         $menu->addChild('artesania', array('route' => 'taller_artesania_ca'));
         $menu->addChild('proximitat', array('route' => 'taller_proximitat_ca'));
+        $menu->setChildrenAttribute('id', 'menu-level-2');
         $menu->setChildrenAttribute('class', 'level2');
         return $menu;
     }
@@ -76,6 +79,7 @@ class Builder extends ContainerAware
         $menu->setCurrentUri($this->container->get('request')->getRequestUri());
         $menu->addChild('la ballena', array('route' => 'origen_la_balena_es'));
         $menu->addChild('los patchdolls', array('route' => 'origen_els_patchdolls_es'));
+        $menu->setChildrenAttribute('id', 'menu-level-2');
         $menu->setChildrenAttribute('class', 'level2');
         return $menu;
     }
@@ -91,6 +95,7 @@ class Builder extends ContainerAware
         $menu->addChild('pájaro', array('route' => 'armari_ocell_es'));
         $menu->addChild('banderola', array('route' => 'armari_banderola_es'));
         $menu->addChild('móvil', array('route' => 'armari_mobil_es'));
+        $menu->setChildrenAttribute('id', 'menu-level-2');
         $menu->setChildrenAttribute('class', 'level2');
         return $menu;
     }
@@ -102,6 +107,7 @@ class Builder extends ContainerAware
         $menu->addChild('historia', array('route' => 'taller_historia_es'));
         $menu->addChild('artesania', array('route' => 'taller_artesania_es'));
         $menu->addChild('proximidad', array('route' => 'taller_proximitat_es'));
+        $menu->setChildrenAttribute('id', 'menu-level-2');
         $menu->setChildrenAttribute('class', 'level2');
         return $menu;
     }
@@ -125,6 +131,7 @@ class Builder extends ContainerAware
         $menu->setCurrentUri($this->container->get('request')->getRequestUri());
         $menu->addChild('the whale', array('route' => 'origen_la_balena_en'));
         $menu->addChild('the patchdolls', array('route' => 'origen_els_patchdolls_en'));
+        $menu->setChildrenAttribute('id', 'menu-level-2');
         $menu->setChildrenAttribute('class', 'level2');
         return $menu;
     }
@@ -140,6 +147,7 @@ class Builder extends ContainerAware
         $menu->addChild('bird', array('route' => 'armari_ocell_en'));
         $menu->addChild('flag', array('route' => 'armari_banderola_en'));
         $menu->addChild('mobile', array('route' => 'armari_mobil_en'));
+        $menu->setChildrenAttribute('id', 'menu-level-2');
         $menu->setChildrenAttribute('class', 'level2');
         return $menu;
     }
@@ -151,6 +159,7 @@ class Builder extends ContainerAware
         $menu->addChild('history', array('route' => 'taller_historia_en'));
         $menu->addChild('crafts', array('route' => 'taller_artesania_en'));
         $menu->addChild('proximity', array('route' => 'taller_proximitat_en'));
+        $menu->setChildrenAttribute('id', 'menu-level-2');
         $menu->setChildrenAttribute('class', 'level2');
         return $menu;
     }

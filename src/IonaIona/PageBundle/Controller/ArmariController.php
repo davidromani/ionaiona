@@ -5,23 +5,29 @@ namespace IonaIona\PageBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Flux\ProductBundle\Entity\Product;
+use Flux\ProductBundle\Entity\Category;
 
 class ArmariController extends Controller
 {
     public function itemsAction($nom, $id)
     {
         $em = $this->getDoctrine()->getManager();
-        $balena = $em->getRepository('FluxProductBundle:Product')->find($id);
+        /** @var Product $item */
+        $item = $em->getRepository('FluxProductBundle:Product')->find($id);
+        /** @var Category $itemCategory */
+        $itemCategory = $item->getCategory();
+        $menuLevel2Position = $itemCategory->getPosition();
         $needsPrev = true;
         $needsNext = true;
         try {
-            $prev = $em->getRepository('FluxProductBundle:Product')->getPrevActiveItemFromPositionAndCategory($balena->getPosition(), $balena->getCategory());
+            $prev = $em->getRepository('FluxProductBundle:Product')->getPrevActiveItemFromPositionAndCategory($item->getPosition(), $item->getCategory());
         } catch (\Doctrine\Orm\NoResultException $e) {
             $prev = null;
             $needsPrev = false;
         }
         try {
-            $next = $em->getRepository('FluxProductBundle:Product')->getNextActiveItemFromPositionAndCategory($balena->getPosition(), $balena->getCategory());
+            $next = $em->getRepository('FluxProductBundle:Product')->getNextActiveItemFromPositionAndCategory($item->getPosition(), $item->getCategory());
         } catch (\Doctrine\Orm\NoResultException $e) {
             $next = null;
             $needsNext = false;
@@ -29,9 +35,10 @@ class ArmariController extends Controller
         return $this->render('PageBundle:Armari:detalle.armari.html.twig', array(
             'prev' => $prev,
             'needsPrev' => $needsPrev,
-            'item' => $balena,
+            'item' => $item,
             'next' => $next,
             'needsNext' => $needsNext,
+            'menuLevel2Position' => $menuLevel2Position,
         ));
     }
 
