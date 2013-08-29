@@ -68,7 +68,7 @@ doctrine:
 
 # Stof Doctrine Extensions (Translatable)
 stof_doctrine_extensions:
-    default_locale: ca
+    default_locale: %locale%
     translation_fallback: true
     orm:
         default:

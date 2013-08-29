@@ -3,3 +3,19 @@
 {% block footer %}
 	{# tinymce_init() #}
 {% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/fluxpage/css/select2.css') }}" type="text/css" rel="stylesheet" media="screen" />
+    {% if form is defined %}
+        {{ form_stylesheet(form) }}
+    {% endif %}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/fluxpage/js/select2.js') }}"></script>
+    {% if form is defined %}
+        {{ form_javascript(form) }}
+    {% endif %}
+{% endblock %}
