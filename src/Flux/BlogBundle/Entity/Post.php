@@ -125,6 +125,18 @@ class Post
     private $categories;
 
     /**
+     * @Gedmo\Timestampable(on="create")
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $created;
+
+    /**
+     * @Gedmo\Timestampable(on="update")
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $updated;
+
+    /**
      * Constructor
      */
     public function __construct() {
@@ -355,7 +367,8 @@ class Post
     public function setImage1File($imageFile)
     {
         $this->image1File = $imageFile;
-        
+        $this->updated  = new \DateTime();
+
         return $this;
     }
 
@@ -378,6 +391,7 @@ class Post
     public function setImage1($image)
     {
         $this->image1 = $image;
+        $this->updated  = new \DateTime();
 
         return $this;
     }
@@ -401,7 +415,8 @@ class Post
     public function setImage2File($imageFile)
     {
         $this->image2File = $imageFile;
-        
+        $this->updated  = new \DateTime();
+
         return $this;
     }
 
@@ -424,6 +439,7 @@ class Post
     public function setImage2($image)
     {
         $this->image2 = $image;
+        $this->updated  = new \DateTime();
 
         return $this;
     }
@@ -447,6 +463,8 @@ class Post
     public function setImage3File($imageFile)
     {
         $this->image3File = $imageFile;
+        $this->updated  = new \DateTime();
+
         return $this;
     }
 
@@ -469,6 +487,7 @@ class Post
     public function setImage3($image)
     {
         $this->image3 = $image;
+        $this->updated  = new \DateTime();
 
         return $this;
     }
@@ -504,6 +523,38 @@ class Post
     public function getIsActive()
     {
         return $this->isActive;
+    }
+
+    /**
+     * @param mixed $created
+     */
+    public function setCreated($created)
+    {
+        $this->created = $created;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    /**
+     * @param mixed $updated
+     */
+    public function setUpdated($updated)
+    {
+        $this->updated = $updated;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUpdated()
+    {
+        return $this->updated;
     }
 
     /**
