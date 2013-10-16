@@ -65,7 +65,7 @@ class StoreCustomerProductAdmin extends Admin
             ;
     }
 
-    protected function configureShowField(ShowMapper $showMapper)
+    /*protected function configureShowField(ShowMapper $showMapper)
     {
         $showMapper
             ->add('id')
@@ -76,7 +76,7 @@ class StoreCustomerProductAdmin extends Admin
             ->add('summary')
             ->add('text')
         ;
-    }
+    }*/
 
     protected function configureRoutes(RouteCollection $collection)
     {

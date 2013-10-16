@@ -90,9 +90,9 @@ class StoreCustomerProduct
         return $this->price;
     }
 
-    function __toString()
+    public function __toString()
     {
-        return $this->getId() ? $this->id : '---';
+        return '---';
     }
 
 }
