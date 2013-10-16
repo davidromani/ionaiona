@@ -19,7 +19,7 @@
         "sensio/framework-extra-bundle": "2.3.*",
         "sensio/generator-bundle": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0",
-        "sonata-project/admin-bundle": "2.2.*@dev",
+        "sonata-project/admin-bundle": "dev-master#206720180ec9f5b2762d8568ff5cf6c3c3e8a3ae",
         "sonata-project/block-bundle": "2.2.*@dev",
         "sonata-project/doctrine-orm-admin-bundle": "2.2.*@dev",
         "sonata-project/user-bundle" : "dev-master",
