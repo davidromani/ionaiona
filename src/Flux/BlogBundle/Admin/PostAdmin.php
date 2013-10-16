@@ -72,7 +72,7 @@ class PostAdmin extends Admin
             ->add('text2', 'textarea', array('label' => $translator->trans('blog.text2'), 'required' => false))
 
             ->with('Imatges') // IMAGES
-            ->add('image1File', 'file', array('label' => $translator->trans('blog.upload.image1'), 'required' => false))
+            ->add('image1File', 'file', array('label' => $translator->trans('blog.upload.image1')))
             ->add('image1', null, array('label' => $translator->trans('blog.image1'), 'required' => false, 'read_only' => true))
             // TRY TO PRINT PREVIEW ->add('img1', 'sonata_type_model', array('property_path' => false, 'label' => 'im1', 'required' => false, 'template' => 'FluxPageBundle:Default:img.html.twig'))
             ->add('image2File', 'file', array('label' => $translator->trans('blog.upload.image2'), 'required' => false))

@@ -19,7 +19,9 @@
     <div class="constrictor clearfix">
         <div class="blog-panel-izquierdo">
             <div class="pblock">
-                <img src="{{ vich_uploader_asset(post, 'image2File') | imagine_filter('imatge600') }}" alt="" title="">
+                {% if post.image2 %}
+                    <img src="{{ vich_uploader_asset(post, 'image2File') | imagine_filter('imatge600') }}" alt="" title="">
+                {% endif %}
                 <h3>{{ post.postDate | date('d/m/Y') }}</h3>
                 <h4>{{ post.title }}</h4>
                 <p>{{ post.text1 | raw }}</p>
